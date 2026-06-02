@@ -19,10 +19,12 @@ Generás imágenes y videos de Dimanche que se ven **de la marca, no genéricos 
 4. **Si es video/hook**, puntuá con `virality_predictor` de Higgsfield.
 5. **Pasá por `dimanche-brand-check`** y armá el layout final en Canva (Niveau Grotesk, texto fuera de la imagen).
 
-## Reglas (REF-030)
-- IA para **mood, escena, contexto y retoque**. **NO** para inventar el producto real que se hace pasar por verdadero.
-- **Producto real:** usar fotos de Drive (`MKT - Dimanche`, `06_Marketing`) o pedir la toma en la DB *Activos a producir*.
-- Cero texto en la imagen generada. Cero emojis. Cero naranja.
+## REGLA DE ORO: nada real sin referencia real (no negociable)
+- **NUNCA** generes con IA algo identificable de Dimanche: el local, los productos, el mostrador, el equipo. Eso sale de **foto/video real de Drive** (`MKT - Dimanche`, `06_Marketing`) o **se le pide la toma a Luciano** (DB *Activos a producir*).
+- IA SOLO para lo **genérico y no reconocible**: texturas, fondos, mood, gente anónima que no se hace pasar por el equipo/local real.
+- Producto = foto real + (a lo sumo) IA para fondo/escena genérica. Si no hay referencia real, NO lo generes: pedí la foto.
+- Ante la duda → es "real" → foto real o pedir a Luciano. (No inventar el local como pasó en la prueba.)
+- Cero texto en la imagen. Cero emojis. Cero naranja.
 
 ## Plantilla rápida (copiar y completar)
 `[concepto] of [motivo + detalle], on [colores/materiales con paleta Dimanche], [composición + negative space], [luz cálida + mood homey/Sunday], shot on [lente], editorial food photography, photorealistic, no text.`

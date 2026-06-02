@@ -24,6 +24,7 @@ No hace falta acordarse el nombre de ningún agente. **Le hablás en criollo y y
 | imagen, foto, video, visual | `dimanche-media` |
 | campaña, promo, pauta, plan del mes | `dimanche-campana` |
 | "¿esto va? ¿es on-brand?" / revisar una pieza | `dimanche-brand-check` |
+| "¿cómo hago un reel/carrusel/historia que funcione?" | `dimanche-formatos` |
 | "¿qué está pasando / qué se viene / virales?" | Radar (ver abajo) — leo *Inteligencia & Ideas* en Notion |
 
 ## Los agentes que corren solos (Radar) y reportan a Notion → Anto

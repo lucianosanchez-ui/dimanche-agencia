@@ -49,8 +49,13 @@ La primera prueba salió correcta pero **aburrida (sin gente) y con producto que
 - **El producto real NO se genera con IA** (se nota y rompe la confianza, REF-030). Para el producto: **foto real** (Drive `MKT - Dimanche` / `06_Marketing`, o pedir toma en *Activos a producir*). La IA se usa para **mood, escena, ambiente, gente en contexto y retoque** — o se combina (foto real del producto + escena/gente generada).
 - Apuntar a que **no parezca IA**: imperfección real, textura, desorden cálido de una mesa de verdad. Nada plástico ni perfecto.
 
-## Reglas (REF-030)
-- IA para **mood, escena, ambiente, gente en contexto y retoque**. **NUNCA** para fabricar el producto real.
-- **Producto real → foto real** (Drive o *Activos a producir*). Ideal: combinar foto real de producto con escena/gente.
-- Cero texto en la imagen generada (el texto va en Canva, Niveau Grotesk). Cero naranja. Cero emojis.
+## REGLA DE ORO: nada real sin referencia real (decisión Luciano, no negociable)
+- **Todo lo identificable de Dimanche — el local, los productos, el mostrador, el equipo — NO se genera con IA inventada.** Se usa **foto/video real de Drive** (`MKT - Dimanche`, `06_Marketing`) o se le **pide la toma a Luciano**. Si no hay referencia real, no se hace.
+- La IA solo puede generar/retocar **lo genérico y NO reconocible**: texturas, fondos abstractos, mood, o personas/escenas anónimas que **no pretenden ser** el local ni el equipo de Dimanche. (Familia/escenas genéricas no conocidas: OK.)
+- Para piezas con producto: **foto real del producto** (Drive o pedida) + a lo sumo IA para fondo/escena genérica. **Nunca un producto inventado.**
+- Ante la duda de si algo es "reconocible como Dimanche" → tratalo como real → foto real o pedir a Luciano.
+- ⚠️ La imagen de prueba del 2026-06-02 estaba MAL: inventó un local que no es el de Dimanche. No repetir ese error.
+
+## Reglas visuales base
+- Cero texto en la imagen generada (el texto va en Canva, Niveau Grotesk). Cero naranja. Cero emojis. Paleta #3559E0/#E9E3D9.
 - Toda pieza pasa por `dimanche-brand-check`; layout final en Canva.

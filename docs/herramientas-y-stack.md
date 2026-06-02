@@ -31,4 +31,4 @@ El ahorro de tokens viene de dos lados distintos:
 **Regla:** la fuente de verdad operativa es **Notion** (los agentes leen/escriben ahí). NotebookLM es una **copia para consultar**, no el almacén.
 
 ## Motor de los agentes autónomos
-Patrón `radar-dimanche` (Python + GitHub Actions + Scrapling) — probado, gratis, 24/7. n8n queda opcional para prototipar visual. Make, descartado.
+**n8n Cloud** (orquestador managed, ~USD 24/mo) + **Railway** (runtime Scrapling, ~USD 5-10/mo). Siempre encendido, sin GitHub Actions (decisión de Luciano). Detalle en `docs/infraestructura.md`. Make, descartado.
