@@ -1,0 +1,19 @@
+# Entorno Python (Scrapling)
+.venv/
+__pycache__/
+*.pyc
+*.egg-info/
+
+# Secrets / entorno
+.env
+.env.*
+!.env.example
+
+# Sistema
+.DS_Store
+Thumbs.db
+
+# Media pesada generada (no versionar binarios grandes)
+media/generado/
+*.mp4
+*.mov
