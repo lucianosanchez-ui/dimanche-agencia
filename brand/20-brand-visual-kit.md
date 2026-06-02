@@ -43,8 +43,14 @@ Cada generación se construye en capas (de lo general a lo específico):
 ### Ejemplo de prompt completo (criollitos)
 > *Food studio shot of a small pile of freshly baked Argentine criollitos, golden flaky tops, one broken open showing soft tender layers, on a raw beige #E9E3D9 surface with light wood and a folded cloth in Dimanche blue #3559E0, centered composition with generous negative space, warm morning window light and soft shadows, homey Sunday-morning mood, shot on 50mm with shallow depth of field, editorial food photography, photorealistic, no text.*
 
+## Afinado (feedback Luciano, 2026-06-02)
+La primera prueba salió correcta pero **aburrida (sin gente) y con producto que se notaba IA**. Reglas que corrigen eso:
+- **Con gente y vida, no bodegones vacíos.** Priorizá presencia humana real: manos amasando/sirviendo, alguien desayunando, el mostrador con movimiento, una familia compartiendo. La marca es "excusa de encuentro" — que se vea gente.
+- **El producto real NO se genera con IA** (se nota y rompe la confianza, REF-030). Para el producto: **foto real** (Drive `MKT - Dimanche` / `06_Marketing`, o pedir toma en *Activos a producir*). La IA se usa para **mood, escena, ambiente, gente en contexto y retoque** — o se combina (foto real del producto + escena/gente generada).
+- Apuntar a que **no parezca IA**: imperfección real, textura, desorden cálido de una mesa de verdad. Nada plástico ni perfecto.
+
 ## Reglas (REF-030)
-- **IA permitida** para mood, escena, fondo, contexto imaginado y retoque.
-- **IA NO permitida** para inventar el producto que se hace pasar por real. Las **tomas de producto real** se piden al equipo (DB *Activos a producir*) o se usan las fotos de Drive (`MKT - Dimanche`, `06_Marketing`).
-- Cero texto en la imagen generada (el texto va en Canva, Niveau Grotesk).
-- Toda pieza pasa por `dimanche-brand-check` y el layout final por el brand kit de Canva.
+- IA para **mood, escena, ambiente, gente en contexto y retoque**. **NUNCA** para fabricar el producto real.
+- **Producto real → foto real** (Drive o *Activos a producir*). Ideal: combinar foto real de producto con escena/gente.
+- Cero texto en la imagen generada (el texto va en Canva, Niveau Grotesk). Cero naranja. Cero emojis.
+- Toda pieza pasa por `dimanche-brand-check`; layout final en Canva.
