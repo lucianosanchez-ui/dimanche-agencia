@@ -1,7 +1,14 @@
 # Infraestructura de la agencia (no GitHub Actions)
 
 ## Decisión (Luciano)
-GitHub Actions no. Queremos algo **managed y pago que funcione siempre 24/7**, sin mantener servidores ni que dependa de que la Mac esté prendida.
+GitHub Actions no. Algo **managed y pago que funcione siempre 24/7**, sin mantener servidores ni depender de que la Mac esté prendida.
+
+**ELEGIDO (2026-06-02): n8n Cloud (orquestador) + Railway corriendo Scrapling (scraping).** Luciano crea/paga las cuentas; Claude arma y mantiene todo lo técnico.
+
+### Plan de deploy (lo hace Claude apenas existan las cuentas)
+- El servicio Scrapling ya está pre-armado en el repo: `server.py` (API HTTP), `requirements.txt`, `Dockerfile`. n8n le pega por HTTP (`/ig/{usuario}`, `/gmaps?url=...`) y recibe JSON.
+- En Railway: conectar el repo `dimanche-agencia`, deploy con el Dockerfile. Variables: `NOTION_TOKEN` si hace falta.
+- En n8n Cloud: importar los workflows de cada agente (Schedule → HTTP al servicio Railway → Claude API → escribir Notion → avisar a Anto).
 
 ## Recomendación
 | Pieza | Herramienta | Costo aprox | Para qué |
