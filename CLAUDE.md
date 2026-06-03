@@ -16,7 +16,7 @@ Este repo es el sistema de la **agencia de marketing semiautomática de Dimanche
 - **Secretos:** nunca en el repo. Tokens/API keys van en n8n o en `.env` (gitignored).
 
 ## Skills propias (en `.claude/skills/`)
-Orquestador `dimanche-mkt` (puerta única) + brand-check, copy, media, calendario, guion, campana, formatos.
+Orquestador `dimanche-mkt` (puerta única) + brand-check, copy, media, calendario, guion, campana, formatos, local.
 
 ## Interfaz y motor
 Bot de Telegram (n8n + Claude + memoria Notion) · agentes autónomos en n8n Cloud + Scrapling en Railway. Ver `docs/infraestructura.md`.

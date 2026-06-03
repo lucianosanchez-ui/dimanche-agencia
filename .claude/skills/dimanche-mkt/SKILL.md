@@ -23,6 +23,7 @@ No hace falta acordarse el nombre de ningún agente. **Le hablás en criollo y y
 | nombre o descripción de un producto | `dimanche-copy` (naming) |
 | imagen, foto, video, visual | `dimanche-media` |
 | campaña, promo, pauta, plan del mes | `dimanche-campana` |
+| "bajá esto al local" / mostrador / qué le decimos al equipo de ventas | `dimanche-local` |
 | "¿esto va? ¿es on-brand?" / revisar una pieza | `dimanche-brand-check` |
 | "¿cómo hago un reel/carrusel/historia que funcione?" | `dimanche-formatos` |
 | "¿qué está pasando / qué se viene / virales?" | Radar (ver abajo) — leo *Inteligencia & Ideas* en Notion |
@@ -41,3 +42,4 @@ Todos escriben en la base **Inteligencia & Ideas** y notifican a Anto (ver `docs
 - Objetivo de fondo: **posicionar la marca** (no vender productos sueltos).
 - Tono POL-010, mensajes maestros REF-029, sin marketinería ni emojis.
 - Nada sale sin gate humano. Producto real no se inventa con IA.
+- **Toda campaña baja al local:** después de `dimanche-campana`, la paso por `dimanche-local` (material de mostrador + comunicado al equipo). Ninguna campaña queda solo en redes.

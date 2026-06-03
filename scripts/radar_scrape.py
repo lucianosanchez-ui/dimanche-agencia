@@ -25,7 +25,7 @@ import json
 import re
 import sys
 
-from scrapling.fetchers import Fetcher, DynamicFetcher
+from scrapling.fetchers import Fetcher, DynamicFetcher, StealthyFetcher
 
 # --- Cuentas / lugares Dimanche -------------------------------------------
 IG_DIMANCHE = "dimanchepanaderia"
@@ -68,6 +68,30 @@ def gmaps_rating(url: str) -> dict:
         out["rating"] = m.group(1).replace(",", ".") if m else None
         c = re.search(r'([\d][\d.\,]*)\s*rese[nñ]as', html)
         out["reviews"] = c.group(1) if c else None
+    except Exception as e:  # noqa: BLE001
+        out["error"] = repr(e)
+    return out
+
+
+def web_text(url: str, max_chars: int = 12000) -> dict:
+    """Texto limpio de cualquier pagina, sorteando anti-bot (Cloudflare).
+
+    Lector universal del Radar: lo usan los agentes (Tendencias, Observatorio,
+    Tendencias-globales) para leer fuentes editoriales (ICYMI, InfoNegocios,
+    Punto a Punto, Taste Tomorrow) sin pelear con cada muro.
+    """
+    out = {"url": url}
+    try:
+        page = StealthyFetcher.fetch(
+            url,
+            headless=True,
+            solve_cloudflare=True,
+            network_idle=True,
+            timeout=90000,
+        )
+        text = page.get_all_text() or ""
+        out["text"] = " ".join(text.split())[:max_chars]
+        out["chars"] = len(out["text"])
     except Exception as e:  # noqa: BLE001
         out["error"] = repr(e)
     return out

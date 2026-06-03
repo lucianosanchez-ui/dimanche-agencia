@@ -26,5 +26,11 @@
 - **Cámara Argentina de Anunciantes / Admetricks** — inversión publicitaria. ⭐⭐
 - Blogs de agencias locales — referencia secundaria, calidad variable. ⭐
 
+## Córdoba (negocios y gastronomía local) — para el Radar de Tendencias
+- **InfoNegocios Córdoba** — negocios, marcas y lanzamientos locales. ⭐⭐ · `infonegocios.info`
+- **Punto a Punto** — negocios de Córdoba (empresas, gastronomía, marketing). ⭐⭐ · `puntoapunto.com.ar`
+- **Circuito Gastronómico** — escena gastronómica de Córdoba (aperturas, tendencias food locales). ⭐⭐ · `circuitogastronomico.com`
+> Se leen con el **lector universal `/web`** de Scrapling (anti-bot). Aportan el pilar *Cultura cordobesa* y el pulso comercial/gastronómico local que las fuentes globales (ICYMI, Taste Tomorrow) no tienen.
+
 ## Nota de honestidad
 Las best practices que ya están en `dimanche-formatos` salieron de búsquedas a Buffer, Later, Metricool, OpusClip, Hootsuite y Sprout + Taste Tomorrow (food). Son sólidas, pero el Observatorio las mantiene frescas y **prioriza las ⭐⭐⭐** (autoridad y fuentes primarias) por sobre los blogs SEO. La lista se revisa y se ajusta con criterio de Luciano.
