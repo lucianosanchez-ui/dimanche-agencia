@@ -17,8 +17,11 @@ Cómo se produce cada tipo de pieza, respetando la identidad visual nueva (sin n
 | Video corto / reel con IA | **Higgsfield** `generate_video` | + `reframe` para 9:16 (reel/story), 1:1 (feed), 16:9 (web) |
 | Adaptar aspect ratio | **Higgsfield** `reframe` | Mismo activo, varios formatos |
 | Score de hook / video | **Higgsfield** `virality_predictor` | Para elegir entre variantes, no como verdad |
-| Placa / carrusel / cartel con texto | **Canva** (brand kit) | Niveau Grotesk, paleta nueva, mucho blanco |
+| Placa / cartel con texto | **Canva** (brand kit) | Niveau Grotesk, paleta nueva, mucho blanco |
+| **Carrusel** o placa generada por código | **Claude design** (canvas-design) | El formato de MÁS engagement; texto+diseño on-brand, rápido; foto real (Drive) + diseño encima |
 | Layout final de marca | **Canva** | Cierre de toda pieza con texto |
+
+**Canva vs Claude design:** Canva para el armado final con plantillas de marca; **Claude design** para generar carruseles/placas directo por código (rápido, iterable). Los dos respetan la paleta y la regla de oro (foto real para producto/local).
 
 ## Identidad visual (obligatoria)
 - Paleta: Azul `#3559E0`, Blanco `#FFFFFF`, Negro `#000000`, Crudo `#E9E3D9`. **Sin naranja.**
