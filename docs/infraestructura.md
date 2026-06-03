@@ -28,7 +28,14 @@ GitHub Actions no. Algo **managed y pago que funcione siempre 24/7**, sin manten
 - **Solo n8n Cloud + Apify** (sin Railway): Apify hace el scraping (pago, con tope mensual). Menos control, una herramienta menos.
 - **Modal** en vez de Railway: serverless Python, pagás por uso (bueno si los agentes corren pocas veces al día).
 
-## Lo único manual (Luciano)
-- Crear cuenta + plan en **n8n Cloud** y **Railway** (son pagos, necesitan tu tarjeta/login).
-- Pegar las **API keys** (Anthropic, Notion, Apify) en n8n.
-- **Todo lo demás lo armo yo:** los workflows de n8n, el servicio Scrapling en Railway, las conexiones y las notificaciones a Anto.
+## Interfaz: grupo de Telegram con memoria (decisión 2026-06-02)
+La agencia se opera desde un **grupo de Telegram**, NO desde chats aislados de Claude. Flujo: mensaje en el grupo → **n8n** → **Claude** (con la base de marca + el historial de la conversación guardado en **Notion**) → responde en el grupo. **La continuidad es real**: la memoria vive en Notion, no en el chat. Los agentes autónomos (Briefing, Cazador de virales, Performance) postean en ese mismo grupo. Es el "Hermes" pero sobre la infra que ya tenemos.
+
+## Estado y lo que falta
+- ✅ **n8n Cloud** creado · ✅ **Railway** creado y conectado a GitHub.
+- **Falta (Luciano, mínimo):**
+  1. Disparar el **deploy** del repo en Railway (New Project → GitHub → `dimanche-agencia`) y pasarme la URL.
+  2. Darme una **API key de n8n Cloud** (Settings → n8n API) para armar los workflows.
+  3. Crear el **bot de Telegram** con @BotFather (2 min) y pasarme el token.
+  4. Tener a mano las API keys (Anthropic, Notion, Apify) que yo cargo en n8n.
+- **Todo lo demás lo armo yo:** servicio Scrapling en Railway, los workflows de los agentes, el bot de Telegram con memoria, y el reporte a Anto.
