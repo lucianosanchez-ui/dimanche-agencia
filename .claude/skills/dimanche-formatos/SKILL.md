@@ -32,8 +32,8 @@ El algoritmo prioriza **watch time + likes/reach + sends/reach**. **Los DM-share
 ## Mix (MAN-018 + POL-015)
 Reels para descubrir · Carrusel para enseñar · Posts para autoridad · Stories para relación. **Consistencia > volumen** (4/sem constante gana). Respetar proporción de pilares POL-015 y T2 (calidad sobre cantidad).
 
-## "Que vean qué está funcionando"
-El agente **Performance** mide qué formatos/temas rinden en Dimanche; el **Radar** trae lo que funciona afuera (referentes + Taste Tomorrow). Fuentes de referencia confiables: Buffer, Metricool, Later (formatos) · Taste Tomorrow/Puratos (food). Eso entra a *Inteligencia & Ideas* y ajusta el plan.
+## "Que vean qué está funcionando" (investigación constante)
+Esta base NO es estática. El agente **Observatorio de contenido** vigila permanentemente las fuentes de `agentes-autonomos/fuentes.md` (Link in Bio, Geekout, ICYMI, Why We Buy, TikTok Creative Center, Mosseri, Taste Tomorrow, etc.) y **mantiene fresca esta skill**. El **Performance** mide qué rinde en Dimanche; el **Cazador de Virales** trae lo urgente. Todo entra a *Inteligencia & Ideas* y ajusta el plan.
 
 ## Visual
 Producto/local = **referencia real** (ver Brand Visual Kit, regla de oro). Nada inventado con IA de lo reconocible.

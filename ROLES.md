@@ -12,6 +12,8 @@ Estados: ✅ hecho · 🔨 armado ahora · ⚪ activable cuando haga falta.
 ## Inteligencia (Radar — corre solo)
 | Rol | Qué hace | Estado | Dónde vive |
 |---|---|---|---|
+| **Cazador de Virales** | Lo que está POR explotar (tipo Tim Payne); alerta urgente con ventana. | ✅ | `agentes-autonomos/cazador-virales/` |
+| **Observatorio de contenido** | Investigación CONSTANTE: vigila fuentes marketineras (formatos, viralidad, algoritmo, food) y mantiene fresca la base. | ✅ | `agentes-autonomos/observatorio/` (+ `fuentes.md`) |
 | **Tendencias (redes)** | A qué formatos/temas locales subirse. | ✅ | `agentes-autonomos/tendencias/` |
 | **Tendencias Globales** | Referentes mundiales + Taste Tomorrow + fechas/drivers; mantiene la página Drivers. | ✅ | `agentes-autonomos/tendencias-globales/` |
 | **Competencia** | Posicionamiento de marca vs el set local (no calidad); defender Villa Allende. | ✅ | `agentes-autonomos/competencia/` |
