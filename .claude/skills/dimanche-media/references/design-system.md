@@ -68,7 +68,7 @@ Mismo sistema, adaptando la plantilla a cada formato.
 > La IA (Higgsfield/nano_banana) entra solo si no tenés la foto: genera la escena partiendo de una referencia real, y el texto/logo igual van en Canva.
 
 ## Cómo vive el sistema en las herramientas
-El design system (foundations + components + templates + gobernanza) es la **especificación**. Se vuelve usable así:
+El design system (foundations + components + templates + gobernanza) es la **especificación**. **Vive en el Drive como base** — `06_Marketing/00_Marca/Design_System/` (PDF + hojas + docs) + los assets en `00_Marca/` (Logos, `Tipografias/Niveau_Grotesk`, `Elementos_Graficos`) y las fotos en `01_Fotos/`. **Las herramientas tiran de ahí:**
 - **Canva = el hogar de producción.** El **Brand Kit "Dimanche"** (paleta · **Niveau Grotesk** · logo/badge · los 8 íconos) + **Brand Templates con autofill** por formato (story/post/carrusel/TV, con grilla y safe-area ya puestas) → Anto **arrastra la foto y escribe el titular**. *(Las plantillas autollenables todavía hay que construirlas — es el puente de "doc" a "usable".)*
 - **Higgsfield (u otra IA) = SOLO la foto/escena**, cuando no hay una real. No hace texto, logo ni layout — eso es Canva.
 - **Flujo:** foto real (celu/Drive) **o** Higgsfield → **Canva** (template: foto + ícono + titular + badge) → **brand-check** → **Propuesto** (gate).
