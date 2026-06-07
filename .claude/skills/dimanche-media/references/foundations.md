@@ -41,11 +41,11 @@ Escala (sobre lienzo 1080 px), de mayor a menor:
 - **Texto sobre foto → SIEMPRE scrim:** degradado negro suave (0→40%) detrás del texto, o ubicarlo sobre una zona oscura/simple de la foto. Contraste objetivo ≥ 4.5:1.
 - **Cero naranja.**
 
-## 4. Iconografía (spec — para que el set crezca consistente)
-- **Estilo:** línea · **un trazo** · **un color** (blanco sobre foto / azul sobre claro).
-- **Caja:** cuadrada ~120×120 px (sobre 1080), con ~10% de aire interno.
-- **Trazo:** ~6 px (al tamaño de caja) · **puntas y uniones redondeadas**.
-- **Silueta:** simple, reconocible al toque (sol, paraguas, taza…).
-- **Regla para sumar íconos:** misma caja, mismo grosor de trazo, mismo redondeo, 1 color, simple. **Probar en chico** (que se entienda a 2 cm). Viven en Drive `00_Marca/Elementos_Graficos`.
+## 4. Iconografía — el set REAL (Drive `00_Marca/Elementos_Graficos`)
+**Set actual (8 íconos):** pan (×2), croissant, torta, galleta, **sol** ("olorcito a domingo"), **lockup "Con olorcito a domingo"** (sign) y el **monograma D**. Variantes: **cobalto** (carpeta `Blue`) y **cobalto sobre crema** (`Off_white_blue`). *Las naranjas (`Orange`, `Off_white_orange`) están deprecadas.*
+- **Estilo (así son los reales, NO líneas finas):** **silueta plana rellena en un solo cobalto**, formas redondeadas/orgánicas, con un **brillo/realce sutil**, simple y reconocible al toque.
+- **Uso:** 1 ícono por pieza, arriba · en **blanco** sobre la foto o en **cobalto** sobre fondo claro · tamaño contenido (caja ~120×120 sobre 1080, ~10% de aire).
+- **Sumar íconos nuevos** (mate, café, frío, fecha…): **diseñarlos matcheando este estilo** (plano, cobalto, brillo sutil, redondeado, simple). Probar en chico (que se entienda a 2 cm).
+- **Nunca** usar un dibujo hecho a código como ícono final — siempre los reales del Drive. (El sol que aparecía dibujado en la hoja de fundamentos era solo un placeholder, ya corregido.)
 
 > Estos son los átomos. Encima van los **componentes** (badge, bloque de titular, banner/cuadro, tag de precio, sticker, lockup) y los **templates por formato** — la capa siguiente.
