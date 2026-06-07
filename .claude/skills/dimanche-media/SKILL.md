@@ -19,8 +19,8 @@ Generás imágenes y videos de Dimanche que se ven **de la marca, no genéricos 
 
 > **Flujo estrella:** referencia real (Drive o foto del celu) → la IA arma el hero/escena premium en tu estética → componés logo + texto → (opcional) movimiento sutil. Ej. probado: croissants hero generados anclados a fotos reales = premium y on-brand, muy por encima de las fotos viejas.
 
-## La estética Dimanche es ESPECÍFICA — siempre referenciá fotos reales
-El look de Dimanche **no** es "panadería beige hogareña" genérica. Es **estudio editorial: fondo azul cobalto seamless (`#3559E0`) en los 2/3 superiores + mesa/superficie crema + producto centrado en plato de borde fino**, luz pareja y suave, producto cálido contra el azul frío, mucho espacio azul arriba. Generar "de memoria" da resultados off-brand (probado: salió beige genérico = nada que ver).
+## La estética Dimanche es ESPECÍFICA — norte canónico en `sistema-visual-dimanche.md`
+El look de Dimanche **no** es "panadería beige hogareña" genérica, **ni "fondo azul cobalto en los 2/3" como en la versión vieja** (ese look quedó solo para placas/slides con texto encima). Norte vigente (2026-06-07): **limpio, prolijo y premium estilo Villa Allende** (blanco, acero inox, mármol/granito) con **disciplina de color** cobalto/crema, un **objeto cobalto real** que firma cada toma, y un **dial de calidez** que sube en reel/story y baja (premium) en feed. **El detalle completo (norte, mundo visual, realismo, playbooks) está en `references/sistema-visual-dimanche.md` — leelo primero; manda sobre cualquier nota genérica vieja.** Generar "de memoria" da off-brand: siempre referenciá fotos reales.
 
 **Regla: para igualar la estética, SIEMPRE pasale al generador 2-4 fotos REALES de Dimanche como referencia de estilo.** Viven en el Drive local: `…/Library/CloudStorage/GoogleDrive-lucianosanchez@panaderiadimanche.ar/Mi unidad/06_Marketing/01_Fotos/Editadas/` (`pic-*.jpg`). Workflow concreto (bajar → achicar → subir a Higgsfield → usar como `medias`) en `references/herramientas.md` → "Referencia desde Drive". Si por algo no hay referencia, al menos describí el azul-estudio explícitamente.
 
@@ -28,6 +28,7 @@ El look de Dimanche **no** es "panadería beige hogareña" genérica. Es **estud
 
 ## Antes de generar: cargá el criterio
 
+- **`references/sistema-visual-dimanche.md` — norte visual canónico (V1, 2026-06-07): identidad, dial por formato, mundo visual, realismo, playbooks. EMPEZÁ POR ACÁ.**
 - `brand/20-brand-visual-kit.md` — vocabulario visual, paleta, luz, tipos de toma, framework de 6 capas de Dimanche.
 - `brand/00-brand-book.md` — qué es Dimanche, qué NO es. `brand/10-contexto-negocio.md` — negocio y buyer personas.
 - Si dudás del visual oficial: REF-002 y REF-030 en Notion (DB Documentos).

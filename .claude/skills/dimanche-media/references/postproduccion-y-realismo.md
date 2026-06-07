@@ -42,5 +42,5 @@ El problema típico: demasiado perfecto, sin textura real. Soluciones (keywords 
 ## Realismo para food (Dimanche)
 - **Textura que da hambre:** `light raking across the golden crust`, `visible air pockets in the soft crumb`, `steam rising catching the warm light`, `condensation on the glass`, `crumbs scattered catching tiny highlights`, `glossy glaze reflections`.
 - **Lente real + macro** para detalle (`100mm macro at f/3.5–4`).
-- **Imperfección apetecible:** un poco de harina caída, una miga partida a mano, bordes irregulares — no el plástico perfecto.
+- **Imperfección apetecible pero PROLIJA** ("real pero prolijo", norte Villa Allende): la miga real, dos o tres migas, una pieza partida a mano, bordes irregulares, un reflejo real en el acero — pero limpio y ordenado, **sin harina volada ni desorden**. Ni el plástico perfecto, ni el rústico desordenado.
 - **Lo identificable real va por foto real + Adobe** (retoque/resize), no IA. La IA arma el set/mood/fondo; la factura/pan real se compone (Nano Banana) o se fotografía.

@@ -86,7 +86,7 @@ Transmiten textura, peso, temperatura y calidad — convierten una imagen plana 
 
 **Pro:** sé preciso (satinado ≠ mate), pensá la interacción con la luz, superponé texturas (lisa+rugosa, mate+brillante) para tensión, apostá por autenticidad (¿cómo se vería en la vida real?).
 
-> **Dimanche:** paleta `#3559E0` (azul) + `#E9E3D9` (crema), **sin naranja**. Materiales: `flour-dusted wood`, `linen`, `kraft paper`, `ceramic`, `golden crust`, `soft crumb`. Mood `warm, homey, Sunday`.
+> **Dimanche (act. 2026-06-07):** paleta `#3559E0` (azul) + `#E9E3D9` (crema), **sin naranja**. Materiales **limpios** (norte Villa Allende): `white surfaces`, `stainless steel`, `white marble`, `ceramic` + `golden crust`/`soft crumb` del producto. `wood`/`linen` solo como acento cálido en reels, nunca la base. Mood: premium-limpio en feed, cálido en reel (ver `sistema-visual-dimanche.md`).
 
 ---
 
