@@ -55,5 +55,39 @@ TV: reconciliar `pantallas-tv-local.md` con este norte. Folleto/cartel: por defi
 - **Mejora continua:** Numa (performance) → repaso **mensual** de qué funcionó/qué no → actualiza estos playbooks; la guía se **versiona**; los aprendizajes quedan en *Memoria & Aprendizajes*.
 - **Al día con plataformas + tendencias:** (a) *cambios de formato/algoritmo* IG/TikTok (aspect, duración de reels, qué prioriza el feed) → un "watch" que actualiza la sección **Técnico** de cada playbook; (b) *tendencias de contenido* (Lola/Mateo/Rocco, ya en *Inteligencia & Ideas*) **filtradas por el norte** (nada efímero) → ideas y tweaks tácticos.
 
-## Pendiente de definir (V1.1)
-Motivo (catálogo de productos-héroe + atributos) · Cámara/lente (lenguaje propio) · Recetas de toma reproducibles · Consistencia (refs/seeds/producto) · Readiness visual (checklist completo) · TV/folleto · WhatsApp/Newsletter/Web.
+## 6. Motivo · cámara/lente · consistencia
+**Motivo:** rotación pareja de clásicos (criollito, medialuna, pan, combos, facturas, café), **sin producto-firma fijo**. Consecuencia: la "firma reconocible a un metro" la sostiene el **tratamiento**, no un producto.
+
+**Cámara/lente:**
+- Hero de antojo/textura (macro de feed + reels): **macro ~100mm, f/3.5–5.6** — miga/greñado/vapor nítidos, fondo que se disuelve.
+- Contexto/momento/gente (mesa, manos, local): **35–50mm, f/2–2.8** — perspectiva natural, editorial-documental.
+- Cierre realista: nombrar un cuerpo real (ej. Canon EOS R5) + grano fino sutil. Story = celu real directo.
+
+**Consistencia** (que toda la cuenta se vea de la misma marca, ahora que rota el producto): cuatro anclajes — (1) disciplina de color cobalto/crema · (2) objeto cobalto de firma en cada toma · (3) mismo tratamiento de luz/limpieza por dial · (4) vocabulario de prompt reusable (mismas keywords EN) + referencias reales del Drive como style-ref + `seed` para reproducir.
+
+## 7. Recetas reproducibles
+Copy-paste, en inglés (rinde mejor). `{producto}` = variable; objeto cobalto y dial se completan según la pieza. Cierre siempre: `photorealistic, no text, no logo, no orange`. El producto parte de foto real (la IA retoca, no fabrica).
+
+**A · Hero macro de FEED (premium-limpio)**
+```
+Clean editorial food hero, macro shot of {real Dimanche product + texture: golden crust, soft crumb, visible scoring}, on a white marble surface with brushed stainless steel and one real cobalt-blue (#3559E0) signature object in frame (plate rim / cup / packaging), warm cream (#E9E3D9) accent, minimalist composition with generous negative space, bright clean airy daylight, soft shadows, light raking across the crust to reveal texture, Canon EOS R5, 100mm macro at f/4, shallow depth, subtle real imperfection (a few crumbs, an irregular edge, a reflection on the steel), fine film grain, photorealistic, no text, no logo, no orange
+```
+
+**B · Antojo en movimiento de REEL (cálido)** — generar frame base y animar
+```
+Warm appetizing macro: real hands breaking open {real Dimanche product}, soft steam rising catching warm morning light, tender/flaky interior revealed, a real cobalt-blue (#3559E0) cup beside it on a clean white surface, cream tones, warm window/golden-hour light, gentle shadows, rich texture, 100mm macro at f/3.5, shallow depth, real hands with natural skin texture, real steam (not CGI), a few crumbs, photorealistic, no text, no logo, no orange
+```
+Movimiento: Higgsfield seedance image→video, 7–12s — vapor subiendo + manos partiendo, push-in lento, casi ASMR; nada que deforme el producto.
+
+**C · Momento / mesa (ritual, cálido)**
+```
+Cozy Sunday-morning scene, {real Dimanche products + a cup of coffee} on a clean white table, real hands serving or sharing (gestures first; a real face only with consent, never a model), a real cobalt-blue (#3559E0) cup or napkin as the signature accent, cream tones, soft warm morning window light, 35mm at f/2.2, natural perspective, lived-in but tidy, real textures, photorealistic, no text, no logo, no orange
+```
+
+**D · Story celu (día a día)** — no genera de cero
+1. Base: foto rápida del celu real (la hornada/combo/local de hoy).
+2. Retoque leve (Adobe/Higgsfield): emparejar luz/color hacia limpio+cálido, sin inventar; sumar un detalle cobalto si está a mano.
+3. Texto/sticker en Canva (Niveau Grotesk, paleta, sin emojis) + CTA simple (Uber/PedidosYa). 9:16, real y ágil.
+
+## Pendiente (V1.1)
+Readiness visual (checklist completo) · TV del local + folleto/cartel · WhatsApp/Newsletter/Web · **cablear los dos loops vivos** (mejora continua vía Numa + watch de plataforma/tendencias).
