@@ -34,3 +34,10 @@
 
 ## Regla común
 Cualquier formato sale de la **misma anatomía** y los **mismos componentes** — cambia la proporción y la safe-area. Eso es lo que hace que toda la cuenta se vea de la misma marca.
+
+## Movimiento (reels / TV)
+- **Entradas/salidas de texto:** suaves — fade o slide corto (0.2–0.4 s), con easing (nada brusco). El texto entra **después** del primer gancho visual.
+- **Reels:** el gancho en el primer segundo (la textura, el corte, el vapor). El titular sostiene ≥ 1.5 s legible. Audio con criterio (sin "loud").
+- **TV (loop):** movimiento **sutil** — push-in lento o vapor que sube; el texto fijo o con un fade. Loop 50–72 s, sin cortes bruscos.
+- **Qué NO se mueve:** el logo/badge (fijo) y el **producto real** (no deformarlo). Anima el ambiente (vapor, luz), no el producto.
+- Herramienta: Higgsfield (image→video / seedance) para el b-roll/mood; el texto se arma en Canva o en edición.
