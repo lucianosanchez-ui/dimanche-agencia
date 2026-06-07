@@ -48,4 +48,6 @@ Escala (sobre lienzo 1080 px), de mayor a menor:
 - **Sumar íconos nuevos** (mate, café, frío, fecha…): **diseñarlos matcheando este estilo** (plano, cobalto, brillo sutil, redondeado, simple). Probar en chico (que se entienda a 2 cm).
 - **Nunca** usar un dibujo hecho a código como ícono final — siempre los reales del Drive. (El sol que aparecía dibujado en la hoja de fundamentos era solo un placeholder, ya corregido.)
 
+**Cómo sumar un ícono nuevo (que quede igual al set):** los actuales son **vectores SVG editables** → usalos de **molde**. Diseñá el nuevo en Illustrator/Figma/Canva replicando el estilo (plano, 1 cobalto, brillo sutil, redondeado), exportá **PNG + SVG** en cobalto y en variante crema, y guardalo en `00_Marca/Elementos_Graficos`. *(Generarlo con IA en este estilo plano es lo más difícil de clavar; no es el camino principal. Si se prueba, pasale 2-3 íconos existentes como referencia de estilo y revisá bien antes de usar.)*
+
 > Estos son los átomos. Encima van los **componentes** (badge, bloque de titular, banner/cuadro, tag de precio, sticker, lockup) y los **templates por formato** — la capa siguiente.
