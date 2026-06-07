@@ -49,11 +49,12 @@ La primera prueba salió correcta pero **aburrida (sin gente) y con producto que
 - **El producto real NO se genera con IA** (se nota y rompe la confianza, REF-030). Para el producto: **foto real** (Drive `MKT - Dimanche` / `06_Marketing`, o pedir toma en *Activos a producir*). La IA se usa para **mood, escena, ambiente, gente en contexto y retoque** — o se combina (foto real del producto + escena/gente generada).
 - Apuntar a que **no parezca IA**: imperfección real, textura, desorden cálido de una mesa de verdad. Nada plástico ni perfecto.
 
-## REGLA DE ORO: nada real sin referencia real (decisión Luciano, no negociable)
-- **Todo lo identificable de Dimanche — el local, los productos, el mostrador, el equipo — NO se genera con IA inventada.** Se usa **foto/video real de Drive** (`MKT - Dimanche`, `06_Marketing`) o se le **pide la toma a Luciano**. Si no hay referencia real, no se hace.
-- La IA solo puede generar/retocar **lo genérico y NO reconocible**: texturas, fondos abstractos, mood, o personas/escenas anónimas que **no pretenden ser** el local ni el equipo de Dimanche. (Familia/escenas genéricas no conocidas: OK.)
-- Para piezas con producto: **foto real del producto** (Drive o pedida) + a lo sumo IA para fondo/escena genérica. **Nunca un producto inventado.**
-- Ante la duda de si algo es "reconocible como Dimanche" → tratalo como real → foto real o pedir a Luciano.
+## REGLA DE ORO: la IA siempre parte de algo real (decisión Luciano · act. 2026-06-05 · no negociable)
+- **La IA NUNCA inventa de cero.** Para cualquier pieza con producto, local o algo identificable de Dimanche, se parte SIEMPRE de una **referencia real**: una **foto nuestra** (Drive `MKT - Dimanche` / `06_Marketing`) o una **foto rápida del celu** que saque el equipo en el momento.
+- Sobre esa base real, la IA **mejora, ambienta y extiende** — estilo, fondo, luz, composición, movimiento. Lo que NUNCA hace es **fabricar un producto que no existe** ni inventar caras que se hagan pasar por el local/equipo real.
+- La IA sí genera/retoca libremente **lo genérico y no reconocible**: texturas, fondos, mood, o gente anónima que **no pretende ser** el local ni el equipo de Dimanche.
+- **Logo y texto van a mano** (Canva, Niveau Grotesk), nunca generados por IA. Sin emojis. Sin naranja.
+- Ante la duda → tratá la pieza como identificable → partí de una foto real (nuestra o del celu).
 - ⚠️ La imagen de prueba del 2026-06-02 estaba MAL: inventó un local que no es el de Dimanche. No repetir ese error.
 
 ## Reglas visuales base

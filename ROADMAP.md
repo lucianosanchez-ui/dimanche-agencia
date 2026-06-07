@@ -59,7 +59,7 @@ Herramientas conectadas y su rol. Todo pasa por **brand-check + gate** y respeta
 | Herramienta | Estado (05/06) | Rol en Dimanche |
 |---|---|---|
 | **Canva** | Conectada · brand kit **"Dimanche"** ✅ · **sin templates autollenables** ❌ | Piezas on-brand con **foto real**: carteles de mostrador, posts/stories IG, menús. Alto leverage: crear **brand templates con autofill**. |
-| **Higgsfield** | Conectada · **836 créditos** (plus) ✅ | Imagen/video **IA solo genérico/mood** (b-roll, ambiente), nunca producto/local real. Skill `dimanche-media`. Edición: reframe 9:16, clipper, upscale. |
+| **Higgsfield** | Conectada · **836 créditos** (plus) ✅ | Imagen/video: mejora/ambienta sobre **foto real** (nuestra o del celu) o genera **genérico/mood** (b-roll, ambiente); nunca un producto/local inventado. Skill `dimanche-media`. Edición: reframe 9:16, clipper, upscale. |
 | **Adobe** | Conectada | Retoque y resize de **fotos reales** por plataforma. |
 | **Gamma** | Conectada | Decks/docs internos (brand book, pitch). |
 | **Claude design** (canvas-design) | Skill | Arte/posters a medida para piezas especiales. |
@@ -73,7 +73,7 @@ Herramientas conectadas y su rol. Todo pasa por **brand-check + gate** y respeta
 ## 🧭 Reglas que no se rompen
 - **Brand book + contexto** = criterio primario de todos los agentes.
 - **Gate humano**: nada se publica sin tu aprobación. Todo nace Propuesto.
-- **Regla visual de oro**: nada identificable de Dimanche se genera con IA (foto real).
+- **Regla visual de oro**: la IA siempre parte de algo real (foto nuestra o del celu) y mejora sobre esa base; nunca inventa el producto/local.
 - **Notion = fuente de verdad.** Tono POL-010: sin marketinería, sin emojis.
 - **T2**: bajo volumen / alta calidad hasta emparejar la experiencia en mostrador.
 
