@@ -12,7 +12,7 @@
 - **Kraft AFUERA.** Ya no es el packaging. El packaging actual se está curando en el Drive → usar ESE (no kraft) para contexto/packaging.
 - **Criollos NO se venden por docena** → nada de pilas/abundancia.
 - **Menos precious.** El premium limpio es la identidad-piso; la expresión va más viva — pero sin pasarse de "loud" (el "Criollazos" gigante fue un overshoot, espantoso).
-- **La foto base es el techo de calidad.** La IA reestiliza el entorno, pero "se nota la IA" si la base es floja (las fotos viejas de `Editadas` no alcanzan). Prioridad: **una sesión de fotos propia buena**; y que la IA toque el producto lo mínimo (idealmente solo entorno/luz/fondo).
+- **El contenido real de Dimanche NO es hero de IA.** Es **foto real + capa gráfica de marca** (ícono + titular Niveau + badge "D") armada en Canva → ver **`design-system.md`** (grilla, tipo, elementos, anclas). La IA reestiliza el entorno solo cuando no tenés la toma, y parte siempre de algo real. **NADA de sesiones de fotos:** foto del celu, y se pide una mejor si hace falta. (Las viejas de `Editadas` son flojas → "se nota la IA" si se abusa de la generación.)
 - **Flujo validado:** foto real (Drive) → `nano_banana_2` image-to-image (media role `image`, 4:5, 2k, mantener el producto real) → texto y logo en Canva (Niveau) → brand-check → Propuesto.
 - **Iteración:** **boceto/mockup a mano primero (gratis) → aprobar el concepto → recién ahí generar.** No quemar créditos antes de que cierre.
 
