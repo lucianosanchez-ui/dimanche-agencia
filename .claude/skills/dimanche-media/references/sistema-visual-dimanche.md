@@ -6,6 +6,16 @@
 - El **norte visual** (cómo se ve Dimanche) es **estable a propósito** — no perseguimos cada moda; esa es la fuerza de marca.
 - Lo que se mueve y se actualiza son las **tácticas** (formatos, ganchos, a qué trend nos subimos), alimentadas por performance (Numa) y radar (Lola/Mateo/Rocco), **filtradas por el norte**.
 
+## Correcciones y aprendizajes (2026-06-07, sesión de validación)
+- **Todas las posibilidades, no un solo look.** El sistema da catálogo · contexto · macro · clásico · carrusel · story; se elige según el pedido. "El clásico" es la firma, no la única.
+- **"El clásico" = SOBRIO, no altar.** La versión museo (plato fino + mármol + luz dramática) salió **demasiado premium** → sirve a lo sumo para catálogo. La firma va sin plato, sobre superficie limpia, con un remate de texto con ingenio (deadpan, dato real sin adjetivos).
+- **Kraft AFUERA.** Ya no es el packaging. El packaging actual se está curando en el Drive → usar ESE (no kraft) para contexto/packaging.
+- **Criollos NO se venden por docena** → nada de pilas/abundancia.
+- **Menos precious.** El premium limpio es la identidad-piso; la expresión va más viva — pero sin pasarse de "loud" (el "Criollazos" gigante fue un overshoot, espantoso).
+- **La foto base es el techo de calidad.** La IA reestiliza el entorno, pero "se nota la IA" si la base es floja (las fotos viejas de `Editadas` no alcanzan). Prioridad: **una sesión de fotos propia buena**; y que la IA toque el producto lo mínimo (idealmente solo entorno/luz/fondo).
+- **Flujo validado:** foto real (Drive) → `nano_banana_2` image-to-image (media role `image`, 4:5, 2k, mantener el producto real) → texto y logo en Canva (Niveau) → brand-check → Propuesto.
+- **Iteración:** **boceto/mockup a mano primero (gratis) → aprobar el concepto → recién ahí generar.** No quemar créditos antes de que cierre.
+
 ## 1. Norte visual
 **Identidad base (constante):** limpio, prolijo y premium — el mundo de **Villa Allende**: superficies blancas, acero inox, mármol/granito blanco, mucho aire. Una **disciplina de color** estricta lo hace reconocible a un metro: cobalto `#3559E0` + crema `#E9E3D9`, **cero naranja**.
 

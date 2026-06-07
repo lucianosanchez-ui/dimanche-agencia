@@ -2,6 +2,15 @@
 
 ## 🟢 2026-06-07 — Estado actual (LEER ESTO PRIMERO)
 
+### 🎨 2026-06-07 (sesión 2) — AGENTE DE CONTENIDO: sistema visual V1 + motor creativo (ARRANCÓ)
+Se trabajó el frente de contenido en serio con Luciano. **Definido y guardado** en la skill `dimanche-media/references/sistema-visual-dimanche.md` + **MAN-021 (Notion)**:
+- **Sistema visual V1:** norte (limpio/premium Villa Allende + **dial por formato**: feed premium / reel cálido), mundo visual, **doctrina de realismo** ("real pero prolijo" + tells de IA), motivo (rotación de clásicos), cámara, consistencia, **recetas** copy-paste, **playbooks IG** (feed/reel/story).
+- **Motor creativo:** **"El clásico" = gesto-firma** (SOBRIO, no altar) + banco de conceptos (contexto, macro, refranero, abrilo, "olorcito a domingo un martes"). **Todas las posibilidades**, se elige por pedido.
+- **Validado con generación real** (nano_banana_2 desde foto real `pic-6` del Drive): el flujo anda (foto real → IA reestiliza entorno, producto real → texto en Canva). **PERO el techo de calidad es la foto base** — las de `Editadas` son flojas y "se nota la IA" → **FALTA UNA SESIÓN DE FOTOS PROPIA BUENA.** Pruebas en `~/Downloads/dimanche-slides/`.
+- **Correcciones de marca:** **kraft afuera** (ya no es el packaging; el actual se está curando en el Drive), **criollos NO por docena**, no pasarse de premium/"loud".
+- **Modo de trabajo nuevo:** **boceto a mano primero, no quemar créditos** hasta aprobar el concepto ([[mockup-antes-de-generar]]).
+- **Pendiente del frente:** bajar a TODO el contenido posible · **Remotion** (video por código: slides/loops de TV + reels templatizados con data real — combos/precios) · **experto por formato** · los **2 loops vivos** (mejora continua vía Numa + watch de plataforma/tendencias) · TV/folleto · y el gran objetivo: el **bot-productor** (que Luti genere y devuelva por Telegram).
+
 ### ⏭️ PRÓXIMA SESIÓN — frente grande: el BOT-PRODUCTOR (agente de contenido EN Telegram)
 Decisión de Luciano (07/06 PM): **TODO por Telegram** (Anto NO usa el Claude Code de Luciano). Luti pasa a ser el **jefe que además produce**: repregunta/refina → genera (incl. **imágenes**) → **devuelve por Telegram**. Sub-puntos:
 - **Imágenes por Telegram:** idea de Luciano → conectar un **Drive** y que el bot pase **links de Drive** (en vez de adjuntar el archivo). Generación con Higgsfield disparada desde n8n.
