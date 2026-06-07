@@ -4,6 +4,8 @@ Los agentes que **corren solos y reportan**. Cada uno escribe en la base Notion 
 
 ## Patrón común (4 nodos)
 
+> ⚠️ **NOTA (2026-06-05):** lo realmente construido en n8n NO usa HTTP a Anthropic ni caché. Usa el nodo nativo `lmChatAnthropic` (que **no** soporta `cache_control`) con un prompt de rol corto — el brand book **no** viaja embebido. La caché y el "brand kit cacheado" descritos abajo son **diseño aspiracional, no real**. Para tener caché habría que migrar a un nodo HTTP→`/v1/messages`. Ver memoria `n8n-caching-brand-book-no-reales`.
+
 ```
 [Schedule Trigger]  →  [Gather]  →  [Analizar con Claude]  →  [Escribir en Notion]
    cron semanal/        Apify /       HTTP → Anthropic API       Notion node (create
