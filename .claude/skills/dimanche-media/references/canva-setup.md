@@ -1,6 +1,6 @@
 # Armar Canva desde la base del Drive — setup (una sola vez)
 
-> Las **plantillas autollenables** de Canva se arman en la **UI** (la API no las crea). Es un setup de **una vez**; después Anto produce por autofill. Todo se sube **DESDE el Drive** (la base). El Brand Kit "Dimanche" **ya existe** (id `kAHGX3NlfR4`).
+> Las **plantillas autollenables** de Canva se arman en la **UI** (la API no las crea). Es un setup de **una vez**; después Anto produce por autofill. Todo se sube **DESDE el Drive** (la base). El Brand Kit "Dimanche" **ya existe** (id `kAHL68AYTxI`, en la cuenta de Luciano "L" — **NO** `kAHGX3NlfR4`, que era de otra cuenta con relleno genérico).
 
 ## Paso 1 — Completar el Brand Kit "Dimanche"
 Canva → **Brand Hub → Brand Kit "Dimanche"**:
