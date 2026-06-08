@@ -23,6 +23,7 @@ Orquestador `dimanche-mkt` (puerta única) + brand-check, copy, media, calendari
 - **Claude Code (skills, orquestadas por `dimanche-mkt`) = taller de producción pesada.** Acá se hace: campañas (`campana`→`local`), calendario del mes (`calendario`), imágenes/video (`media`), guiones (`guion`), brand-check formal (`brand-check`). Todo nace **Propuesto** (gate humano).
 - **Regla simple:** ajuste rápido → Luti. Producir una campaña/pieza en serio → Claude Code.
 - **Flujo de campaña (ej. Día del Padre / Mundial):** `dimanche-mkt` → `dimanche-campana` (objetivo + piezas) → `dimanche-calendario` (grilla) → `dimanche-media` (visuales sobre foto real) → `dimanche-local` (cartelería + comunicado) → `dimanche-brand-check` (valida) → **Propuesto** en Notion → aprueban → ejecuta.
+- **Proceso de producción de una pieza (paso a paso, para NO trabarse): `docs/proceso-contenido.md`.** El método visual ya está definido en las skills — seguirlo, no reinventarlo. **Producir piezas es de Claude Code, NO de Telegram** (decidido 08/06; el bot-productor por Telegram se probó y se descartó).
 
 ## Interfaz y motor
 Bot de Telegram (n8n + Claude + memoria Notion) · agentes autónomos en n8n Cloud + Scrapling en Railway. Ver `docs/infraestructura.md`.
