@@ -110,5 +110,11 @@ Abrilas, comparalas con lo que estés por proponer, y preguntate: ¿se parece a 
 - **No sabés si está en onda:** pasalo por el brand-check, para eso está.
 - **No tenés foto buena:** pedí una foto del celu mejor. No inventes ni uses una floja.
 - **Algo se ve genérico o frío:** decilo tal cual ("esto se ve frío / genérico / como cualquiera") y pedí que lo lleven con la onda Dimanche. Es exactamente el problema que esta onda viene a resolver.
-</content>
-</invoke>
+
+---
+
+## Esto está vivo — anotá lo que aprendés
+
+Esta onda **no es fija: mejora con lo que vos producís.** Cuando hagas una pieza y algo funcione muy bien o quede feo (una **letra**, una animación, un encuadre, un copy), **anotalo** — en Notion, en *Memoria & Aprendizajes*, en una línea: qué fue y por qué. Esos aprendizajes después se suben al sistema (la onda, las plantillas, esta guía) para que la próxima salga mejor.
+
+Si algo del motor todavía no está fino —por ejemplo, **la letra/animación de los reels está en desarrollo**— no te frenes: producí, marcá qué le falta, y se ajusta. Así la onda se afina **produciendo de verdad**, no adivinando.
