@@ -197,8 +197,9 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
   const vespaBob = Math.sin(frame / 6) * 4;
   const vespaOp = interpolate(frame, [0, 8, 150, 156], [0, 1, 1, 0], cl);
 
-  // Bolsa final (queda apoyada): aparece justo cuando termina el clip → continuidad.
-  const holdOp = interpolate(frame, [CLIP_END - 4, CLIP_END + 2], [0, 1], cl);
+  // Bolsa final (queda apoyada): va DETRAS del clip y llega a opacidad plena ANTES
+  // de que el clip termine → cuando el clip se desmonta, la bolsa ya está sólida (sin glitch).
+  const holdOp = interpolate(frame, [CLIP_END - 24, CLIP_END - 12], [0, 1], cl);
 
   // Texto (entra cuando la mano ya soltó / se va)
   const tEnter = (d: number) => {
@@ -227,12 +228,7 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
         <Img src={TV_DELIVERY.vespaSide} style={{ height: 320, width: "auto", display: "block" }} />
       </div>
 
-      {/* 2) Clip REAL: la mano ENTRA desde arriba, baja la bolsa, la apoya, suelta y se va */}
-      <Sequence from={CLIP_START} durationInFrames={CLIP_LEN}>
-        <ManoClip box={bagBox} />
-      </Sequence>
-
-      {/* 2b) Bolsa apoyada (ultimo frame del clip) — queda fija para el hold */}
+      {/* 2a) Bolsa apoyada (ultimo frame del clip) — va DETRAS, sólida antes de que el clip termine */}
       <Img
         src={staticFile("assets/tv/delivery-bolsa-final.png")}
         style={{
@@ -246,6 +242,11 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
           filter: "drop-shadow(0 16px 36px rgba(0,0,0,0.3))",
         }}
       />
+
+      {/* 2b) Clip REAL (ENCIMA de la bolsa fija): la mano entra desde arriba, baja la bolsa, suelta y se va */}
+      <Sequence from={CLIP_START} durationInFrames={CLIP_LEN}>
+        <ManoClip box={bagBox} />
+      </Sequence>
 
       {/* 3) Texto (crema, izquierda) */}
       <div style={{ position: "absolute", left: 130, top: 150 }}>
