@@ -315,7 +315,7 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
             transformOrigin: "left bottom",
           }}
         >
-          <Img src={TV_DELIVERY.qr} style={{ width: 300, height: 300, display: "block" }} />
+          <Img src={TV_DELIVERY.qr} style={{ width: 360, height: 360, display: "block" }} />
         </div>
         <div style={{ display: "flex", flexDirection: "column" }}>
           <div style={{ fontFamily: FONT_FAMILY, fontWeight: FONT_WEIGHTS.medium, fontSize: 30, letterSpacing: "0.18em", textTransform: "uppercase", color: CREMA, opacity: 0.78, marginBottom: 10 }}>
