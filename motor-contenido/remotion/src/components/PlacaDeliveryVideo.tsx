@@ -214,15 +214,16 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
   const qrScale = interpolate(ctaS, [0, 1], [0.6, 1]);
   const ctaOp = interpolate(ctaS, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
 
-  const bagBox = { left: BAG_CX, bottom: 52, width: 850, height: 1008 } as const;
+  // clip recortado al contenido (479x981); se apoya con la base de la bolsa en el piso.
+  const bagBox = { left: BAG_CX, bottom: 58, width: 500, height: 1024 } as const;
 
   return (
     <AbsoluteFill style={{ backgroundColor: COBALTO, overflow: "hidden" }}>
       {/* 1) Calle */}
       <Calle opacity={calleOp} freezeFrame={150} />
 
-      {/* 1) Vespa cruzando */}
-      <div style={{ position: "absolute", left: vespaX, top: GROUND - 248 + vespaBob, opacity: vespaOp }}>
+      {/* 1) Vespa cruzando — sobre la CALZADA (ruedas dentro de la franja de la calle) */}
+      <div style={{ position: "absolute", left: vespaX, top: 632 + vespaBob, opacity: vespaOp }}>
         <Img src={TV_DELIVERY.vespaSide} style={{ height: 320, width: "auto", display: "block" }} />
       </div>
 
