@@ -8,6 +8,7 @@
     "studio": "remotion studio",
     "render:reel": "remotion render Reel out/reel.mp4",
     "render:placatv": "remotion render PlacaTV out/placa-tv.mp4",
+    "render:looptv": "remotion render LoopTV out/loop-tv.mp4",
     "render": "remotion render",
     "upgrade": "remotion upgrade"
   },
