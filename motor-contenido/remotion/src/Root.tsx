@@ -203,7 +203,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="DeliveryVideo"
         component={PlacaDeliveryVideo}
-        durationInFrames={510} // 17 s @ 30fps (secuencia + hold largo del QR)
+        durationInFrames={540} // 18 s @ 30fps (calle + clip real de la mano + hold largo del QR)
         fps={FPS}
         width={1920}
         height={1080}

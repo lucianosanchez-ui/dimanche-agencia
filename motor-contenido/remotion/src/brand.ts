@@ -124,6 +124,7 @@ export const TV_DELIVERY = {
   // v2 (escena cobalto, vista lateral):
   vespaSide: staticFile("assets/tv/delivery-vespa-side.png"), // vespa de perfil + conductor + caja
   manoArriba: staticFile("assets/tv/delivery-mano-arriba.png"), // mano real que baja la bolsa desde arriba
+  manoVacia: staticFile("assets/tv/delivery-mano-vacia.png"), // misma mano, abierta/vacía (suelta y se va)
   bolsaParada: staticFile("assets/tv/delivery-bolsa-parada.png"), // bolsa real apoyada (cuando la mano se va)
   emblemaCrema: staticFile("assets/tv/emblema-crema.png"), // logo crema (para el local sobre cobalto)
   wordmarkCrema: staticFile("assets/tv/wordmark-crema.png"),

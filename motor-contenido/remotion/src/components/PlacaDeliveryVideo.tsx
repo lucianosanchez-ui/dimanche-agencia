@@ -1,26 +1,32 @@
 /**
- * PlacaDeliveryVideo — secuencia de delivery para la TV (16:9, ~17 s). v2 COBALTO.
+ * PlacaDeliveryVideo — secuencia de delivery para la TV (16:9, ~17 s). v3 COBALTO.
  *
- * Guion (definido con Luciano):
- *  1) Calle de Villa Allende ILUSTRADA (flat, vista lateral) sobre cobalto:
- *     casas + arboles + el LOCAL Dimanche. La Vespa (de perfil, con conductor y
- *     caja de delivery) cruza de IZQUIERDA a DERECHA y SALE del cuadro.
- *  2) "La realidad se mete en el dibujo": baja la BOLSA REAL desde arriba con una
- *     mano real, se apoya en el borde de abajo; la mano se va y la bolsa queda.
- *  3) Entra el texto (crema) con aire + el QR grande, fijo un buen rato.
+ * Guion (Luciano):
+ *  1) Calle de Villa Allende ILUSTRADA y PLANA (vista lateral) sobre cobalto:
+ *     casas CREMA/BLANCO (contraste, no azul sobre azul) + arboles + el LOCAL
+ *     Dimanche (blanco, con el emblema cobalto bien visible). La Vespa de perfil
+ *     (con conductor y caja) cruza de IZQUIERDA a DERECHA y SALE del cuadro; la
+ *     calle se FRENA cuando se va.
+ *  2) "La realidad entra al dibujo": baja la BOLSA REAL desde arriba con la mano,
+ *     se apoya en el borde de abajo; la mano se ABRE, SUELTA y se va VACIA; la
+ *     bolsa queda (sin duplicarse).
+ *  3) Entra el texto (crema, con aire) + el QR grande, fijo un buen rato.
  *
- * Sobre cobalto, la ilustracion va en crema/blanco + cobalto-claro. Export mudo.
+ * Texto crema. Export mudo.
  */
 
 import React from "react";
 import {
   AbsoluteFill,
   Img,
+  Sequence,
+  OffthreadVideo,
   useCurrentFrame,
   useVideoConfig,
   interpolate,
   spring,
   Easing,
+  staticFile,
 } from "remotion";
 import {
   FONT_FAMILY,
@@ -29,6 +35,7 @@ import {
   CREMA,
   COLORS,
   TV_DELIVERY,
+  TV_GRAFICA,
 } from "../brand";
 
 export type PlacaDeliveryVideoProps = {
@@ -45,24 +52,17 @@ export const placaDeliveryVideoDefaultProps: PlacaDeliveryVideoProps = {
   numero: "+54 9 351 663 9003",
 };
 
-const GROUND = 728; // donde apoyan las casas / vereda
-const ROAD_TOP = 800;
-
+const GROUND = 760;
+const ROAD_TOP = 832;
 const CL = COLORS.cobaltoClaro; // #D6DEFB
 const CD = COLORS.cobaltoOscuro; // #2843A8
+const WHITE = "#FFFFFF";
 
-/** Una casa flat (pared + techo a dos aguas + ventanas + puerta). */
-const Casa: React.FC<{
-  x: number;
-  w: number;
-  h: number;
-  wall: string;
-  roof: string;
-}> = ({ x, w, h, wall, roof }) => {
-  const roofH = Math.round(w * 0.42);
+/** Casa flat: pared crema/blanco, techo light-cobalt, ventanas/puerta cobalto. */
+const Casa: React.FC<{ x: number; w: number; h: number; wall: string }> = ({ x, w, h, wall }) => {
+  const roofH = Math.round(w * 0.4);
   return (
     <div style={{ position: "absolute", left: x, top: GROUND - h, width: w, height: h }}>
-      {/* techo a dos aguas */}
       <div
         style={{
           position: "absolute",
@@ -72,92 +72,76 @@ const Casa: React.FC<{
           height: 0,
           borderLeft: `${w / 2 + 12}px solid transparent`,
           borderRight: `${w / 2 + 12}px solid transparent`,
-          borderBottom: `${roofH}px solid ${roof}`,
+          borderBottom: `${roofH}px solid ${CL}`,
         }}
       />
-      {/* pared */}
       <div style={{ position: "absolute", inset: 0, backgroundColor: wall, borderRadius: 3 }} />
-      {/* ventanas */}
-      <div style={{ position: "absolute", left: w * 0.18, top: h * 0.22, width: w * 0.22, height: w * 0.22, backgroundColor: COBALTO, borderRadius: 3, opacity: 0.85 }} />
-      <div style={{ position: "absolute", right: w * 0.18, top: h * 0.22, width: w * 0.22, height: w * 0.22, backgroundColor: COBALTO, borderRadius: 3, opacity: 0.85 }} />
-      {/* puerta */}
-      <div style={{ position: "absolute", left: "50%", bottom: 0, transform: "translateX(-50%)", width: w * 0.24, height: h * 0.42, backgroundColor: CD, borderRadius: "4px 4px 0 0" }} />
+      <div style={{ position: "absolute", left: w * 0.18, top: h * 0.24, width: w * 0.2, height: w * 0.2, backgroundColor: COBALTO, borderRadius: 3 }} />
+      <div style={{ position: "absolute", right: w * 0.18, top: h * 0.24, width: w * 0.2, height: w * 0.2, backgroundColor: COBALTO, borderRadius: 3 }} />
+      <div style={{ position: "absolute", left: "50%", bottom: 0, transform: "translateX(-50%)", width: w * 0.22, height: h * 0.4, backgroundColor: CD, borderRadius: "4px 4px 0 0" }} />
     </div>
   );
 };
 
-/** Arbol flat (copa + tronco). */
-const Arbol: React.FC<{ x: number; size: number; color: string }> = ({ x, size, color }) => (
-  <div style={{ position: "absolute", left: x, top: GROUND - size * 1.45 }}>
-    <div style={{ position: "absolute", left: size * 0.42, top: size, width: size * 0.16, height: size * 0.55, backgroundColor: CD, borderRadius: 3 }} />
-    <div style={{ width: size, height: size * 1.1, backgroundColor: color, borderRadius: "50%" }} />
+const Arbol: React.FC<{ x: number; size: number }> = ({ x, size }) => (
+  <div style={{ position: "absolute", left: x, top: GROUND - size * 1.5 }}>
+    <div style={{ position: "absolute", left: size * 0.42, top: size, width: size * 0.16, height: size * 0.6, backgroundColor: CD, borderRadius: 3 }} />
+    <div style={{ width: size, height: size * 1.05, backgroundColor: CREMA, borderRadius: "50%" }} />
   </div>
 );
 
-const CalleLateral: React.FC<{ opacity: number }> = ({ opacity }) => {
+const Calle: React.FC<{ opacity: number; freezeFrame: number }> = ({ opacity, freezeFrame }) => {
   const frame = useCurrentFrame();
+  const motionF = Math.min(frame, freezeFrame); // la calle se FRENA al llegar la bolsa
 
-  // Casas (la primera, a la izquierda, es el local Dimanche).
   const casas = [
-    { x: 470, w: 180, h: 196, wall: CREMA, roof: CD },
-    { x: 700, w: 150, h: 150, wall: "#FFFFFF", roof: CL },
-    { x: 980, w: 200, h: 214, wall: CREMA, roof: CD },
-    { x: 1240, w: 160, h: 168, wall: "#FFFFFF", roof: CL },
-    { x: 1470, w: 185, h: 200, wall: CREMA, roof: CD },
-    { x: 1720, w: 150, h: 150, wall: "#FFFFFF", roof: CL },
+    { x: 470, w: 175, h: 188, wall: CREMA },
+    { x: 690, w: 150, h: 150, wall: WHITE },
+    { x: 980, w: 195, h: 205, wall: WHITE },
+    { x: 1240, w: 160, h: 165, wall: CREMA },
+    { x: 1470, w: 180, h: 195, wall: WHITE },
+    { x: 1720, w: 150, h: 150, wall: CREMA },
   ];
   const arboles = [
-    { x: 388, size: 96, color: CL },
-    { x: 905, size: 84, color: CL },
-    { x: 1410, size: 92, color: CL },
-    { x: 1672, size: 80, color: CL },
+    { x: 392, size: 92 },
+    { x: 905, size: 80 },
+    { x: 1418, size: 88 },
+    { x: 1676, size: 78 },
   ];
-
-  // Rayas de la calle corriendo a la izquierda (la vespa va a la derecha).
   const dashes = Array.from({ length: 16 });
 
   return (
     <AbsoluteFill style={{ opacity, pointerEvents: "none" }}>
-      {/* Sol + nubes en el cielo (relleno sutil; el sol a la derecha para no chocar el titular) */}
-      <div style={{ position: "absolute", left: 1660, top: 96, width: 120, height: 120, borderRadius: "50%", backgroundColor: CREMA, opacity: 0.85 }} />
-      <div style={{ position: "absolute", left: 1320, top: 150, width: 220, height: 50, borderRadius: 40, backgroundColor: CL, opacity: 0.55 }} />
-      <div style={{ position: "absolute", left: 980, top: 230, width: 170, height: 42, borderRadius: 30, backgroundColor: CL, opacity: 0.4 }} />
+      {/* sol + nubes (crema/blanco) a la derecha para no chocar el titular */}
+      <div style={{ position: "absolute", left: 1670, top: 90, width: 116, height: 116, borderRadius: "50%", backgroundColor: CREMA }} />
+      <div style={{ position: "absolute", left: 1330, top: 150, width: 210, height: 48, borderRadius: 40, backgroundColor: WHITE, opacity: 0.85 }} />
 
-      {/* Arboles atras */}
       {arboles.map((a, i) => (
         <Arbol key={`a${i}`} {...a} />
       ))}
-
-      {/* Casas */}
       {casas.map((c, i) => (
         <Casa key={`c${i}`} {...c} />
       ))}
 
-      {/* LOCAL Dimanche (a la izquierda): facha cobalto + toldo + logo crema */}
-      <div style={{ position: "absolute", left: 120, top: GROUND - 232, width: 250, height: 232 }}>
-        {/* techo plano */}
-        <div style={{ position: "absolute", left: -10, top: -30, width: 270, height: 34, backgroundColor: CD, borderRadius: 6 }} />
-        {/* pared cobalto */}
-        <div style={{ position: "absolute", inset: 0, backgroundColor: COBALTO, borderRadius: 4, border: `3px solid ${CD}` }} />
-        {/* wordmark crema */}
-        <Img src={TV_DELIVERY.wordmarkCrema} style={{ position: "absolute", left: 28, top: 30, width: 194, height: "auto" }} />
-        {/* vidriera */}
-        <div style={{ position: "absolute", left: 30, bottom: 0, width: 86, height: 120, backgroundColor: CL, opacity: 0.85, borderRadius: "4px 4px 0 0" }} />
-        {/* puerta */}
-        <div style={{ position: "absolute", right: 30, bottom: 0, width: 74, height: 134, backgroundColor: CREMA, borderRadius: "4px 4px 0 0" }} />
+      {/* LOCAL Dimanche: facha BLANCA + toldo cobalto + emblema cobalto grande */}
+      <div style={{ position: "absolute", left: 120, top: GROUND - 250, width: 268, height: 250 }}>
+        <div style={{ position: "absolute", inset: 0, backgroundColor: WHITE, borderRadius: 4 }} />
         {/* toldo */}
-        <div style={{ position: "absolute", left: -6, top: 96, width: 262, height: 26, backgroundColor: CREMA, borderRadius: 6 }} />
+        <div style={{ position: "absolute", left: -8, top: 92, width: 284, height: 24, backgroundColor: COBALTO, borderRadius: 5 }} />
+        {/* emblema cobalto grande (la marca, bien visible) */}
+        <Img src={TV_GRAFICA.emblema} style={{ position: "absolute", left: "50%", top: 14, transform: "translateX(-50%)", height: 78, width: "auto" }} />
+        {/* vidriera + puerta */}
+        <div style={{ position: "absolute", left: 26, bottom: 0, width: 78, height: 116, backgroundColor: CL, borderRadius: "4px 4px 0 0" }} />
+        <div style={{ position: "absolute", right: 30, bottom: 0, width: 68, height: 128, backgroundColor: COBALTO, borderRadius: "4px 4px 0 0" }} />
       </div>
 
-      {/* Vereda */}
-      <div style={{ position: "absolute", left: 0, top: GROUND, width: 1920, height: ROAD_TOP - GROUND, backgroundColor: CREMA, opacity: 0.92 }} />
-      {/* Calzada */}
+      {/* vereda + calzada */}
+      <div style={{ position: "absolute", left: 0, top: GROUND, width: 1920, height: ROAD_TOP - GROUND, backgroundColor: CREMA, opacity: 0.9 }} />
       <div style={{ position: "absolute", left: 0, top: ROAD_TOP, width: 1920, height: 1080 - ROAD_TOP, backgroundColor: CD }} />
-      {/* Rayas */}
       {dashes.map((_, i) => {
-        const x = (((i * 170 - frame * 7) % 2720) + 2720) % 2720 - 360;
+        const x = (((i * 170 - motionF * 7) % 2720) + 2720) % 2720 - 360;
         return (
-          <div key={`d${i}`} style={{ position: "absolute", left: x, top: 936, width: 86, height: 13, backgroundColor: CREMA, opacity: 0.85, borderRadius: 3 }} />
+          <div key={`d${i}`} style={{ position: "absolute", left: x, top: 952, width: 86, height: 13, backgroundColor: CREMA, opacity: 0.85, borderRadius: 3 }} />
         );
       })}
     </AbsoluteFill>
@@ -174,86 +158,85 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
   const { fps } = useVideoConfig();
   const cl = { extrapolateLeft: "clamp" as const, extrapolateRight: "clamp" as const };
 
-  // Calle: full hasta que aterriza la bolsa, despues se atenua para dar aire al texto.
-  const calleOp = interpolate(frame, [0, 12, 205, 245], [0, 1, 1, 0.28], cl);
+  const BAG_CX = 1300; // la bolsa queda a la derecha (deja la izquierda al texto)
+  const CLIP_START = 150; // arranca el clip real de la mano (tras salir la vespa)
+  const CLIP_LEN = 152; // ~5 s del clip real (121f @24fps)
+  const CLIP_END = CLIP_START + CLIP_LEN;
 
-  // Vespa: cruza de izq a der y sale.
+  // Calle: full durante el viaje; se atenua para dar aire al texto.
+  const calleOp = interpolate(frame, [0, 12, CLIP_END - 6, CLIP_END + 24], [0, 1, 1, 0.18], cl);
+
+  // Vespa cruza y sale.
   const vespaX = interpolate(frame, [0, 150], [-460, 2320], { ...cl, easing: Easing.inOut(Easing.sin) });
   const vespaBob = Math.sin(frame / 6) * 4;
+  const vespaOp = interpolate(frame, [0, 8, 150, 156], [0, 1, 1, 0], cl);
 
-  // Mano+bolsa: baja desde arriba (135) y apoya (~205); luego la mano se va (215->255).
-  const bagDownY = interpolate(frame, [135, 205], [-1180, 0], { ...cl, easing: Easing.out(Easing.cubic) });
-  const handLeaveY = interpolate(frame, [216, 256], [0, -1260], { ...cl, easing: Easing.in(Easing.cubic) });
-  const manoY = bagDownY + handLeaveY;
+  // Bolsa final (queda apoyada): aparece justo cuando termina el clip → continuidad.
+  const holdOp = interpolate(frame, [CLIP_END - 4, CLIP_END + 2], [0, 1], cl);
 
-  // Bolsa parada: aparece cuando la mano la suelta.
-  const standOp = interpolate(frame, [206, 230], [0, 1], cl);
-
-  // Texto
+  // Texto (entra cuando la mano ya soltó / se va)
   const tEnter = (d: number) => {
     const s = spring({ frame: frame - d, fps, config: { damping: 200 } });
     return { opacity: interpolate(s, [0, 1], [0, 1]), y: interpolate(s, [0, 1], [22, 0]) };
   };
-  const chip = spring({ frame: frame - 286, fps, config: { damping: 12, mass: 0.6, stiffness: 120 } });
+  const chip = spring({ frame: frame - (CLIP_END + 28), fps, config: { damping: 12, mass: 0.6, stiffness: 120 } });
   const chipScale = interpolate(chip, [0, 1], [0.7, 1]);
   const chipOp = interpolate(chip, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
 
   // CTA / QR
-  const ctaS = spring({ frame: frame - 308, fps, config: { damping: 16 } });
+  const ctaS = spring({ frame: frame - (CLIP_END + 46), fps, config: { damping: 16 } });
   const qrScale = interpolate(ctaS, [0, 1], [0.6, 1]);
   const ctaOp = interpolate(ctaS, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
 
-  const BAG_CX = 1330; // centro horizontal del aterrizaje
+  const bagBox = { left: BAG_CX, bottom: 56, width: 858, height: 968 } as const;
 
   return (
     <AbsoluteFill style={{ backgroundColor: COBALTO, overflow: "hidden" }}>
-      {/* 1) Calle ilustrada */}
-      <CalleLateral opacity={calleOp} />
+      {/* 1) Calle */}
+      <Calle opacity={calleOp} freezeFrame={150} />
 
       {/* 1) Vespa cruzando */}
-      <div
-        style={{
-          position: "absolute",
-          left: vespaX,
-          top: GROUND - 250 + vespaBob,
-        }}
-      >
-        <Img src={TV_DELIVERY.vespaSide} style={{ height: 330, width: "auto", display: "block" }} />
+      <div style={{ position: "absolute", left: vespaX, top: GROUND - 248 + vespaBob, opacity: vespaOp }}>
+        <Img src={TV_DELIVERY.vespaSide} style={{ height: 320, width: "auto", display: "block" }} />
       </div>
 
-      {/* 2) Bolsa parada (queda cuando la mano se va) */}
+      {/* 2) Clip REAL: la mano baja la bolsa, la apoya, suelta y se va (verde keyeado → webm alfa) */}
+      <Sequence from={CLIP_START} durationInFrames={CLIP_LEN}>
+        <OffthreadVideo
+          src={staticFile("assets/tv/delivery-mano-real.webm")}
+          transparent
+          muted
+          style={{
+            position: "absolute",
+            left: bagBox.left,
+            bottom: bagBox.bottom,
+            width: bagBox.width,
+            height: bagBox.height,
+            transform: "translateX(-50%)",
+            filter: "drop-shadow(0 16px 36px rgba(0,0,0,0.3))",
+          }}
+        />
+      </Sequence>
+
+      {/* 2b) Bolsa apoyada (ultimo frame del clip) — queda fija para el hold */}
       <Img
-        src={TV_DELIVERY.bolsaParada}
+        src={staticFile("assets/tv/delivery-bolsa-final.png")}
         style={{
           position: "absolute",
-          left: BAG_CX,
-          bottom: 8,
-          height: 560,
-          width: "auto",
+          left: bagBox.left,
+          bottom: bagBox.bottom,
+          width: bagBox.width,
+          height: bagBox.height,
           transform: "translateX(-50%)",
-          opacity: standOp,
-          filter: "drop-shadow(0 18px 40px rgba(0,0,0,0.28))",
+          opacity: holdOp,
+          filter: "drop-shadow(0 16px 36px rgba(0,0,0,0.3))",
         }}
       />
 
-      {/* 2) Mano real bajando la bolsa desde arriba */}
-      <Img
-        src={TV_DELIVERY.manoArriba}
-        style={{
-          position: "absolute",
-          left: BAG_CX,
-          bottom: -20,
-          height: 1000,
-          width: "auto",
-          transform: `translateX(-50%) translateY(${manoY}px)`,
-          filter: "drop-shadow(0 18px 40px rgba(0,0,0,0.25))",
-        }}
-      />
-
-      {/* 3) Texto (crema, izquierda, en el cielo despejado) */}
+      {/* 3) Texto (crema, izquierda) */}
       <div style={{ position: "absolute", left: 130, top: 150 }}>
         {titular.map((linea, i) => {
-          const e = tEnter(250 + i * 10);
+          const e = tEnter(CLIP_END + 4 + i * 10);
           return (
             <div
               key={i}
@@ -295,7 +278,7 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
         </div>
       </div>
 
-      {/* 4) CTA: QR grande + numero (abajo-izquierda) */}
+      {/* 4) CTA: QR + numero (abajo-izquierda) */}
       <div
         style={{
           position: "absolute",
@@ -309,7 +292,7 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
       >
         <div
           style={{
-            backgroundColor: "#FFFFFF",
+            backgroundColor: WHITE,
             padding: 20,
             borderRadius: 22,
             boxShadow: "0 14px 36px rgba(0,0,0,0.3)",
