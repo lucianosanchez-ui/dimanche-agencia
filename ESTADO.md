@@ -20,6 +20,8 @@
 
 **Guardado:** commit `3b64b3a` en `main` (local; el push a remoto quedó pendiente de autorización explícita del clasificador). **Ejemplos del motor probados (sesión 9, en `~/Downloads/dimanche-slides/`):** `placa-ejemplo-completa.png` = placa estática completa compuesta por código con PIL (foto premium + titular Niveau + acento cobalto + tagline + wordmark, **sin Canva**) → prueba de concepto del "pieza lista para publicar"; + video del **humito** (Higgsfield `seedance_2_0` image→video sobre el hero) → prueba de que el movimiento de producto ya se puede hoy. Falta: las plantillas afinadas (zonas seguras) + el motor de video data-driven para placas tipo TV.
 
+**MOTOR DE VIDEO + ARSENAL HIGGSFIELD (sesión 9):** test de realismo con foto real de croissants (`_JFZ6268`) y 4 modelos top → **Luciano eligió KLING 3.0 (`mode:pro`) como motor de video por default** (alt: Veo 3.1 ultra; Cinema 3.0; Hailuo salió cuadrado). **Regla:** el video SIEMPRE parte de **foto real** (Kling i2v), nunca de un hero IA (arrastra tells). **Se mapeó TODO el arsenal de Higgsfield** (pedido de Luciano: no encerrarse en lo "clásico", revisar constantemente) → nuevo **`dimanche-media/references/higgsfield-arsenal.md`** + bajado a SKILL/herramientas/motor-de-composicion + memoria [[higgsfield-arsenal]]. **"Angles" validado** (edición Nano Banana Pro/Seedream: otras tomas —top-down, macro— desde 1 foto real, producto idéntico). **Marketing Studio VIDEO (Hyper Motion/TV Spot = el "vibe motion") da 500 por MCP → va por la app web de Higgsfield** (pendiente: cargar Brand Kit Dimanche en la app). Videos del test (Kling/Veo/Cinema/Hailuo) + angles + ejemplos en `~/Downloads/dimanche-slides/`.
+
 ---
 
 ## 🟢 2026-06-08 (sesión 8 — "agencia mkt 8")

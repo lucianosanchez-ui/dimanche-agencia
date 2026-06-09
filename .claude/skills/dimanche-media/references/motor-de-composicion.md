@@ -4,7 +4,7 @@
 
 ## El principio
 Dos capas, cada una con su responsable:
-1. **HERO (la foto) → IA.** Higgsfield / Nano Banana genera el hero premium **anclado a una foto real del producto** (regla de oro: el producto se mantiene intacto, el fondo lo construye el prompt — norte Villa Allende). Ver `herramientas.md` y `sistema-visual-dimanche.md`.
+1. **HERO (la foto o el CLIP) → Higgsfield.** Para imagen: Nano Banana / Seedream generan el hero premium **anclado a una foto real del producto** (el producto se mantiene intacto, el fondo lo construye el prompt). Para **video**: el clip en movimiento (humito, push-in) lo hace **Higgsfield i2v — Kling 3.0 por default** (ganó el test de realismo 08/06), partiendo SIEMPRE de una foto real. Catálogo completo y "cuándo usar cada cosa" en **`higgsfield-arsenal.md`**; recetas en `herramientas.md` y norte en `sistema-visual-dimanche.md`.
 2. **CAPA GRÁFICA (texto + logo + íconos + badge + acento azul) → CÓDIGO.** Se compone programáticamente sobre el hero, con Niveau embebida y los assets reales del Drive. El resultado es el archivo final listo para publicar.
 
 **Por qué así (y no las dos alternativas que descartamos):**

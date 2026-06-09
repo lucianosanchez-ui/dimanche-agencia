@@ -14,7 +14,9 @@
 | Para… | Herramienta | MCP / dónde |
 |---|---|---|
 | Escena/mood/fondo/textura IA (imagen) | **Higgsfield** | `generate_image` |
-| Video corto, movimiento de cámara, efectos | **Higgsfield** | `generate_video`, `reframe`, presets |
+| Video de producto, movimiento, humito | **Higgsfield i2v — Kling 3.0 (`pro`)** por default (ganó test 08/06) | desde **foto real**; alt: Veo 3.1 ultra. Ver `higgsfield-arsenal.md` |
+| Variar tomas/ángulos desde 1 foto, cambiar fondo | **Higgsfield edición** (Nano Banana Pro / Seedream) | "Angles" — mismo producto, otro ángulo |
+| Íconos / mockups de packaging on-brand | **Recraft 4.1** | vector/utility + paleta #hex |
 | Meter foto real de producto en la escena, logo, texto correcto | **Nano Banana** (vía Higgsfield) | `generate_image` con multi-referencia / Higgsfield "Nano Banana" |
 | Layout final con texto, logo, íconos y badge | **Composición POR CÓDIGO** (Satori/PIL para estáticas, Remotion para video/TV) | ver `motor-de-composicion.md`. Canva queda AFUERA de todo. |
 | Retoque/resize de foto real | **Adobe** | skills adobe-* |

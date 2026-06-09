@@ -34,6 +34,8 @@ El look de Dimanche **no** es "panadería beige hogareña" genérica, **ni "fond
 - `brand/20-brand-visual-kit.md` — vocabulario visual, paleta, luz, tipos de toma, framework de 6 capas de Dimanche.
 - `brand/00-brand-book.md` — qué es Dimanche, qué NO es. `brand/10-contexto-negocio.md` — negocio y buyer personas.
 - Si dudás del visual oficial: REF-002 y REF-030 en Notion (DB Documentos).
+- **`references/higgsfield-arsenal.md` — TODO lo que Higgsfield puede hacer y CUÁNDO usar cada cosa (video = Kling 3.0; "angles"/variar tomas = edición Nano Banana/Seedream; íconos/packaging = Recraft; reframe; upscale; virality). Mapa vivo: revisalo y sumá lo nuevo (Higgsfield cambia casi a diario).**
+- **Video: cuando se pide un video, el default es Kling 3.0 (`mode:pro`) desde una FOTO REAL, movimiento sutil, producto intacto. Ver el flujo en `higgsfield-arsenal.md`.**
 
 ## El proceso — de la idea a la pieza publicada
 
@@ -67,7 +69,9 @@ Catálogos completos de keywords (verbatim en inglés) + plantilla de ensamblaje
 |---|---|---|
 | Escena/mood/fondo/textura IA | **Higgsfield** (`generate_image`) | Tu stack principal (836 créditos). Mobile-first, fácil. |
 | Meter foto real de producto en escena / logo / texto correcto | **Nano Banana** (vía Higgsfield) | Multi-referencia precisa; consistencia de objeto/texto. **Clave para la regla de oro.** |
-| Video corto (3-5s), movimiento de cámara, efectos | **Higgsfield** (`generate_video`, `reframe`, presets) | Empezá por imagen base. |
+| Video corto, movimiento de producto/cámara, humito | **Higgsfield i2v — Kling 3.0 (`pro`)** por default (ganó el test 08/06) | Empezá SIEMPRE por una **foto real**. Ver `references/higgsfield-arsenal.md`. |
+| Variar tomas/ángulos desde 1 foto · cambiar fondo | **Higgsfield edición** (Nano Banana Pro / Seedream) | "Angles": mismo producto, otro ángulo, sin sesión nueva. |
+| Íconos / mockups de packaging on-brand | **Recraft 4.1** (vector/utility, paleta #hex) | Para los elementos gráficos. |
 | Pieza final con texto + logo + íconos + badge (post, story, carrusel, cartel, placa) | **Motor por código** — **Satori/PIL** (estáticas), **Remotion** (video/TV) | Compone la capa gráfica sobre el hero, Niveau embebida, assets reales del Drive. Texto/logo nunca IA ni a mano. **Canva afuera.** Ver `references/motor-de-composicion.md`. |
 | Retoque/resize de foto real por plataforma | **Adobe** | Sobre material real. |
 | Loops / texto-a-video | Sora (opcional) | Bueno para loops. |
