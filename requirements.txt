@@ -2,3 +2,4 @@ scrapling[fetchers]>=0.4.8
 fastapi>=0.115
 uvicorn[standard]>=0.34
 notion-client>=2.2
+Pillow>=11.0
