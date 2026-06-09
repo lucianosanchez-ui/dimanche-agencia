@@ -20,7 +20,7 @@ Un "diccionario" que traduce la personalidad de marca a keywords que la IA entie
 - Filtros: color (Claro | Suave | Alto contraste | Monocromático) · saturación (Viva | Desaturada | Natural | Vintage) · luminosidad (Clara y aireada | Oscura | Equilibrada | High key).
 - Movimiento (video): animación (Fluida | Dinámica | Rápida | Lenta) · transiciones (Fundidos | Lateral | Vertical | Zoom) · energía (Estática | Suave | Dinámica | Enérgica).
 
-**Dimanche (ya definido — resumen):** personalidad cálida, simple, auténtica, anti-pretensión; paleta `#3559E0` azul + `#E9E3D9` crema, **sin naranja**; foto natural/suave, ambiente homey/minimalista limpio, motivo producto+lifestyle; clara y aireada; mood "domingo, antojable". Detalle completo en `brand/20-brand-visual-kit.md`.
+**Dimanche (ya definido — resumen):** personalidad cálida, simple, auténtica, anti-pretensión; paleta `#3559E0` azul cobalto + `#E9E3D9` crema, **sin naranja**; mundo premium-yet-warm de Villa Allende — white marble, brushed stainless steel, clean airy daylight, mucho aire; un solo objeto cobalto de firma real con sentido por toma; motivo producto+lifestyle; clara y aireada. Detalle completo en `brand/20-brand-visual-kit.md` y en `references/sistema-visual-dimanche.md` (norte canónico). Cierre de todo prompt: `photorealistic, no text, no logo, no orange`.
 
 ## Brand AI-Readiness Check (20 preguntas)
 Diagnóstico de si la marca tiene base para traducirse a IA con consistencia. Respondé **SÍ=3 / PARCIALMENTE=1 / NO=0** (máx 60). **Ojo pregunta 7: puntaje invertido.**

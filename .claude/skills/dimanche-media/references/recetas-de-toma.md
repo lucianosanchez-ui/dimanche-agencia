@@ -70,21 +70,21 @@ Patrón: macro 70–100mm f/3.2–8, crop muy cerrado, "surface detail and reali
 
 ## Adaptación Dimanche (food)
 
-Construidas con las 6 capas + paleta azul/crema (sin naranja) + mood warm/homey/Sunday. **Generás la ESCENA con IA; la foto REAL del pan/factura se compone encima (Nano Banana/Canva).** Por eso estos prompts describen el set/fondo/luz, con un placeholder del producto.
+Construidas con las 6 capas + paleta cobalto/crema (sin naranja). **Base premium-limpia:** white marble / brushed stainless steel / clean airy daylight — **nunca** madera "flour-dusted" ni mood "homey/Sunday" como base (madera/lino solo como acento explícito en reels). **La foto real aporta el PRODUCTO, no el fondo** (decidido 2026-06-08): la escena premium la construye el PROMPT; el producto real se compone encima (Nano Banana, NO Canva). Por eso estos prompts describen el set/fondo/luz, con un placeholder del producto. El objeto cobalto, cuando aparece, es **real y con sentido** (la taza de quien toma el café, el packaging, un detalle del local), nunca un prop decorativo de relleno.
 
 **Food studio / product hero (escena para componer el producto real):**
-> Food studio shot of an empty cream-toned ceramic plate on a flour-dusted light wood table, soft linen napkin in muted blue to the side, a few scattered crumbs catching the light. Background: warm neutral beige, softly blurred. Soft diffused window light from the left, gentle shadows, warm homey Sunday morning atmosphere. Shot on a Canon EOS R5 with a 100mm macro lens at f/4, shallow depth of field. Editorial food photography, photorealistic, no text, no logo. — *(luego: componer la foto real de la factura/pan sobre el plato).* 
+> Food studio shot of an empty cream-toned ceramic plate on a white marble surface with brushed stainless steel, one real cobalt-blue (#3559E0) signature object in frame (a cup or packaging that belongs in the scene), warm cream (#E9E3D9) accent, a few scattered crumbs catching the light. Background: clean neutral white, softly blurred. Bright clean airy daylight from the left, gentle soft shadows. Shot on a Canon EOS R5 with a 100mm macro lens at f/4, shallow depth of field. Editorial food photography, photorealistic, no text, no logo, no orange. — *(luego: componer la foto real de la factura/pan sobre el plato).* 
 
-**Product in context / cozy interior (mood de domingo):**
-> Cozy interior scene, a warm breakfast table near a window with morning light, steaming coffee cup in soft focus, open book, muted blue and cream palette, flour-dusted wooden surface, linen textures. 35mm lens at f/2.8, natural directional light, atmospheric haze, intimate and homey mood. Photorealistic, no text. — *(componer producto real).* 
+**Product in context / mesa-ritual (reel/story, cálido):**
+> Breakfast table near a window with warm morning light, steaming coffee in a real cobalt-blue (#3559E0) cup in soft focus (the cup of whoever is having coffee — a signature object with a reason to be there), clean light surface with a wood or linen accent only (warming touch, not the base), cream palette. 35mm lens at f/2.8, natural directional morning light, soft shadows and texture, intimate but tidy mood. Photorealistic, no text, no logo, no orange. — *(componer producto real).* 
 
 **Flat lay (cenital para mostrador/promo):**
-> Top-down flat lay on a soft cream linen background, negative space for product, scattered flour and a few wheat stalks, a small ceramic dish with a blue rim, soft even overhead light, gentle shadows, warm minimal Sunday aesthetic. 50mm macro lens at f/5.6. Photorealistic, no text, no logo. — *(componer productos reales en la zona de negative space).* 
+> Top-down flat lay on a white marble surface, generous negative space for product, one real cobalt-blue (#3559E0) signature object (a small ceramic dish or cup that belongs in the scene), warm cream (#E9E3D9) accent, bright clean even overhead daylight, gentle soft shadows, minimal premium aesthetic. 50mm macro lens at f/5.6. Photorealistic, no text, no logo, no orange. — *(componer productos reales en la zona de negative space).* 
 
 **Textura (macro de miga/corteza — solo si es producto genérico, o sobre foto real con Adobe):**
-> Extreme macro texture shot of golden bread crust, light raking across the surface revealing crackle and air pockets, warm side light, fine film grain, shallow depth of field, 100mm macro at f/3.5, tactile and appetizing. Photorealistic, no text. — *(para producto identificable, mejor macro de la foto REAL retocada en Adobe).* 
+> Extreme macro texture shot of golden bread crust, light raking across the surface revealing crackle and air pockets, warm side light, fine film grain, shallow depth of field, 100mm macro at f/3.5, tactile and appetizing. Photorealistic, no text, no logo, no orange. — *(para producto identificable, mejor macro de la foto REAL retocada en Adobe).* 
 
 **Video (mood/b-roll, 3-5s, Higgsfield sobre imagen base):**
-> Start from a Dimanche food image. Higgsfield, subtle camera move: slow push-in (dolly) toward the plate, gentle steam rising, soft morning light flicker. `silent`, no people talking. 9:16, 3s, warm homey mood. — *(empezá por imagen base; ver `herramientas.md`).* 
+> Start from a Dimanche food image. Higgsfield, subtle camera move: slow push-in (dolly) toward the plate, gentle steam rising, soft morning light flicker. `silent`, no people talking. 9:16, 3s, warm morning mood. — *(empezá por imagen base; ver `herramientas.md`).* 
 
-> **Siempre:** prompt en inglés, cierre `photorealistic, no text, no logo`; texto y logo se ponen en Canva; lo identificable real se compone, no se genera.
+> **Siempre:** prompt en inglés, cierre `photorealistic, no text, no logo, no orange`; texto y logo los compone el código (Niveau embebida, NO Canva — ver `motor-de-composicion.md`); lo identificable real se compone, no se genera.

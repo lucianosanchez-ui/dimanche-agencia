@@ -39,7 +39,7 @@ El "por qué"/tipo de imagen. Los 4 más comunes: `Beauty shot` · `Product shot
 
 *Artístico/abstracto:* `Abstract Visual` · `Cinematic Scene` · `Surreal Composition` · `3D Render Style` · `Geometric Composition` · `Texture Study` · `Double Exposure` · `Vintage Film Style` · `Digital Art Style` · `Conceptual Metaphor`.
 
-> **Dimanche usa sobre todo:** `Food Studio Shot`, `Product in Context`, `Flat Lay`, `Cozy Interior`, `Golden Hour Scene`, `Macro Nature`/`Organic Texture Shot`, `Brand Mood Visual`.
+> **Dimanche usa sobre todo:** `Food Studio Shot`, `Product in Context`, `Flat Lay`, `Minimalist Space`, `Golden Hour Scene`, `Macro Nature`/`Organic Texture Shot`, `Brand Mood Visual`. *(Nada de `Cozy Interior`/homey: el norte es premium-yet-warm de Villa Allende — superficies limpias y luz aireada; la calidez va por luz y crema, no por "cozy".)*
 
 ---
 
@@ -66,7 +66,7 @@ El protagonista. Clave: pensá los **atributos que la IA asocia automáticamente
 Transmiten textura, peso, temperatura y calidad — convierten una imagen plana en algo "que casi se toca".
 
 **Temperatura:**
-- `warm colors` — acogedor, nostálgico (golden honey, amber, naranjas cálidos, rojos). *Ej:* `Warm color palette dominated by golden honey tones and amber highlights, creating a cozy, intimate atmosphere reminiscent of late afternoon sunlight`.
+- `warm colors` — acogedor, nostálgico. **PROHIBIDO PARA DIMANCHE el eje golden honey / amber / naranjas cálidos** (Dimanche = sin naranja). La calidez de Dimanche se logra con la crema `#E9E3D9` y la luz (window/golden-hour light), NO con paletas ámbar/naranja. El *Ej* genérico de abajo (`Warm color palette dominated by golden honey tones and amber highlights…`) NO se usa para Dimanche.
 - `cool colors` — moderno, limpio, profesional (steel blue, ice, mint). *Ej:* `Cool color palette with steel blue undertones and crisp whites, modern professional aesthetic`.
 
 **Armonía:**
@@ -154,6 +154,6 @@ Simulás equipo carísimo describiendo características técnicas.
 - ¿Cámara y lente refuerzan la atmósfera?
 
 ## Nota Dimanche
-- Prompt en inglés, cierre con `editorial food photography, photorealistic, no text, no logo`.
-- Paleta azul/crema, sin naranja. Mood warm/homey/Sunday/antojable.
+- Prompt en inglés, cierre con `editorial food photography, photorealistic, no text, no logo, no orange`.
+- Paleta azul/crema, sin naranja. Norte: premium-yet-warm de Villa Allende (`white marble / brushed stainless steel / clean airy daylight / one real cobalt signature object`) — premium-limpio en feed, cálido en reel. Mood antojable. **NO** "homey / Sunday cozy".
 - Lo identificable (producto/local/equipo real) NO se genera: se compone la foto real encima (ver `postproduccion-y-realismo.md` y `herramientas.md`).

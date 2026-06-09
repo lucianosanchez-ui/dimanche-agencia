@@ -1,6 +1,6 @@
 # Fundamentos del Design System — Dimanche
 
-> Los "átomos" del sistema: **tipografía, grilla/espaciado, color, iconografía.** Medidos sobre un **lienzo de referencia de 1080 px de ancho** (el de IG); escalá proporcional para otros tamaños. Para producir en **Canva**. Fuente de verdad de marca: REF-002 (Notion). Complementa `design-system.md`. (El `Manual_de_Marca.pdf` es viejo — referencia histórica, no manda.)
+> Los "átomos" del sistema: **tipografía, grilla/espaciado, color, iconografía.** Medidos sobre un **lienzo de referencia de 1080 px de ancho** (el de IG); escalá proporcional para otros tamaños. Para producir **por código** (Satori/PIL/Remotion; `motor-de-composicion.md`). Fuente de verdad de marca: REF-002 (Notion). Complementa `design-system.md`. (El `Manual_de_Marca.pdf` es viejo — referencia histórica, no manda.)
 
 ## 1. Tipografía — Niveau Grotesk (única fuente)
 Escala (sobre lienzo 1080 px), de mayor a menor:

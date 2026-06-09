@@ -15,7 +15,7 @@
 Se consume rápido, en secuencia y con el pulgar listo para saltar: **(1)** algo que frene el tapeo en <1 s (foto del momento, pregunta) → **(2)** el mensaje en una línea → **(3)** CTA simple o interacción. Una idea por story. La interacción (encuesta/pregunta) va donde el pulgar la alcanza.
 
 ## 4. Anatomía Dimanche
-Dial **el más cálido y suelto**: acá sí vale la **foto rápida del celu** (base real), mejorada apenas. Lo de hoy: la hornada, el combo, "ya abrimos", un repost de cliente. Empujar **lo digital** (Uber/PedidosYa). Manos/gestos; el cobalto aunque sea en un detalle. → cómo mejorar la foto del celu: `sistema-visual-dimanche.md` receta D. → texto/sticker: Canva.
+Dial **el más cálido y suelto**: acá sí vale la **foto rápida del celu** (base real), mejorada apenas. Lo de hoy: la hornada, el combo, "ya abrimos", un repost de cliente. Empujar **lo digital** (Uber/PedidosYa). Manos/gestos; la **firma cobalto = objeto real con motivo** (la taza, el packaging, un detalle del local), aunque sea en un detalle — nunca un prop inventado ni generado por IA. → cómo mejorar la foto del celu: `sistema-visual-dimanche.md` receta D. → texto/sticker/badge: compuestos **por código** (Niveau embebida, assets reales del Drive), nunca a mano ni por la IA → `motor-de-composicion.md`.
 
 ## 5. Do's & Don'ts Dimanche
 **SÍ:** inmediatez, cercanía, CTA simple, foto del celu real, interacción (preguntar a la comunidad). **NO:** sobre-producción (mata la espontaneidad del formato), sobre-prometer (T2 — no inventes lo que no hay), emojis, story que no dice nada (relleno).

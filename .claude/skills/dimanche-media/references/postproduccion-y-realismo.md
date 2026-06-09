@@ -19,11 +19,11 @@ El problema típico: demasiado perfecto, sin textura real. Soluciones (keywords 
 
 ## Manejo de logos y texto
 **Nunca confíes el logo a la IA generativa** (es su punto débil — y además es lo identificable de Dimanche). Tres casos:
-- **Falta el logo:** subí la imagen a **Nano Banana** + el **PNG del logo**, indicá dónde va y describilo; o ponelo a mano en **Canva/Photoshop**.
+- **Falta el logo:** el logo lo pone el **código** al componer la pieza (PNG real del Drive, posición/tamaño exactos; `motor-de-composicion.md`). La IA no lo dibuja.
 - **Logo incorrecto/borroso:** borralo en el editor y **reinsertá el correcto** en Nano Banana, o pegá el PNG real directo (control total).
 - **Logo correcto pero muy grande:** recortá el logo, colocalo en la imagen final y **ajustá tamaño/contexto** en el editor.
 
-> Para Dimanche: el layout final con logo y texto se cierra **en Canva** (brand kit "Dimanche", Niveau Grotesk), texto **fuera de la imagen**. La IA no escribe el texto.
+> Para Dimanche: el layout final con logo y texto se cierra **por código** (Satori/PIL/Remotion, Niveau embebida; `motor-de-composicion.md`), texto **fuera de la imagen** — lo pone el código, no la IA ni a mano. **Canva afuera.**
 
 ## Errores frecuentes y cómo resolverlos
 - **Producto mal colocado:** describí composición con detalle (`vertical`/`horizontal`/`tilted`, "inclinado ~30°", `The product is rising from the bottom of the frame`). Si la IA "sabe" la pose típica y la sobreescribe, **rotá vos una referencia y subila**.

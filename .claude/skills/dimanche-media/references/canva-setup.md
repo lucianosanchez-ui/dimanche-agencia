@@ -1,3 +1,5 @@
+> ⚠️ **LEGACY — Canva YA NO es el motor de producción** (decidido 08/06, sesión 9): las piezas se componen **POR CÓDIGO** (ver `motor-de-composicion.md`). El Brand Kit de Canva queda solo como **referencia de paleta/fuentes/assets**, no para producir.
+
 # Armar Canva desde la base del Drive — setup (una sola vez)
 
 > Las **plantillas autollenables** de Canva se arman en la **UI** (la API no las crea). Es un setup de **una vez**; después Anto produce por autofill. Todo se sube **DESDE el Drive** (la base). El Brand Kit "Dimanche" **ya existe** (id `kAHL68AYTxI`, en la cuenta de Luciano "L" — **NO** `kAHGX3NlfR4`, que era de otra cuenta con relleno genérico).
@@ -20,7 +22,7 @@ Crear un diseño por formato (arrancá por **Story 9:16** y **Post 4:5**) con la
 - **Sin eso:** guardá el diseño como **plantilla** (duplicar y editar). Mismo resultado, un paso más manual.
 
 ## Paso 4 — Producir (día a día de Anto)
-1. **Foto real** (del celu o del Drive `01_Fotos`). Si no hay, generar la escena en Higgsfield partiendo de una foto real (regla de oro).
+1. **Foto real** (del celu o del Drive `01_Fotos` — NO `Editadas`, usar `Sesion_Principal`). Si no hay, generar la escena en Higgsfield partiendo de una foto real (regla de oro).
 2. Abrir el template → soltar la foto → escribir el **titular** (corto, con ingenio) → elegir el **ícono** que pegue con el mensaje.
 3. **Brand-check** (paleta · sin naranja/emojis · regla de oro) → guardar como **Propuesto** (gate).
 

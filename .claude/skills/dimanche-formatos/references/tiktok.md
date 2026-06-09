@@ -17,7 +17,7 @@
 Igual scroll-stop que reel pero **el sonido manda**: muchos descubren por el audio en tendencia. (1) hook audiovisual 2-4 s → (2) desarrollo con cortes al ritmo del sonido → (3) remate. Autenticidad > perfección: una toma "de celu" buena rinde más que una sobre-producida.
 
 ## 4. Anatomía Dimanche
-Dial cálido, igual que reel, pero **más crudo/cercano** permitido (es el formato donde la foto del celu real brilla). Series temáticas recurrentes que la gente espera: ej. **"el criollito del día"**, **"lunes de horno"**, **"qué sale ahora del horno"**. La serie crea hábito de visionado. → guion: `dimanche-guion`. → visual: `sistema-visual-dimanche.md`.
+Dial cálido, igual que reel, pero **más crudo/cercano** permitido (es el formato donde la foto del celu real brilla). **Firma cobalto = objeto real con motivo** (la taza, el packaging, un detalle del local), nunca un prop de relleno ni generado por IA. Series temáticas recurrentes que la gente espera: ej. **"el criollito del día"**, **"lunes de horno"**, **"qué sale ahora del horno"**. La serie crea hábito de visionado. Los text overlays, logo y badge se **componen por código** (Remotion, Niveau embebida), nunca a mano ni por la IA → `motor-de-composicion.md`. → guion: `dimanche-guion`. → visual del hero: `sistema-visual-dimanche.md`.
 
 ## 5. Do's & Don'ts Dimanche
 **SÍ:** trending sound bien elegido, series temáticas, autenticidad cordobesa, hashtags locales, hook en 2-4 s. **NO:** #fyp, sobre-producción que mata la cercanía, audio que no pega con la marca solo por ser trend, copiar un trend que no tiene nada que ver con Dimanche (forzarlo se nota), emojis.

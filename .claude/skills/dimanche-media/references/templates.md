@@ -1,6 +1,6 @@
 # Templates por formato — Dimanche
 
-> Cómo se **ensamblan los componentes** (`components.md`) en cada formato, con sus medidas reales. Para armar en **Canva**. Anatomía base (`design-system.md`): **lockup (ícono+titular) arriba · foto real full-bleed · badge abajo**, + banner/tag si hace falta. Fundamentos (grilla, tipo, color) → `foundations.md`.
+> Cómo se **ensamblan los componentes** (`components.md`) en cada formato, con sus medidas reales. Para armar **por código** (Satori/PIL para estáticas, Remotion para video; `motor-de-composicion.md` — Canva afuera). Anatomía base (`design-system.md`): **lockup (ícono+titular) arriba · foto real full-bleed · badge abajo**, + banner/tag si hace falta. Fundamentos (grilla, tipo, color) → `foundations.md`.
 
 ## Story / Reel-cover — 1080 × 1920 (9:16)
 - **Safe area:** ~**250 px libres arriba y abajo** (los tapa la UI de IG). Todo lo importante, adentro.
@@ -40,4 +40,4 @@ Cualquier formato sale de la **misma anatomía** y los **mismos componentes** �
 - **Reels:** el gancho en el primer segundo (la textura, el corte, el vapor). El titular sostiene ≥ 1.5 s legible. Audio con criterio (sin "loud").
 - **TV (loop):** movimiento **sutil** — push-in lento o vapor que sube; el texto fijo o con un fade. Loop 50–72 s, sin cortes bruscos.
 - **Qué NO se mueve:** el logo/badge (fijo) y el **producto real** (no deformarlo). Anima el ambiente (vapor, luz), no el producto.
-- Herramienta: Higgsfield (image→video / seedance) para el b-roll/mood; el texto se arma en Canva o en edición.
+- Herramienta: Higgsfield (image→video / seedance) para el b-roll/mood; el texto se compone **por código** (Remotion; Canva afuera).

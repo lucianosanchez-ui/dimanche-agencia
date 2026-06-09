@@ -19,5 +19,7 @@ Pilar (POL-015), buyer persona (default Cande), canal/formato, producto real (de
 3. Pasá cada una por `dimanche-brand-check`. Descartá la que no pase los 5 filtros.
 4. Ajustá largo al canal. Cero emojis, cero marketinería, tuteo, "un pan" no "el pan".
 
+**Texto-en-la-pieza (titulares/remates de piezas visuales):** registro **deadpan, dato real sin adjetivos** (ej. "18 h de fermentación en frío"). El texto que va sobre la imagen no convence ni adorna: enuncia un hecho concreto del oficio y deja que el dato hable. Sin marketinería, sin adjetivos calientes.
+
 ## Output
 Por versión: texto final + 1 línea de por qué (persona/ángulo) + si necesita toma real (→ Activos a producir). Todo entra al Calendario como **Propuesto** (gate de Luciano/Anto).

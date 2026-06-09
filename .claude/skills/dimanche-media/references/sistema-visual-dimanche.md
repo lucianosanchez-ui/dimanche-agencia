@@ -2,6 +2,11 @@
 
 > **Canónico.** Cómo se ve Dimanche, definido con Luciano el 2026-06-07 **desde la marca** (lo que queremos comunicar), no desde piezas previas. Es la base de toda generación/composición. Espejo en Notion: **MAN-021**. **Donde haya conflicto con notas genéricas viejas ("mood homey", "madera/kraft", "fondo azul 2/3"), manda este archivo.**
 
+> **⚡ Actualización 2026-06-08 (sesión 9) — tres definiciones que faltaban y se confirmaron con Luciano:**
+> 1. **La pieza sale COMPLETA por código, lista para publicar** — el hero lo hace Higgsfield/Nano Banana (producto real, regla de oro) y el **texto + logo + íconos + badge los compone CÓDIGO** (Satori/PIL para estáticas, Remotion para video/TV), con Niveau embebida y los assets reales del Drive. **Canva queda AFUERA de todo** (quedaba malísimo, sobre todo TV). El texto NUNCA lo escribe la IA (lo pone el código) y NUNCA se arma a mano. Detalle: **`motor-de-composicion.md`**. Excepción: piezas que no llevan capa gráfica (un mood/fondo suelto) salen solo del hero.
+> 2. **El premium es PISO, no techo.** Accesible, con gente y vida; **ni distante / de altar ni "loud"**. ("Menos precious", el clásico sobrio, el museo fue demasiado, el Criollazos gigante fue overshoot.) Reconcilia el brand-book ("no es premium") con el contexto ("premium accesible"): premium en la **marca y la terminación**, accesible en el trato.
+> 3. **El objeto cobalto va POR FORMATO y CON SENTIDO** (no decorativo random) — ver §1 "Firma de color".
+
 ## Concepto que ordena todo: identidad estable + tácticas vivas
 - El **norte visual** (cómo se ve Dimanche) es **estable a propósito** — no perseguimos cada moda; esa es la fuerza de marca.
 - Lo que se mueve y se actualiza son las **tácticas** (formatos, ganchos, a qué trend nos subimos), alimentadas por performance (Numa) y radar (Lola/Mateo/Rocco), **filtradas por el norte**.
@@ -12,14 +17,18 @@
 - **Kraft AFUERA.** Ya no es el packaging. El packaging actual se está curando en el Drive → usar ESE (no kraft) para contexto/packaging.
 - **Criollos NO se venden por docena** → nada de pilas/abundancia.
 - **Menos precious.** El premium limpio es la identidad-piso; la expresión va más viva — pero sin pasarse de "loud" (el "Criollazos" gigante fue un overshoot, espantoso).
-- **El contenido real de Dimanche NO es hero de IA.** Es **foto real + capa gráfica de marca** (ícono + titular Niveau + badge "D") armada en Canva → ver **`design-system.md`** (grilla, tipo, elementos, anclas). La IA reestiliza el entorno solo cuando no tenés la toma, y parte siempre de algo real. **NADA de sesiones de fotos:** foto del celu, y se pide una mejor si hace falta. (Las viejas de `Editadas` son flojas → "se nota la IA" si se abusa de la generación.)
-- **Flujo validado:** foto real (Drive) → `nano_banana_2` image-to-image (media role `image`, 4:5, 2k, mantener el producto real) → texto y logo en Canva (Niveau) → brand-check → Propuesto.
+- **El contenido real de Dimanche NO es hero de IA.** Es **foto real + capa gráfica de marca** (ícono + titular Niveau + badge "D") **compuesta por código** (pieza completa lista para publicar; ver **`motor-de-composicion.md`**), siguiendo la grilla/tipo/elementos de **`design-system.md`**. La IA reestiliza el entorno solo cuando no tenés la toma, y parte siempre de algo real. **NADA de sesiones de fotos:** foto del celu, y se pide una mejor si hace falta. **La foto real aporta el PRODUCTO, no el fondo** (decidido 2026-06-08): pasala como referencia de **producto** y construí la escena premium por **prompt** — el banco real (incl. la sesión profesional `01_Fotos/Sesiones/Sesion_Principal/Fotos/`) es mayormente azul/madera, así que copiar su fondo devuelve la salida al azul-base. Usá Sesion_Principal (las buenas) para el producto, NUNCA `01_Fotos/Editadas/` (slides viejas flojas).
+- **Flujo validado:** foto real del **producto** (Drive/celu) → `nano_banana_2` componiendo ese producto en una **escena premium NUEVA descrita por prompt** (norte Villa Allende; role `image`, 4:5, 2k, producto intacto) — **NO** copiar el fondo de la foto → texto y logo **por código** (Niveau embebida; `motor-de-composicion.md`) → brand-check → Propuesto.
 - **Iteración:** **boceto/mockup a mano primero (gratis) → aprobar el concepto → recién ahí generar.** No quemar créditos antes de que cierre.
 
 ## 1. Norte visual
 **Identidad base (constante):** limpio, prolijo y premium — el mundo de **Villa Allende**: superficies blancas, acero inox, mármol/granito blanco, mucho aire. Una **disciplina de color** estricta lo hace reconocible a un metro: cobalto `#3559E0` + crema `#E9E3D9`, **cero naranja**.
 
-**Firma de color:** en cada toma hay un **objeto cobalto real y recurrente** (taza, plato, packaging, un detalle del local) que firma la imagen — el azul anclado a algo real (lógica Levain). + azul en el layout/texto (Canva). **No** usamos fondo azul dominante como regla general (eso queda solo para placas/slides con texto encima).
+**Firma de color (POR FORMATO, con sentido — nunca decorativo random):** el azul cobalto firma la imagen, pero **dónde** depende del formato y siempre tiene una razón de estar:
+- **Fotos de mesa/ritual (reel/story):** un **objeto cobalto real con motivo** — la taza de quien toma el café, el packaging, un detalle real del local. Algo que **tiene sentido que esté ahí**; nunca un prop puesto de relleno, nunca inventado ni generado por IA (rompería la regla de oro).
+- **Feed / placas:** el azul vive en la **capa gráfica** (titular, badge D, acento) compuesta por código — como en las piezas reales del Drive — no en un objeto físico forzado.
+
+Es el azul anclado a algo real (lógica Levain). **No** usamos fondo azul dominante como regla general (eso queda solo para placas con texto encima).
 
 **Dial de calidez (varía por formato):**
 - **Feed** → premium-minimalista; luz clara y aireada; mucho blanco; prolijo. La cara de identidad: destaca, se ve premium (no pasa desapercibido en IG).
@@ -43,7 +52,7 @@
 ### FEED (post / carrusel) — la cara premium de identidad
 - **Dial:** premium-minimalista. Luz clara y aireada, mucho blanco, prolijo.
 - **Qué lleva:** hero **macro limpio** del producto (greñado, miga, hojaldre) sobre blanco/mármol + el **objeto cobalto de firma**. Composición centrada, espacio negativo. *Carrusel:* hero → detalle/textura → cierre con **un dato real** ("18 h de fermentación en frío", sin adjetivos).
-- **Técnico:** 4:5 vertical (gana grilla) · carrusel hasta 10.
+- **Técnico:** 4:5 vertical (gana grilla) · carrusel hasta 20 (sweet spot 7-10).
 - **Sí:** textura nítida, un solo foco, firma cobalt real, blanco generoso. **No:** blanco vacío aspiracional, madera rústica, naranja, emojis, "imperdible", producto sobre-topeado.
 
 ### REEL (IG / TikTok) — el antojo en movimiento
@@ -55,7 +64,7 @@
 ### STORY (IG / WhatsApp) — el día a día cercano
 - **Dial:** el más cálido y suelto; acá sí vale la **foto rápida del celu** (base real) mejorada.
 - **Qué lleva:** lo de hoy (la hornada, el combo, "ya abrimos", repost de cliente), empujar **lo digital** (Uber/PedidosYa); manos/gestos; el cobalto aunque sea en un detalle.
-- **Técnico:** 9:16 · texto Niveau Grotesk (Canva) · stickers de marca · sin emojis.
+- **Técnico:** 9:16 · texto Niveau Grotesk **por código** · stickers de marca · sin emojis.
 - **Sí:** inmediatez, cercanía, CTA simple, foto del celu. **No:** sobre-producción, sobre-prometer (T2), emojis.
 
 ### TV del local · Folleto/cartel — PENDIENTE
@@ -73,7 +82,7 @@ TV: reconciliar `pantallas-tv-local.md` con este norte. Folleto/cartel: por defi
 - Contexto/momento/gente (mesa, manos, local): **35–50mm, f/2–2.8** — perspectiva natural, editorial-documental.
 - Cierre realista: nombrar un cuerpo real (ej. Canon EOS R5) + grano fino sutil. Story = celu real directo.
 
-**Consistencia** (que toda la cuenta se vea de la misma marca, ahora que rota el producto): cuatro anclajes — (1) disciplina de color cobalto/crema · (2) objeto cobalto de firma en cada toma · (3) mismo tratamiento de luz/limpieza por dial · (4) vocabulario de prompt reusable (mismas keywords EN) + referencias reales del Drive como style-ref + `seed` para reproducir.
+**Consistencia** (que toda la cuenta se vea de la misma marca, ahora que rota el producto): cuatro anclajes — (1) disciplina de color cobalto/crema · (2) objeto cobalto de firma en cada toma · (3) mismo tratamiento de luz/limpieza por dial · (4) vocabulario de prompt reusable (mismas keywords EN) que define la escena premium + foto real del Drive como **referencia de producto** (Sesion_Principal, no Editadas; el fondo lo pone el prompt, no la foto) + `seed` para reproducir.
 
 ## 7. Recetas reproducibles
 Copy-paste, en inglés (rinde mejor). `{producto}` = variable; objeto cobalto y dial se completan según la pieza. Cierre siempre: `photorealistic, no text, no logo, no orange`. El producto parte de foto real (la IA retoca, no fabrica).
@@ -97,7 +106,7 @@ Cozy Sunday-morning scene, {real Dimanche products + a cup of coffee} on a clean
 **D · Story celu (día a día)** — no genera de cero
 1. Base: foto rápida del celu real (la hornada/combo/local de hoy).
 2. Retoque leve (Adobe/Higgsfield): emparejar luz/color hacia limpio+cálido, sin inventar; sumar un detalle cobalto si está a mano.
-3. Texto/sticker en Canva (Niveau Grotesk, paleta, sin emojis) + CTA simple (Uber/PedidosYa). 9:16, real y ágil.
+3. Texto/sticker **por código** (Niveau Grotesk embebida, paleta, sin emojis; `motor-de-composicion.md`) + CTA simple (Uber/PedidosYa). 9:16, real y ágil.
 
 ## Pendiente (V1.1)
 Readiness visual (checklist completo) · TV del local + folleto/cartel · WhatsApp/Newsletter/Web · **cablear los dos loops vivos** (mejora continua vía Numa + watch de plataforma/tendencias).

@@ -16,13 +16,13 @@ Pilar POL-015: casi siempre producto/oferta. Nunca "branding" vacío en un carte
 - **De mano:** A5 o postal 10×15.
 - **CMYK, 300 dpi**, 3 mm de sangrado + 5 mm de margen de seguridad al corte.
 - Papel **mate** (el brillo ensucia y lee barato). Sin plastificar, salvo vidriera (sol).
-- Se arma en **Canva** (brand kit "Dimanche", plantilla de impresión) y se exporta PDF para imprenta.
+- Se compone **por código** (Satori/PIL, Niveau embebida, assets reales del Drive) y se exporta PDF/PNG a 300 dpi para imprenta — **Canva afuera de todo** → `motor-de-composicion.md`.
 
 ## 3. Jerarquía y lectura
 Pirámide invertida leída a 1 metro, en la cola: **(1)** foto o titular gancho → **(2)** qué es / precio → **(3)** detalle / CTA chico. Una sola entrada de ojo. Si el cliente en la cola necesita >3 s para entenderlo, el cartel falló (misma regla que TV). **Precio pegado al nombre**, peso fuerte, no flotando.
 
 ## 4. Anatomía Dimanche
-Misma anatomía base, adaptada a vertical impreso: **ícono de línea arriba** (sol/paraguas/producto — blanco sobre foto, o cobalto sobre crema) · **foto real full-bleed** o zona cobalto/crema con foto recortada · **titular Niveau Grotesk** (Bold/Black para vidriera, Medium para detalle) · **badge D** abajo. Dial: **premium-limpio** (es identidad física de la marca, no reel). Una nota cálida (crema) permitida. → qué producto-héroe va y qué dice: `dimanche-local`. → armado: brand kit Canva.
+Misma anatomía base, adaptada a vertical impreso: **ícono arriba** (sol/paraguas/producto — silueta plana rellena, blanco sobre foto o cobalto sobre crema; nunca línea fina) · **foto real full-bleed** o zona cobalto/crema con foto recortada · **titular Niveau Grotesk** (Bold/Black para vidriera, Medium para detalle) · **badge D** abajo. Dial: **premium-limpio** (es identidad física de la marca, no reel): **premium = piso accesible, menos precious**. La firma cobalto vive en la **capa gráfica** (ícono, zona/acento del titular), como toda placa. Una nota cálida (crema) permitida. → qué producto-héroe va y qué dice: `dimanche-local`. → armado **por código** (Satori/PIL): `motor-de-composicion.md`.
 
 ## 5. Do's & Don'ts Dimanche
 **SÍ:** una idea por cartel · **foto REAL** del producto (regla de oro; o el producto a la vista, sin foto) · sobriedad premium (poco texto, mucho aire) · precio claro y legible · **coherencia con la campaña** (lo que dice el reel y lo que dice el cartel es lo mismo).
@@ -35,7 +35,7 @@ Misma anatomía base, adaptada a vertical impreso: **ícono de línea arriba** (
 - NO van bien acá: refranero largo, contexto/mesa (son de feed/reel, no de punto de venta).
 
 ## 7. Ejemplo desarrollado — cartel de mostrador A4, "criollos calientes"
-- **Ícono:** sol de línea, cobalto, arriba-centro.
+- **Ícono:** sol (silueta plana rellena, cobalto; no línea fina), arriba-centro.
 - **Foto:** real, criollos recién salidos (foto del celu mejorada; **NUNCA pila/docena** — los criollos no se venden por docena), full-bleed con scrim leve.
 - **Titular:** `HAY CRIOLLOS CALENTITOS` (Niveau Black, blanco, 2 líneas máx).
 - **Sub:** "Recién salidos del horno" (Medium). Sin precio si es antojo, o precio unitario pegado si es oferta.

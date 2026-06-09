@@ -1,5 +1,7 @@
 # Brand Visual Kit Dimanche
 
+> ⚠️ Materiales y mood SUPERADOS por references/sistema-visual-dimanche.md (norte Villa Allende: white marble/steel/airy, NO homey/madera/kraft). Mantener solo paleta y principios generales.
+
 > Traduce la marca a un lenguaje que la IA entiende, para que Higgsfield/Gemini generen **on-brand y consistente, no genérico**. Método del *Branded AI Guide* (el curso de Anto) aplicado a Dimanche. Fuente: REF-002 (identidad visual), REF-030 (sistema gráfico), POL-010 (tono), MAN-019 (Brand Book).
 >
 > **Principio:** la IA es **traductora creativa, no socia**. Sin concepto y dirección de marca, sale sin alma. Siempre se parte de una imagen clara en la cabeza y se describe en capas, como lo haría un fotógrafo.
@@ -53,10 +55,10 @@ La primera prueba salió correcta pero **aburrida (sin gente) y con producto que
 - **La IA NUNCA inventa de cero.** Para cualquier pieza con producto, local o algo identificable de Dimanche, se parte SIEMPRE de una **referencia real**: una **foto nuestra** (Drive `MKT - Dimanche` / `06_Marketing`) o una **foto rápida del celu** que saque el equipo en el momento.
 - Sobre esa base real, la IA **mejora, ambienta y extiende** — estilo, fondo, luz, composición, movimiento. Lo que NUNCA hace es **fabricar un producto que no existe** ni inventar caras que se hagan pasar por el local/equipo real.
 - La IA sí genera/retoca libremente **lo genérico y no reconocible**: texturas, fondos, mood, o gente anónima que **no pretende ser** el local ni el equipo de Dimanche.
-- **Logo y texto van a mano** (Canva, Niveau Grotesk), nunca generados por IA. Sin emojis. Sin naranja.
+- **Logo y texto van por composición de código** (Satori/PIL/Remotion, Niveau Grotesk embebida), nunca generados por IA ni armados a mano. Sin emojis. Sin naranja.
 - Ante la duda → tratá la pieza como identificable → partí de una foto real (nuestra o del celu).
 - ⚠️ La imagen de prueba del 2026-06-02 estaba MAL: inventó un local que no es el de Dimanche. No repetir ese error.
 
 ## Reglas visuales base
-- Cero texto en la imagen generada (el texto va en Canva, Niveau Grotesk). Cero naranja. Cero emojis. Paleta #3559E0/#E9E3D9.
-- Toda pieza pasa por `dimanche-brand-check`; layout final en Canva.
+- Cero texto en la imagen generada (el texto lo compone el código, Niveau Grotesk embebida). Cero naranja. Cero emojis. Paleta #3559E0/#E9E3D9.
+- Toda pieza pasa por `dimanche-brand-check`; layout final compuesto por código (Satori/PIL/Remotion, no Canva).

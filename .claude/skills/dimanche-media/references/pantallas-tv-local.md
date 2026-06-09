@@ -2,6 +2,8 @@
 
 > Cómo las marcas líderes (Starbucks, McDonald's, Mostaza) diseñan sus menu boards / TVs de promo, destilado para replicarlo en Dimanche. Contexto Dimanche: **local físico, cola de mostrador, vista 2,5–5 m** (no drive-thru). Fuentes al pie.
 
+> **⚡ Reconciliado con el norte 2026-06-08 (sesión 9):** la placa de TV sale **completa por código**, no a mano. **Motor de motion = Remotion** (React → video), tomando de base el **hero/clip de Higgsfield** (producto real, regla de oro); el texto + logo + íconos + precio los compone el código, con Niveau embebida y assets reales del Drive. **Canva queda AFUERA** (quedaba malísimo en TV). Las placas estáticas simples pueden salir con **PIL** (ya en el repo), nunca Canva. Detalle: `motor-de-composicion.md`. El **hero es foto real + escena premium por prompt** — NO sesiones nuevas, NO producto inventado por IA (ver "Regla de oro" al pie).
+
 ## 1. Contenido y cadencia
 - **Loop total 50–72 s** (entra en el tiempo de cola), **5–8 placas**.
 - **Dwell por placa:** visual + titular corto **6–10 s**; placa con texto/combo **15–20 s**; nunca <8 s.
@@ -15,8 +17,8 @@
 - **Legibilidad a distancia:** ~2,5 cm de alto de letra por cada 3 m; usar 1,5–2× ese mínimo. Probalo parado en la cola (2,5–4,5 m).
 - **Tipografía:** sans gruesa y limpia. Para Dimanche: **Niveau Grotesk** en pesos Medium/Bold/Black para titulares y precio (legible en pantalla); evitar pesos finos y script. (Lección Starbucks: elegí la fuente mirándola EN la TV.)
 - **Contraste:** mínimo 4,5:1, apuntar a 7:1 en precios. Nunca texto directo sobre la foto sin overlay oscuro o zona de color sólido. Fondo oscuro + texto claro mejora legibilidad.
-- **Fondo de marca:** usar el **azul Dimanche #3559E0** como fondo pleno en placas-menú y mood (consistencia + máximo contraste), tipo "white-on-black" de Starbucks.
-- **Foto:** **a sangre (full-bleed)** para la placa hero (máximo apetito); **recortada sobre color sólido** para combos/menú.
+- **Fondo de marca:** el azul Dimanche #3559E0 como fondo pleno va **solo en placas con texto** (menú/precios, combos, mood con claim) — ahí da consistencia + máximo contraste, tipo "white-on-black" de Starbucks. **En la placa hero NO hay fondo azul:** es la foto a sangre. El cobalto, en el hero, vive en un detalle real o en la capa gráfica (titular/badge), no como fondo.
+- **Foto:** la placa **hero** es **foto real del producto a sangre (full-bleed)** — máximo apetito, regla de oro (producto real, escena premium por prompt; nunca producto inventado por IA); **recortada sobre color sólido** para combos/menú.
 - **Texto al mínimo:** titular + 1 línea + precio. Si hay que leer un párrafo, la placa falló.
 - **Logo:** discreto, en lugar **fijo** en todas las placas. **Precio** pegado al nombre, peso fuerte.
 
@@ -27,7 +29,7 @@
 - **Loops seamless:** el vapor/zoom cierra sin salto; la placa termina quieta y legible.
 - **Video** para apetito (vapor, miel cayendo, corte de medialuna); **motion graphics** para precios/combos/transiciones.
 - **Evitar:** todo moviéndose a la vez; texto que rebota/gira/titila; movimiento lineal; transiciones 3D/flips.
-- **En Dimanche:** Higgsfield image→video, clips 3–5 s, empezar por la imagen hero. Movimiento mínimo y elegante.
+- **En Dimanche:** el hero/clip de antojo lo hace **Higgsfield image→video** (clips 3–5 s, empezar por la imagen hero); la **placa con movimiento/datos se arma en Remotion** tomando ese hero/clip de base y componiendo texto, precio, logo e íconos por código (datos que cambian — precios/combos — sin rehacer la pieza). Movimiento mínimo y elegante. **Nunca Canva.**
 
 ## 4. Especificaciones y errores
 - **Resolución:** 1080p mínimo, **4K** ideal cerca de ventanas/luz. **16:9 horizontal** (estándar TV); 9:16 solo si la pantalla imita una carta parada.
@@ -43,7 +45,7 @@
 1. ¿Un solo mensaje (hero O categoría)?
 2. ¿Foto que abre apetito? (real cuando sea producto identificable; ver regla de oro)
 3. ¿Se lee nombre y precio a 4 m? (sans gruesa, 7:1)
-4. ¿Fondo azul sólido de marca, o foto a sangre con overlay?
+4. Si es placa con texto → ¿fondo azul sólido de marca? Si es placa hero → ¿foto real a sangre (sin fondo azul, con overlay donde haya texto)?
 5. ¿Texto al mínimo (titular + 1 línea + precio)?
 6. ¿Logo en lugar fijo, discreto?
 7. ¿Movimiento sutil con easing, o estático? (nada que distraiga)
@@ -52,8 +54,8 @@
 10. ¿Asignada a su daypart?
 11. ¿16:9, 1080p/4K?
 
-## Regla de oro vs. calidad (decisión abierta de Luciano, 2026-06)
-El estándar QSR exige foto de producto **excelente y actual**. Las fotos reales de Dimanche hoy disponibles son viejas/flojas. Opciones: **(a)** nueva sesión de fotos real (lo más sólido y on-brand), **(b)** permitir IA de alta calidad para producto en estas pantallas (revisa la regla visual de oro), **(c)** híbrido: IA para set/mood + producto real compuesto. Definir con Luciano antes de producción a escala.
+## Regla de oro vs. calidad (cerrado con Luciano, 2026-06-08)
+El estándar QSR exige foto de producto **excelente y actual**. Las fotos reales viejas eran flojas, pero la decisión ya está cerrada: **NO sesiones nuevas de fotos** y **NO inventar producto por IA**. El camino es el de toda pieza Dimanche — **híbrido**: el producto sale de una **foto real** (banco del Drive `01_Fotos/Sesiones/Sesion_Principal/Fotos/`, no `01_Fotos/Editadas/`; o foto rápida del celu si hace falta), y la **escena premium la construye el prompt** (Higgsfield/Nano Banana arman el set/mood; el producto se mantiene intacto). El producto se pasa como **referencia de producto, nunca como referencia de fondo** — nada de "exact style/palette of the references". Eso es la regla de oro aplicada a TV.
 
 ---
 ### Fuentes

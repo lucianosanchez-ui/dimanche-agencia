@@ -1,18 +1,18 @@
 # Design System de Dimanche — cómo se arma una pieza
 
-> Cómo se ven y se arman las piezas de contenido: la **grilla, los textos, los elementos gráficos, el logo, el color** y las **anclas de contenido**. Anclado en lo que YA existe y funciona: piezas reales del Drive (`06_Marketing/03_Piezas/Redes`), los elementos de `00_Marca/Elementos_Graficos`, el `Manual_de_Marca.pdf` y REF-002 (Notion). Escrito para que cualquiera arme una pieza on-brand, aunque no sepa diseño. Producción: **Canva** con el brand kit "Dimanche". Complementa `sistema-visual-dimanche.md`.
+> Cómo se ven y se arman las piezas de contenido: la **grilla, los textos, los elementos gráficos, el logo, el color** y las **anclas de contenido**. Anclado en lo que YA existe y funciona: piezas reales del Drive (`06_Marketing/03_Piezas/Redes`), los elementos de `00_Marca/Elementos_Graficos`, el `Manual_de_Marca.pdf` y REF-002 (Notion). Escrito para que cualquiera arme una pieza on-brand, aunque no sepa diseño. Producción: **composición POR CÓDIGO** (Satori/PIL para estáticas, Remotion para video/TV; Niveau embebida, assets reales del Drive) — ver `motor-de-composicion.md`. **Canva queda afuera de todo (08/06).** Complementa `sistema-visual-dimanche.md`.
 
 ## El principio: foto real + capa gráfica de marca
 El contenido de Dimanche **NO es un hero de IA.** Es:
 1. una **foto real** — del Drive, o **una foto del celu** (y si hace falta una mejor, se pide; **no hacemos sesiones de fotos**),
 2. + la **capa gráfica de marca** encima (ícono + titular + badge),
-3. armada en **Canva**.
+3. compuesta **POR CÓDIGO** (Satori/PIL para estáticas, Remotion para video/TV; Niveau embebida) — ver `motor-de-composicion.md`. El texto **nunca** lo escribe la IA y **nunca** se arma a mano: lo pone el código, exacto.
 
-La IA (Higgsfield) queda **solo** para cuando necesitás una toma/escena que no tenés. Lo identificable siempre parte de algo real (regla de oro).
+La IA (Higgsfield) queda **solo** para el hero — cuando necesitás una toma/escena que no tenés. Lo identificable siempre parte de algo real (regla de oro).
 
 ## La plantilla (anatomía de una pieza)
 El patrón de las piezas que ya funcionan, de arriba a abajo:
-1. **Ícono de marca** (línea, blanco sobre la foto) — arriba, centrado. El que pegue con el mensaje (sol, paraguas, producto…).
+1. **Ícono de marca** (silueta plana rellena en cobalto; sobre la foto se usa en blanco) — arriba, centrado. El que pegue con el mensaje (sol, paraguas, producto…).
 2. **Titular** — Niveau Grotesk, blanco, centrado, corto, con ingenio.
 3. **Foto real full-bleed** — ocupa todo el fondo. Cálida, apetitosa, en contexto.
 4. **Badge circular de la "D"** — abajo, centrado (cobalto sobre blanco, o blanco).
@@ -36,13 +36,13 @@ Mismo sistema, adaptando la plantilla a cada formato.
 - Blanco sobre la foto · centrado · corto (idealmente ≤ 2 líneas) · con ingenio, **sin marketinería**.
 
 ## Elementos gráficos (los "recursos") — Drive `00_Marca/Elementos_Graficos`
-Íconos de línea simples, cobalto o blanco:
+Íconos de silueta plana rellena en cobalto (sobre foto se usan en blanco):
 - **Sol** — domingo / mañana / "olorcito a domingo".
 - **Paraguas + lluvia** — día de lluvia o fresco ("algo calentito").
 - **Producto** (pan, croissant, torta, galleta) — refuerzan el producto.
 - **"D" (monograma)** + lockup **"Con olorcito a domingo"**.
 - **Reglas:** 1 ícono por pieza · arriba · blanco sobre foto (o cobalto sobre claro) · tamaño contenido · **cero naranja** (las variantes naranja están deprecadas).
-- **Ampliar el set:** sumar íconos contextuales cuando haga falta (mate, café, frío, fecha especial…), mismo estilo de línea simple.
+- **Ampliar el set:** sumar íconos contextuales cuando haga falta (mate, café, frío, fecha especial…), mismo estilo de silueta plana rellena en cobalto.
 
 ## Color (aplicado)
 - Texto e íconos sobre foto: **blanco**.
@@ -61,15 +61,15 @@ Mismo sistema, adaptando la plantilla a cada formato.
 - **Banco de conceptos:** el momento/contexto (café, mesa, "un martes"), macro/textura (antojo), refranero cordobés, "olorcito a domingo, un martes".
 
 ## Cómo se arma (flujo)
-1. **Foto real** (Drive o celu; pedir una mejor si hace falta).
-2. **Canva** con brand kit "Dimanche": elegir formato → foto full-bleed → ícono arriba → titular Niveau → badge "D".
+1. **Foto real** (Drive o celu; pedir una mejor si hace falta). **No usar `01_Fotos/Editadas/`** (slides viejas sobre azul) — usar `01_Fotos/Sesiones/Sesion_Principal/Fotos/`.
+2. **Composición por código** (Satori/PIL; ver `motor-de-composicion.md`): elegir formato → foto full-bleed → ícono arriba → titular Niveau → badge "D", todo posicionado por código con Niveau embebida y los assets reales del Drive.
 3. **Brand-check** (tono POL-010, paleta, regla de oro, cero naranja/emojis) → **Propuesto** (gate humano).
 
-> La IA (Higgsfield/nano_banana) entra solo si no tenés la foto: genera la escena partiendo de una referencia real, y el texto/logo igual van en Canva.
+> La IA (Higgsfield/nano_banana) entra solo para el hero: genera la escena partiendo de una referencia real de **producto** (no de fondo), y el texto/logo/íconos los pone igual el **código**.
 
 ## Cómo vive el sistema en las herramientas
-El design system (foundations + components + templates + gobernanza) es la **especificación**. **Vive en el Drive como base** — `06_Marketing/00_Marca/Design_System/` (PDF + hojas + docs) + los assets en `00_Marca/` (Logos, `Tipografias/Niveau_Grotesk`, `Elementos_Graficos`) y las fotos en `01_Fotos/`. **Las herramientas tiran de ahí:**
-- **Canva = el hogar de producción.** El **Brand Kit "Dimanche"** (paleta · **Niveau Grotesk** · logo/badge · los 8 íconos) + **Brand Templates con autofill** por formato (story/post/carrusel/TV, con grilla y safe-area ya puestas) → Anto **arrastra la foto y escribe el titular**. *(Las plantillas autollenables todavía hay que construirlas — es el puente de "doc" a "usable".)*
-- **Higgsfield (u otra IA) = SOLO la foto/escena**, cuando no hay una real. No hace texto, logo ni layout — eso es Canva.
-- **Flujo:** foto real (celu/Drive) **o** Higgsfield → **Canva** (template: foto + ícono + titular + badge) → **brand-check** → **Propuesto** (gate).
-- **A futuro (bot-productor):** el bot dispara Higgsfield + el autofill de Canva por API y devuelve la pieza por Telegram (las MCP de ambos ya están conectadas).
+El design system (foundations + components + templates + gobernanza) es la **especificación**. **Vive en el Drive como base** — `06_Marketing/00_Marca/Design_System/` (PDF + hojas + docs) + los assets en `00_Marca/` (Logos, `Tipografias/Niveau_Grotesk`, `Elementos_Graficos`) y las fotos en `01_Fotos/` (**NO `Editadas`** — slides viejas sobre azul; usar `Sesiones/Sesion_Principal/Fotos`). **Las herramientas tiran de ahí:**
+- **Código = el hogar de producción.** Las **plantillas por formato** (story/post/carrusel/TV, con grilla y safe-area) viven en el repo y se componen por código (Satori/PIL para estáticas, Remotion para video/TV), tomando del Brand Kit los assets reales (paleta · **Niveau Grotesk** embebida · logo/badge · los 8 íconos). Ver `motor-de-composicion.md`. *(Las plantillas de código todavía hay que construirlas — es el próximo entregable del frente de contenido; mientras tanto, una pieza puntual se compone ad-hoc con PIL, jamás Canva.)*
+- **Higgsfield (u otra IA) = SOLO el hero (la foto/escena)**, cuando no hay una real. No hace texto, logo ni layout — eso es código.
+- **Flujo:** foto real (celu/Drive: `Sesiones/Sesion_Principal/Fotos`, **no Editadas**) **o** Higgsfield → **composición por código** (foto + ícono + titular + badge) → **brand-check** → **Propuesto** (gate).
+- **~~A futuro (bot-productor)~~ — DESCARTADO (08/06):** el bot-productor por Telegram se probó y se descartó. La producción de piezas va por **Claude Code, dirigida** (no automática por Telegram).

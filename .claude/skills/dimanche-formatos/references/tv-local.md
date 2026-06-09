@@ -15,7 +15,7 @@
 **1 mensaje por placa** (hero O categoría, nunca ambos). En placa-menú el **precio es protagonista** (alto contraste, pegado al nombre); en placa-hero el precio puede omitirse para vender deseo. Mezcla del loop: hero a sangre · combo · novedad/temporada · marca/mood · menú-precios. Logo discreto en **lugar fijo** en todas.
 
 ## 4. Anatomía Dimanche
-**Foto a sangre (full-bleed)** con overlay para la placa hero; **foto recortada sobre color sólido** para combos/menú. Movimiento **sutil con easing**: push-in lento / vapor en loop seamless; el texto entra con fade. **Anima el ambiente, nunca el producto ni el logo.** → movimiento detallado: `pantallas-tv-local.md` §3 + `templates.md`.
+**Foto a sangre (full-bleed)** con overlay para la placa hero; **foto recortada sobre color sólido** para combos/menú. La placa sale **completa por código** (Remotion; Revideo como alternativa gratis) — hero IA + texto/logo/íconos/precio/badge compuestos con Niveau embebida y assets reales del Drive, **Canva afuera** (quedaba malísimo en TV) → `motor-de-composicion.md`. Movimiento **sutil con easing**: push-in lento / vapor en loop seamless; el texto entra con fade. **Anima el ambiente, nunca el producto ni el logo.** → movimiento detallado: `pantallas-tv-local.md` §3 + `templates.md`.
 
 **Reconciliación con el norte (importante):** el viejo `pantallas-tv-local.md` dice "azul `#3559E0` como fondo pleno". El norte (`sistema-visual-dimanche.md`) lo acota: el **azul dominante como fondo va SOLO en placas con texto** (menú/precios/mood) — para máximo contraste —, **no como regla general**. Las placas hero van **foto a sangre** con overlay, no fondo azul. (Pendiente menor: bajar esta aclaración al propio `pantallas-tv-local.md`.)
 

@@ -15,7 +15,7 @@
 Swipe: **(1) portada = el gancho** (gana o pierde el deslizar — lockup + foto que invite) → **(2) slides: 1 idea por slide** (foto + dato/texto corto, mismo tratamiento en todas) → **(3) cierre: badge + CTA** (banner "Pedí por Uber" / "Te esperamos"). La portada es también la tapa en el grid: tiene que funcionar sola.
 
 ## 4. Anatomía Dimanche
-Mismo tratamiento visual en **todas** las slides (es lo que lo hace "una pieza", no 10 sueltas). Hero/portada → detalle/textura → cierre con **un dato real** ("18 h de fermentación en frío", sin adjetivos). Dial premium-limpio (como feed). → componentes y banner CTA: `templates.md` / `components.md`. → copy por slide: `dimanche-copy`.
+Mismo tratamiento visual en **todas** las slides (es lo que lo hace "una pieza", no 10 sueltas). Hero/portada → detalle/textura → cierre con **un dato real** ("18 h de fermentación en frío", sin adjetivos). Dial premium-limpio (como feed): **premium = piso accesible, menos precious**. Como es formato de feed, la **firma cobalto vive en la capa gráfica** (titular, badge D, banner CTA, acento), no en un objeto físico forzado. Cada slide sale **completa por código** — hero IA + texto/logo/íconos/badge compuestos con Niveau embebida y assets reales del Drive (ver `motor-de-composicion.md`). → componentes y banner CTA: `templates.md` / `components.md`. → copy por slide: `dimanche-copy`.
 
 ## 5. Do's & Don'ts Dimanche
 **SÍ:** pensarlo como historia (vale el esfuerzo), 1 idea por slide, portada que invita, cierre con CTA, coherencia entre slides. **NO:** slides con tratamientos distintos (parecen 10 posts pegados), texto largo por slide, portada floja (se pierde el swipe), naranja/emojis, marketinería.

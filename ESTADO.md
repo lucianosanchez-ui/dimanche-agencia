@@ -1,6 +1,26 @@
 # ESTADO — Agencia de Marketing Dimanche (punto de retomada)
 
-## 🟢 2026-06-08 (sesión 8 — "agencia mkt 8") — LEER ESTO PRIMERO
+## 🟢 2026-06-08 (sesión 9 — "agencia mkt 9") — LEER ESTO PRIMERO
+
+**Frente prioritario CONTENIDO/VISUAL — diagnosticado, arreglado y validado (1ra prueba).** El "la salida vuelve al azul-base genérico" tenía DOS causas:
+1. **Bug de path (arreglado):** el skill `dimanche-media` anclaba las referencias de estilo a `01_Fotos/Editadas/` (slides viejas sobre azul, flojas) — contradecía `docs/proceso-contenido.md`. Re-apuntado a la **sesión profesional** `01_Fotos/Sesiones/Sesion_Principal/Fotos/` (197 buenas) en los 3 archivos del skill (`SKILL.md`, `references/herramientas.md`, `references/sistema-visual-dimanche.md`).
+2. **Causa más profunda (hallazgo):** miré las 197 fotos de la sesión profesional → el banco real es **mayormente fondo azul cobalto o madera cálida; casi no hay premium blanco/mármol/acero del norte**. Usarlas como *style-ref de fondo* arrastra ese azul/madera. → **Decisión de Luciano: "Foto = solo producto, fondo por prompt".** La foto real aporta el PRODUCTO (regla de oro, role `image` en Nano Banana); la escena premium la **construye el PROMPT** (norte Villa Allende), **no** "in the exact style of the references". El skill quedó ajustado a ese enfoque.
+
+**Validación (Higgsfield `nano_banana_2`, 2 créditos):** medialuna real (`_JFZ6286.JPG`, base sobre azul) → hero premium 4:5 sobre **mármol blanco + luz de ventana + plato cobalto de firma + servilleta crema**, producto intacto, **sin azul-base**. On-brand al primer intento → valida el enfoque. Archivos en `~/Downloads/dimanche-slides/`: `validacion-medialuna-premium.png`, `validacion-comparacion.png`, contact sheets `contact-sesion-principal-{1,2}.png`, `zoom-productos.png`. **PENDIENTE: OK final de Luciano al look.**
+
+**VIRAJE GRANDE (Luciano, sesión 9): "se perdieron muchas cosas que habíamos definido".** Se hizo arqueología exhaustiva (workflow de 12 lectores sobre repo + skills + Notion + Drive + memorias) y se confirmó: las decisiones existían pero vivían en UN archivo (`sistema-visual-dimanche.md`) o en ESTADO/memoria y **nunca bajaron a lo que se usa al producir** + había un **bug vivo** (`proceso-contenido.md` mandaba "exact style of the references", que reintroduce el azul-base). **3 decisiones confirmadas por Luciano y bajadas a TODO el sistema:**
+1. **PIEZA COMPLETA POR CÓDIGO, lista para publicar, sin trabajo manual.** Hero = Higgsfield/Nano Banana (producto real). Texto+logo+íconos+badge = **por código** (Satori/PIL estáticas, Remotion video/TV), Niveau embebida, assets reales del Drive. **CANVA AFUERA DE TODO** (quedaba malísimo). El texto nunca lo escribe la IA ni se arma a mano. Excepción: piezas sin capa gráfica (mood/fondo suelto). → doc nuevo **`references/motor-de-composicion.md`**.
+2. **PREMIUM = PISO, no techo:** accesible, con gente y vida, ni de altar ni "loud" ("menos precious"). Reconcilia brand-book ("no es premium") con contexto ("premium accesible").
+3. **OBJETO AZUL POR FORMATO Y CON SENTIDO** (no decorativo random): objeto cobalto real con motivo en reel/story; azul en la capa gráfica (titular/badge/acento) en feed/placas.
++ Motores: **estáticas = Satori/PIL (gratis, MIT)**; **video/TV = Revideo (MIT, self-host gratis)** o Remotion (más maduro pero para Dimanche, >3 empleados, requiere Company License ~US$100/mes) o Creatomate (US$29/mes). **Decisión de motor de video PENDIENTE** (según si hay quién mantenga el self-host). Adobe afuera de la composición (Firefly Services es enterprise US$1.000+/mes).
+
+**Sincronización aplicada y verificada:** workflow de 14 agentes (1 por archivo) + barrido manual → **23 archivos** (22 modificados + `motor-de-composicion.md` nuevo). Purgado el vocabulario viejo (homey/madera/no-orange), íconos línea→silueta, Canva fuera (solo queda en `canva-setup.md` marcado LEGACY + como trigger word + cita histórica), bot-productor marcado descartado, deadpan/dato-real bajado a `dimanche-copy` y `dimanche-brand-check`, premium=piso a SKILL/brand-check/feed-post.
+
+**Próximos pasos de contenido:** (a) **OK de Luciano al look** de la medialuna premium (sigue pendiente); (b) **construir las plantillas de código** por formato (el motor real: Satori/PIL para estáticas, Remotion para video/TV) — es el próximo entregable grande; (c) con look + plantillas, producir a escala las campañas (Día del Padre / "antes del partido").
+
+---
+
+## 🟢 2026-06-08 (sesión 8 — "agencia mkt 8")
 
 Sesión multi-frente (Luciano pidió "todo junto con subagentes"). Se atacaron los 4 pendientes abiertos del 08/06 AM en paralelo (scouting con subagentes + producción dirigida en Claude Code). Estado de cada uno:
 
