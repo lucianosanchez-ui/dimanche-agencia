@@ -148,6 +148,32 @@ const Calle: React.FC<{ opacity: number; freezeFrame: number }> = ({ opacity, fr
   );
 };
 
+/** El clip real de la mano, que ENTRA deslizándose desde arriba (no aparece de golpe). */
+const ManoClip: React.FC<{ box: { left: number; bottom: number; width: number; height: number } }> = ({ box }) => {
+  const f = useCurrentFrame();
+  const entryY = interpolate(f, [0, 18], [-880, 0], {
+    extrapolateLeft: "clamp",
+    extrapolateRight: "clamp",
+    easing: Easing.out(Easing.cubic),
+  });
+  return (
+    <OffthreadVideo
+      src={staticFile("assets/tv/delivery-mano-real.webm")}
+      transparent
+      muted
+      style={{
+        position: "absolute",
+        left: box.left,
+        bottom: box.bottom,
+        width: box.width,
+        height: box.height,
+        transform: `translateX(-50%) translateY(${entryY}px)`,
+        filter: "drop-shadow(0 16px 36px rgba(0,0,0,0.3))",
+      }}
+    />
+  );
+};
+
 export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
   titular,
   resalte,
@@ -188,7 +214,7 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
   const qrScale = interpolate(ctaS, [0, 1], [0.6, 1]);
   const ctaOp = interpolate(ctaS, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
 
-  const bagBox = { left: BAG_CX, bottom: 56, width: 858, height: 968 } as const;
+  const bagBox = { left: BAG_CX, bottom: 52, width: 850, height: 1008 } as const;
 
   return (
     <AbsoluteFill style={{ backgroundColor: COBALTO, overflow: "hidden" }}>
@@ -200,22 +226,9 @@ export const PlacaDeliveryVideo: React.FC<PlacaDeliveryVideoProps> = ({
         <Img src={TV_DELIVERY.vespaSide} style={{ height: 320, width: "auto", display: "block" }} />
       </div>
 
-      {/* 2) Clip REAL: la mano baja la bolsa, la apoya, suelta y se va (verde keyeado → webm alfa) */}
+      {/* 2) Clip REAL: la mano ENTRA desde arriba, baja la bolsa, la apoya, suelta y se va */}
       <Sequence from={CLIP_START} durationInFrames={CLIP_LEN}>
-        <OffthreadVideo
-          src={staticFile("assets/tv/delivery-mano-real.webm")}
-          transparent
-          muted
-          style={{
-            position: "absolute",
-            left: bagBox.left,
-            bottom: bagBox.bottom,
-            width: bagBox.width,
-            height: bagBox.height,
-            transform: "translateX(-50%)",
-            filter: "drop-shadow(0 16px 36px rgba(0,0,0,0.3))",
-          }}
-        />
+        <ManoClip box={bagBox} />
       </Sequence>
 
       {/* 2b) Bolsa apoyada (ultimo frame del clip) — queda fija para el hold */}
