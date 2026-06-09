@@ -88,6 +88,20 @@ export const MEDIA = {
   heroImage: staticFile("media/hero.jpg"),
 } as const;
 
+// Clips y estaticas reales para el Reel (copiados de ~/Downloads/dimanche-slides).
+//  - croissants     : test-kling3.mp4  (croissants en canasta, movimiento)
+//  - humito         : humito-medialuna.mp4 (medialuna + vapor, plato cobalto)
+//  - cinnaEscena    : cinna-escena.png (lifestyle: mano + canasta + cafe)
+//  - macroLateral   : angle-macro-lateral.png (macro glossy)
+//  - cierreBg       : frame congelado de croissants para la placa de cierre
+export const REEL_MEDIA = {
+  croissants: staticFile("media/croissants.mp4"),
+  humito: staticFile("media/humito-medialuna.mp4"),
+  cinnaEscena: staticFile("media/cinna-escena.png"),
+  macroLateral: staticFile("media/angle-macro-lateral.png"),
+  cierreBg: staticFile("media/cierre-bg.png"),
+} as const;
+
 // ---------------------------------------------------------------------------
 // 4. Copy de marca (filo deadpan, sin emojis)
 // ---------------------------------------------------------------------------

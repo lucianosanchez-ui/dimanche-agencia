@@ -24,9 +24,13 @@ type TitularProps = {
   weight?: keyof typeof FONT_WEIGHTS;
   /** Frame en el que arranca la entrada. */
   delay?: number;
+  /** Frame en el que el titular empieza a salir (fade-out). Omitir = se queda. */
+  out?: number;
   /** Alineacion del bloque. */
   align?: "left" | "center";
   maxWidth?: number | string;
+  /** Sombra suave para legibilidad sobre foto. */
+  shadow?: boolean;
 };
 
 export const Titular: React.FC<TitularProps> = ({
@@ -35,12 +39,30 @@ export const Titular: React.FC<TitularProps> = ({
   color = CREMA,
   weight = "black",
   delay = 0,
+  out,
   align = "left",
   maxWidth = "82%",
+  shadow = true,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
   const palabras = texto.split(" ");
+
+  // Salida del bloque entero (fade + leve subida) si se define `out`.
+  const exitOpacity =
+    out === undefined
+      ? 1
+      : interpolate(frame, [out, out + 12], [1, 0], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
+  const exitY =
+    out === undefined
+      ? 0
+      : interpolate(frame, [out, out + 12], [0, -size * 0.18], {
+          extrapolateLeft: "clamp",
+          extrapolateRight: "clamp",
+        });
 
   return (
     <div
@@ -51,6 +73,8 @@ export const Titular: React.FC<TitularProps> = ({
         maxWidth,
         justifyContent: align === "center" ? "center" : "flex-start",
         textAlign: align,
+        opacity: exitOpacity,
+        transform: `translateY(${exitY}px)`,
       }}
     >
       {palabras.map((palabra, i) => {
@@ -79,6 +103,9 @@ export const Titular: React.FC<TitularProps> = ({
               color,
               transform: `translateY(${y}px)`,
               opacity,
+              textShadow: shadow
+                ? "0 2px 24px rgba(0,0,0,0.45), 0 1px 4px rgba(0,0,0,0.35)"
+                : "none",
               // mask-reveal: la palabra entra desde abajo dentro de su caja
               clipPath: `inset(${clip}% 0 0 0)`,
             }}

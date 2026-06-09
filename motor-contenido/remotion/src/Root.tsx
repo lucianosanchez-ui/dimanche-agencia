@@ -22,7 +22,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="Reel"
         component={Reel}
-        durationInFrames={FPS * 8} // 8 s
+        durationInFrames={390} // 13 s @ 30fps
         fps={FPS}
         width={1080}
         height={1920}
