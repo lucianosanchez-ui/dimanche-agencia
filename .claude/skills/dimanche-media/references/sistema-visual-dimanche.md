@@ -7,6 +7,13 @@
 > 2. **El premium es PISO, no techo.** Accesible, con gente y vida; **ni distante / de altar ni "loud"**. ("Menos precious", el clásico sobrio, el museo fue demasiado, el Criollazos gigante fue overshoot.) Reconcilia el brand-book ("no es premium") con el contexto ("premium accesible"): premium en la **marca y la terminación**, accesible en el trato.
 > 3. **El objeto cobalto va POR FORMATO y CON SENTIDO** (no decorativo random) — ver §1 "Firma de color".
 
+> **⚡ LA ONDA DIMANCHE — CERRADA con Luciano (2026-06-09). Es la dirección operativa; manda sobre cualquier nota previa que suene "aesthetic/fría".**
+> - **El producto a COLOR es el HÉROE** — apetitoso, vivo, con vida (manos, café, luz, un momento real). Energía estilo **Cinnamood** (producto en uso/lifestyle/mood/antojo). La foto **SIEMPRE a color**: el duotono cobalto fue probado y **rechazado** (mata el antojo).
+> - **La identidad entra como TOQUE, no tapa el producto:** cobalto + monograma D + sello "con olorcito a domingo" (cápsula **directa**, NUNCA con recuadro blanco atrás) + titular Niveau con **filo deadpan** + **line-art** (estilo sello de los elementos gráficos) cuando suma.
+> - **VERSÁTIL — no un molde único:** conviven registros — *lifestyle* (vida/mano/café), *solo producto* (macro, el antojo puro), *placa* — mismo sistema, distinta pieza.
+> - **El cobalto vive en la capa gráfica / props / packaging real, NO tiñendo la foto.** Descartados: el azul-base plano y el "texto gigante sobre foto" genérico (lo hace cualquiera).
+> - Referencias de la onda: **Cinnamood** (energía/mood/producto en uso) + **mobileeditingclub** (tipo editorial + método de IA dirigida: composición/luz/ángulos). Piezas aprobadas en `~/Downloads/dimanche-slides/` (PIEZA-cinnamood-dimanche, reg1-lifestyle, reg2-producto).
+
 ## Concepto que ordena todo: identidad estable + tácticas vivas
 - El **norte visual** (cómo se ve Dimanche) es **estable a propósito** — no perseguimos cada moda; esa es la fuerza de marca.
 - Lo que se mueve y se actualiza son las **tácticas** (formatos, ganchos, a qué trend nos subimos), alimentadas por performance (Numa) y radar (Lola/Mateo/Rocco), **filtradas por el norte**.

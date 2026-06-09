@@ -21,7 +21,11 @@ Donas gourmet de Londres ("doughnut atelier", de Roladin). Lujo couture (~£6,50
 **Robar:** producto único como héroe macro (miga, greñado, brillo, hojaldre) partiendo de pieza REAL · el obrador/manos/horno como set (credibilidad artesanal sin decir marketing) · drops estacionales deseables.
 **No copiar:** el dorado/pan de oro y la estética "bling" (choca con azul/crema) · copy pomposo ("exquisito", "indulgente", "fit for a King") = marketinería prohibida (POL-010) · la idea de "demasiado lindo para comer" (Dimanche es para comer y disfrutar).
 
-## Cinnamood (@cinnamood) — solo el método del antojo
+## Cinnamood (@cinnamood_) — REFERENCIA PRINCIPAL DE ONDA (act. 2026-06-09)
+**Luciano la eligió como el norte de "onda" para Dimanche.** Lo que SÍ se toma (revierte el "solo el método" anterior, que era demasiado conservador): la **energía/mood** (producto a color, vivo, en uso/con manos, lifestyle), el **color de marca protagonista** (en packaging/props, no tiñendo la foto), el **macro del producto en movimiento**, los **drops con gancho**, el producto **apetitoso como héroe**. Lo que se mantiene afuera: los **eslóganes en inglés vacíos** y la **marketinería** (POL-010), el sobre-topeado, la paleta lila (lo nuestro es cobalto/crema). La "onda Dimanche" (cerrada 09/06, ver `sistema-visual-dimanche.md`) es Cinnamood **con identidad Dimanche**. + **mobileeditingclub** (@mobileeditingclub): referencia del **diseño editorial** (tipo masiva con actitud) y del **método de producción con IA dirigida** (composición/luz/ángulos/foco definidos antes de generar; campañas y UGC desde una foto real). + **Starbucks Argentina**: registro premium-accesible local (pendiente de relevar, el handle no resolvió por Apify).
+
+---
+### (histórico) Cinnamood — el método del antojo
 Cinnamon rolls "lifestyle" de Colonia (Alemania), 2022; rolls sobre-topeados, paleta **lila/bordó**, tono "Daily Mood Boost" ruidoso.
 - **Lo picante = textura y deseo en movimiento:** macro del roll, el "pull" gooey, el frosting cayendo, casi ASMR. El producto como objeto de antojo.
 - Firma cromática propia y consistente (lo suyo es lila/bordó; lo nuestro es cobalto + crema).
