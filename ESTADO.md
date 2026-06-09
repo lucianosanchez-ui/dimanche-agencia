@@ -16,7 +16,9 @@
 
 **Sincronización aplicada y verificada:** workflow de 14 agentes (1 por archivo) + barrido manual → **23 archivos** (22 modificados + `motor-de-composicion.md` nuevo). Purgado el vocabulario viejo (homey/madera/no-orange), íconos línea→silueta, Canva fuera (solo queda en `canva-setup.md` marcado LEGACY + como trigger word + cita histórica), bot-productor marcado descartado, deadpan/dato-real bajado a `dimanche-copy` y `dimanche-brand-check`, premium=piso a SKILL/brand-check/feed-post.
 
-**Próximos pasos de contenido:** (a) **OK de Luciano al look** de la medialuna premium (sigue pendiente); (b) **construir las plantillas de código** por formato (el motor real: Satori/PIL para estáticas, Remotion para video/TV) — es el próximo entregable grande; (c) con look + plantillas, producir a escala las campañas (Día del Padre / "antes del partido").
+**Próximos pasos de contenido:** (a) **OK de Luciano al look** de la medialuna premium (sigue pendiente); (b) **construir las plantillas de código** por formato (el motor real: Satori/PIL para estáticas, Remotion/Revideo para video/TV) — es el próximo entregable grande; (c) con look + plantillas, producir a escala las campañas (Día del Padre / "antes del partido").
+
+**Guardado:** commit `3b64b3a` en `main` (local; el push a remoto quedó pendiente de autorización explícita del clasificador). **Ejemplos del motor probados (sesión 9, en `~/Downloads/dimanche-slides/`):** `placa-ejemplo-completa.png` = placa estática completa compuesta por código con PIL (foto premium + titular Niveau + acento cobalto + tagline + wordmark, **sin Canva**) → prueba de concepto del "pieza lista para publicar"; + video del **humito** (Higgsfield `seedance_2_0` image→video sobre el hero) → prueba de que el movimiento de producto ya se puede hoy. Falta: las plantillas afinadas (zonas seguras) + el motor de video data-driven para placas tipo TV.
 
 ---
 
