@@ -43,6 +43,14 @@ import {
   PlacaDeliveryVideo,
   placaDeliveryVideoDefaultProps,
 } from "./components/PlacaDeliveryVideo";
+import {
+  PlacaProducto,
+  placaProductoDefaultProps,
+} from "./components/PlacaProducto";
+import {
+  PlacaProductoVideo,
+  placaProductoVideoDefaultProps,
+} from "./components/PlacaProductoVideo";
 import { ensureFonts } from "./brand";
 
 const FPS = 30;
@@ -194,6 +202,34 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={placaDeliveryDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="Producto"
+        component={PlacaProducto}
+        durationInFrames={150}
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaProductoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="ProductoVideo"
+        component={PlacaProductoVideo}
+        durationInFrames={300}
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaProductoVideoDefaultProps}
         calculateMetadata={async ({ props }) => {
           await ensureFonts();
           return { props };
