@@ -52,6 +52,10 @@ import {
   placaProductoVideoDefaultProps,
 } from "./components/PlacaProductoVideo";
 import { PlacaInfo, placaInfoDefaultProps } from "./components/PlacaInfo";
+import {
+  PlacaBudinesVideo,
+  placaBudinesVideoDefaultProps,
+} from "./components/PlacaBudinesVideo";
 import { ensureFonts } from "./brand";
 
 const FPS = 30;
@@ -245,6 +249,20 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={placaProductoVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="BudinesVideo"
+        component={PlacaBudinesVideo}
+        durationInFrames={360} // 12 s @ 30fps (acto1 4.2s + 6 budines 1s c/u + cierre)
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaBudinesVideoDefaultProps}
         calculateMetadata={async ({ props }) => {
           await ensureFonts();
           return { props };
