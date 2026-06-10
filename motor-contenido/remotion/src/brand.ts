@@ -165,7 +165,7 @@ export const TV_MEDIA = {
 export const LOCALES = [
   { zona: "Villa Allende", horario: "lun a sáb 7 a 22 h · dom 8 a 20 h" },
   { zona: "Gauss", horario: "todos los días · 7 a 21 h" }, // PROVISORIO — confirmar
-  { zona: "Boulevares", horario: "lun a sáb 6 a 22 h · dom 7 a 20 h" },
+  { zona: "Boulevares", horario: "lun a vie 6 a 22 h · sáb 7 a 22 h · dom 7 a 20 h" },
 ] as const;
 
 // ---------------------------------------------------------------------------
