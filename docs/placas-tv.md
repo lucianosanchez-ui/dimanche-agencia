@@ -12,6 +12,7 @@
 ## Estado por TV
 **Cerradas y aprobadas (referencia de calidad):**
 - Desayuno (producto, 10s), Criollos (producto, 10s), Delivery (info, escena ilustrada + mano real, QR), Horarios Villa Allende (info, medialuna).
+- Horarios Boulevares (10/06): mismo molde por props (`local` + `filas`: lun-sáb 6 a 22 / dom 7 a 20). Al video se le portó la prop `adorno` (tenía el emblema viejo hardcodeado; ahora medialuna como la estática). Horarios reales de VA y Boulevares quedaron en `brand.ts` LOCALES (Gauss sigue provisorio).
 
 **Hechas en lote 10/06 — FUNCIONAN pero quedaron PLANAS, hay que retrabajarlas de a una:**
 - Producto: pan, torta de chocolate, medialunas, masas finas, muffin, coquitos (estática + video; precios reales de Notion).

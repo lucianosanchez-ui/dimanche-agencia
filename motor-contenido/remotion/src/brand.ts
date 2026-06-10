@@ -161,11 +161,11 @@ export const TV_MEDIA = {
 } as const;
 
 // Los 3 locales (placa de servicio de la TV).
-// OJO: horarios PROVISORIOS — confirmar con Anto direccion + horario reales.
+// Villa Allende y Boulevares confirmados por Luciano (09-10/06). Gauss PROVISORIO.
 export const LOCALES = [
-  { zona: "Villa Allende", horario: "todos los días · 7 a 21 h" },
-  { zona: "Gauss", horario: "todos los días · 7 a 21 h" },
-  { zona: "Boulevares", horario: "todos los días · 7 a 21 h" },
+  { zona: "Villa Allende", horario: "lun a sáb 7 a 22 h · dom 8 a 20 h" },
+  { zona: "Gauss", horario: "todos los días · 7 a 21 h" }, // PROVISORIO — confirmar
+  { zona: "Boulevares", horario: "lun a sáb 6 a 22 h · dom 7 a 20 h" },
 ] as const;
 
 // ---------------------------------------------------------------------------

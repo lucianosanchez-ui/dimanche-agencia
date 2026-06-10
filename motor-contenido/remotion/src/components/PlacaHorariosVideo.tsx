@@ -31,8 +31,11 @@ export type PlacaHorariosVideoProps = {
   local: string;
   antetitulo: string;
   filas: Fila[];
+  /** Qué pieza de marca llena el lado derecho (igual que la estática). */
+  adorno: "croissant" | "emblema";
   emblemaSrc: string;
   selloSrc: string;
+  croissantSrc: string;
 };
 
 export const placaHorariosVideoDefaultProps: PlacaHorariosVideoProps = {
@@ -42,8 +45,10 @@ export const placaHorariosVideoDefaultProps: PlacaHorariosVideoProps = {
     { dia: "lunes a sábado", abre: "7", cierra: "22" },
     { dia: "domingos", abre: "8", cierra: "20" },
   ],
+  adorno: "croissant", // medialuna: la opción que eligió Luciano para horarios
   emblemaSrc: TV_GRAFICA.emblema,
   selloSrc: TV_GRAFICA.selloDomingo,
+  croissantSrc: TV_GRAFICA.croissant,
 };
 
 const Numero: React.FC<{ children: React.ReactNode }> = ({ children }) => (
@@ -79,8 +84,10 @@ export const PlacaHorariosVideo: React.FC<PlacaHorariosVideoProps> = ({
   local,
   antetitulo,
   filas,
+  adorno,
   emblemaSrc,
   selloSrc,
+  croissantSrc,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -144,7 +151,20 @@ export const PlacaHorariosVideo: React.FC<PlacaHorariosVideoProps> = ({
           alignItems: "flex-start",
         }}
       >
-        {/* (el emblema va GRANDE a la derecha, no arriba) */}
+        {/* Emblema chico arriba (solo si la derecha la ocupa la medialuna) */}
+        {adorno !== "emblema" ? (
+          <Img
+            src={emblemaSrc}
+            style={{
+              height: 170,
+              width: "auto",
+              marginBottom: 48,
+              transform: `scale(${embScale})`,
+              transformOrigin: "left center",
+              opacity: embOpacity,
+            }}
+          />
+        ) : null}
 
         {/* Antetitulo */}
         <div
@@ -227,20 +247,36 @@ export const PlacaHorariosVideo: React.FC<PlacaHorariosVideoProps> = ({
         </div>
       </AbsoluteFill>
 
-      {/* Emblema grande: ancla del lado derecho (entra con pop) */}
-      <Img
-        src={emblemaSrc}
-        style={{
-          position: "absolute",
-          right: 150,
-          top: "50%",
-          height: 500,
-          width: "auto",
-          transform: `translateY(-56%) scale(${embScale})`,
-          transformOrigin: "center center",
-          opacity: embOpacity,
-        }}
-      />
+      {/* Pieza de marca grande del lado derecho (entra con pop) */}
+      {adorno === "croissant" ? (
+        <Img
+          src={croissantSrc}
+          style={{
+            position: "absolute",
+            right: 110,
+            top: "50%",
+            height: 460,
+            width: "auto",
+            transform: `translateY(-62%) rotate(-6deg) scale(${embScale})`,
+            transformOrigin: "center center",
+            opacity: embOpacity,
+          }}
+        />
+      ) : (
+        <Img
+          src={emblemaSrc}
+          style={{
+            position: "absolute",
+            right: 150,
+            top: "50%",
+            height: 500,
+            width: "auto",
+            transform: `translateY(-56%) scale(${embScale})`,
+            transformOrigin: "center center",
+            opacity: embOpacity,
+          }}
+        />
+      )}
 
       {/* Sello: estampa abajo-derecha */}
       <Img
