@@ -258,7 +258,7 @@ export const RemotionRoot: React.FC = () => {
       <Composition
         id="BudinesVideo"
         component={PlacaBudinesVideo}
-        durationInFrames={360} // 12 s @ 30fps (acto1 4.2s + 6 budines 1s c/u + cierre)
+        durationInFrames={516} // 17.2 s @ 30fps (acto1 4.8s + 6 budines 1.6s c/u + cierre 2.8s)
         fps={FPS}
         width={1920}
         height={1080}

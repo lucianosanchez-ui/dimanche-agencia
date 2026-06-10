@@ -61,13 +61,17 @@ export const placaBudinesVideoDefaultProps: PlacaBudinesVideoProps = {
   remate: "los mates los pone otro.",
 };
 
-// Timeline (30 fps)
-const ACTO1_DUR = 126; // 0–4.2s
-const POR_BUDIN = 30; // 1s por budín
-const ACTO2_DUR = 6 * POR_BUDIN; // 180 f
+// Timeline (30 fps) — ritmo ajustado 10/06: "muy rápido" → 1.6s por budín
+const ACTO1_DUR = 144; // 0–4.8s (el clip Seedance dura 5s: alcanza sin estirar)
+const POR_BUDIN = 48; // 1.6s por budín, tiempo real de lectura en la TV
+const ACTO2_DUR = 6 * POR_BUDIN; // 288 f
 const ACTO2_FROM = ACTO1_DUR;
-const CIERRE_FROM = ACTO2_FROM + ACTO2_DUR; // f306
-// total: 360 f (12 s)
+const CIERRE_FROM = ACTO2_FROM + ACTO2_DUR; // f432
+// total: 516 f (17.2 s)
+
+// Sombra sintética idéntica para los 6 budines (los PNG vienen recortados con
+// alpha por remove_background — sin sombra propia → uniformidad total).
+const SOMBRA_BUDIN = "drop-shadow(0 18px 30px rgba(80, 60, 30, 0.22))";
 
 /** Acto 2 — un budín cenital vertical grande + nombre al lado. */
 const BudinFocus: React.FC<{ budin: Budin; index: number; total: number }> = ({
@@ -112,9 +116,10 @@ const BudinFocus: React.FC<{ budin: Budin; index: number; total: number }> = ({
         <Img
           src={budin.src}
           style={{
-            maxHeight: 1040,
+            maxHeight: 1000,
             maxWidth: 700,
             objectFit: "contain",
+            filter: SOMBRA_BUDIN,
           }}
         />
       </div>
@@ -298,7 +303,10 @@ export const PlacaBudinesVideo: React.FC<PlacaBudinesVideoProps> = ({
                     transform: `translateY(${ty}px)`,
                   }}
                 >
-                  <Img src={b.src} style={{ height: 500, width: "auto" }} />
+                  <Img
+                    src={b.src}
+                    style={{ height: 500, width: "auto", filter: SOMBRA_BUDIN }}
+                  />
                   <div
                     style={{
                       marginTop: 26,
