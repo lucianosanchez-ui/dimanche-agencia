@@ -109,6 +109,9 @@ export const TV_GRAFICA = {
   selloDomingo: staticFile("assets/tv/sello-domingo.png"),
   solAzul: staticFile("assets/tv/sol-azul.png"),
   croissant: staticFile("assets/tv/croissant-cobalto.png"), // medialuna cobalto (elemento real)
+  // Versiones CREMA oficiales (set Off_white_blue) — para placas sobre cobalto:
+  selloCrema: staticFile("assets/tv/sello-domingo-crema.png"), // "con olorcito a domingo" placa crema
+  monedaCrema: staticFile("assets/tv/moneda-d-crema.png"), // D moneda crema
 } as const;
 
 // Placa DELIVERY: piezas generadas/recortadas (regla de oro: la bolsa parte de

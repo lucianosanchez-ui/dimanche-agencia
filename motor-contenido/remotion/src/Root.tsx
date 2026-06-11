@@ -56,6 +56,11 @@ import {
   PlacaBudinesVideo,
   placaBudinesVideoDefaultProps,
 } from "./components/PlacaBudinesVideo";
+import {
+  PlacaSanguchitoVideo,
+  placaSanguchitoVideoDefaultProps,
+  placaSanguchitoCajaDefaultProps,
+} from "./components/PlacaSanguchitoVideo";
 import { ensureFonts } from "./brand";
 
 const FPS = 30;
@@ -263,6 +268,34 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={placaBudinesVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="SanguchitoVideo"
+        component={PlacaSanguchitoVideo}
+        durationInFrames={240} // 8 s (clip squeeze 5s + hold de lectura)
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaSanguchitoVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="SanguchitoCajaVideo"
+        component={PlacaSanguchitoVideo}
+        durationInFrames={240} // 8 s (push-in por código + hold)
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaSanguchitoCajaDefaultProps}
         calculateMetadata={async ({ props }) => {
           await ensureFonts();
           return { props };
