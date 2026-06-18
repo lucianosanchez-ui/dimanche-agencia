@@ -1,6 +1,6 @@
 # Servicio Scrapling del Radar para Railway.
 # Base con navegadores ya instalados (Playwright) para que Scrapling pueda scrapear IG/TikTok/Maps.
-FROM mcr.microsoft.com/playwright/python:v1.59.0-jammy
+FROM mcr.microsoft.com/playwright/python:v1.60.1-jammy
 
 WORKDIR /app
 
