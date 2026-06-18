@@ -12,10 +12,15 @@
 ## Estado por TV
 **Cerradas y aprobadas (referencia de calidad):**
 - Desayuno (producto, 10s), Criollos (producto, 10s), Delivery (info, escena ilustrada + mano real, QR), Horarios Villa Allende (info, medialuna).
+- Horarios Boulevares (10/06) y Gauss (11/06): mismo molde por props (`local` + `filas`; Boulevares lleva 3 filas: lun-vie 6 a 22 / sáb 7 a 22 / dom 7 a 20 — Gauss 2: lun-sáb 7 a 22 / dom 7 a 20). Al video se le portó la prop `adorno` (tenía el emblema viejo hardcodeado; ahora medialuna como la estática). Horarios reales de los 3 locales confirmados en `brand.ts` LOCALES. **Los 3 locales tienen su placa de horarios.**
 
 **Hechas en lote 10/06 — FUNCIONAN pero quedaron PLANAS, hay que retrabajarlas de a una:**
 - Producto: pan, torta de chocolate, medialunas, masas finas, muffin, coquitos (estática + video; precios reales de Notion).
 - Info: café, medios de pago, seguinos (QR IG), encargos (QR WhatsApp) (estática + video).
+
+**BUDINES (producto, video 17.2s) — PRODUCIDA 10/06, esperando aprobación final de Luciano.** 3 actos: (1) hero chocolatoso cortado sobre crema (clip Seedance 1080p) + "el que te salva / [la juntada]"; (2) cenitales VERTICALES de a uno (1.6s c/u, nano_banana desenvolvió los 6 desde la cenital real IMG_9603; recortados con remove_background de Higgsfield + sombra sintética CSS — el keyeo por color falló con glaseados claros), nombre al lado; (3) cierre: los 6 en fila + "$4.500 — el que sea" + "los mates los pone otro." + sello. Primera placa de producto sobre CREMA. Entregados: `budines — video (17s).mp4` + `budines — placa estatica.png` (= still frame 505). Comp `BudinesVideo` (`PlacaBudinesVideo.tsx`); assets en `public/media/tv/budines/` (gitignored — backup en `_opciones budines/generaciones-ia/`). Generaciones: 10 nano_banana (correcciones: chocolatoso masa/glaseado, manzana proporción de molde) + 6 remove_background + 2 Seedance (quedó la 1080p job 977ae7dc).
+
+**SANGUCHITOS (producto, 2 placas de 8s c/u) — PRODUCIDAS 11/06, esperando aprobación final.** Estilo "cartel de producto" minimal calcado de la placa café (decisión Luciano tras 5 iteraciones de mockup: matar el copy del partido largo, matar sol/sparkles — producto + nombre + precio). Placa 1 "sanguchito": hero squeeze (mano apretando el pan de papa, Seedance job 3703da78, espejado) + "pan de papa, jamón y queso" + $1.200. Placa 2 "caja x 9": "para el partido" + $10.000, push-in por código. Elementos CREMA oficiales del set `Off_white_blue` (sello + moneda D, nuevos en `assets/tv/` y `TV_GRAFICA`). Comp `SanguchitoVideo` / `SanguchitoCajaVideo` (`PlacaSanguchitoVideo.tsx`, sirve para ambas por props). NO usar "pebete" (es pan de papa) ni "juntada" (es de budines). Estáticas = frame 200.
 
 **Pendiente:**
 - TV contenido (videos mood): manos/proceso, mostrador, medialunas+café, pan en canasta, lluvia/torta, drone Villa Allende. Requiere Seedance (~20 créditos c/u) + bajar un aéreo real del drone (los buenos están "online only" en Drive).

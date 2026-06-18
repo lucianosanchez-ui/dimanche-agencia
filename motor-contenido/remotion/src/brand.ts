@@ -109,6 +109,9 @@ export const TV_GRAFICA = {
   selloDomingo: staticFile("assets/tv/sello-domingo.png"),
   solAzul: staticFile("assets/tv/sol-azul.png"),
   croissant: staticFile("assets/tv/croissant-cobalto.png"), // medialuna cobalto (elemento real)
+  // Versiones CREMA oficiales (set Off_white_blue) — para placas sobre cobalto:
+  selloCrema: staticFile("assets/tv/sello-domingo-crema.png"), // "con olorcito a domingo" placa crema
+  monedaCrema: staticFile("assets/tv/moneda-d-crema.png"), // D moneda crema
 } as const;
 
 // Placa DELIVERY: piezas generadas/recortadas (regla de oro: la bolsa parte de
@@ -161,11 +164,11 @@ export const TV_MEDIA = {
 } as const;
 
 // Los 3 locales (placa de servicio de la TV).
-// OJO: horarios PROVISORIOS — confirmar con Anto direccion + horario reales.
+// Horarios confirmados por Luciano (09-11/06). Los 3 cerrados.
 export const LOCALES = [
-  { zona: "Villa Allende", horario: "todos los días · 7 a 21 h" },
-  { zona: "Gauss", horario: "todos los días · 7 a 21 h" },
-  { zona: "Boulevares", horario: "todos los días · 7 a 21 h" },
+  { zona: "Villa Allende", horario: "lun a sáb 7 a 22 h · dom 8 a 20 h" },
+  { zona: "Gauss", horario: "lun a sáb 7 a 22 h · dom 7 a 20 h" },
+  { zona: "Boulevares", horario: "lun a vie 6 a 22 h · sáb 7 a 22 h · dom 7 a 20 h" },
 ] as const;
 
 // ---------------------------------------------------------------------------

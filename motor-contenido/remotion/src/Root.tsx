@@ -52,6 +52,15 @@ import {
   placaProductoVideoDefaultProps,
 } from "./components/PlacaProductoVideo";
 import { PlacaInfo, placaInfoDefaultProps } from "./components/PlacaInfo";
+import {
+  PlacaBudinesVideo,
+  placaBudinesVideoDefaultProps,
+} from "./components/PlacaBudinesVideo";
+import {
+  PlacaSanguchitoVideo,
+  placaSanguchitoVideoDefaultProps,
+  placaSanguchitoCajaDefaultProps,
+} from "./components/PlacaSanguchitoVideo";
 import { ensureFonts } from "./brand";
 
 const FPS = 30;
@@ -245,6 +254,48 @@ export const RemotionRoot: React.FC = () => {
         width={1920}
         height={1080}
         defaultProps={placaProductoVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="BudinesVideo"
+        component={PlacaBudinesVideo}
+        durationInFrames={516} // 17.2 s @ 30fps (acto1 4.8s + 6 budines 1.6s c/u + cierre 2.8s)
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaBudinesVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="SanguchitoVideo"
+        component={PlacaSanguchitoVideo}
+        durationInFrames={240} // 8 s (clip squeeze 5s + hold de lectura)
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaSanguchitoVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="SanguchitoCajaVideo"
+        component={PlacaSanguchitoVideo}
+        durationInFrames={240} // 8 s (push-in por código + hold)
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaSanguchitoCajaDefaultProps}
         calculateMetadata={async ({ props }) => {
           await ensureFonts();
           return { props };
