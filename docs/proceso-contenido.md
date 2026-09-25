@@ -10,6 +10,36 @@ Todo el criterio visual y de marca **ya está escrito** en las skills (abajo). E
 - **Luti (Telegram) = el ASISTENTE rápido.** Ideas, copys, hooks, tendencias, aprobar/archivar ideas, agendar, consultar la marca. **NO produce piezas** (imágenes/video). Eso se intentó (bot-productor con fal.ai) y se descartó: la calidad es trabajo dirigido, no automático. El bot-productor quedó archivado en n8n.
 - **Notion** = base operativa común (Calendario, Inteligencia & Ideas, Documentos, Productos). Compartida; vos y Anto ven/editan lo mismo.
 
+## Forma de trabajo POR ETAPAS (act. 2026-06-15) — la regla nueva
+El error a no repetir: **generar todo de una.** Si la foto base o el copy no están buenos, la pieza sale fea (garbage in, garbage out). Se trabaja **por etapas, con aprobación entre cada una**: primero buenos ingredientes, recién después se cocina.
+
+**El banco de fotos (materia prima) — POR PRODUCTO.** En el Drive:
+- `06_Marketing/01_Fotos/1_Listas-para-publicar/<producto>/` → fotos reales limpias.
+- `.../<producto>/ia/` → versiones generadas con IA (parten de foto real).
+- Productos discontinuados / fotos viejas → `99_Archivo` (fuera del banco activo).
+- **Regla del banco:** la fábrica come SOLO del banco (`1_Listas-para-publicar` + `ia/`). **NUNCA de Piezas** (compuestas → texto sobre texto). En código: `brand_kit.fotos_producto("<producto>")` y `brand_kit.productos_disponibles()`.
+
+**Las piezas terminadas (salida) — POR MES.** `06_Marketing/02_Piezas/<YYYY-MM>/`. El cruce por producto vive como etiqueta en el Calendario de Notion, no en carpetas.
+
+**Las dos máquinas (no confundir):**
+- **Foto/hero → Higgsfield + Nano Banana** (mejora la foto, saca ángulos). Es "lo de Pomelli", dentro de casa y en español.
+- **Componer la pieza → motor por código** (`motor-contenido/`: `plantillas.py` + `fabrica.py`, Pillow). Pone texto + logo + sello exactos, automático. **Canva afuera.**
+- **Copy → `dimanche-copy`** (español, tono POL-010).
+
+**Las etapas (con gate):**
+1. **Elegir la foto base** — siempre la elegís vos (del banco por producto, o una nueva del celu).
+2. **¿Está potable?** Sí → directo a componer. No → **mejorar con Higgsfield/Nano Banana** (ángulos/escena) → guardar la buena en `<producto>/ia/`. **Gate: hero aprobado.**
+3. **Copy con `dimanche-copy`.** **Gate: copy aprobado.**
+4. **Componer con la fábrica** (hero aprobado + copy aprobado → layout exacto).
+5. **Brand-check → Propuesto** en Notion (gate humano).
+
+**Cómo publica Anto (sin pelear con Telegram):** las piezas van al Drive (`02_Piezas/<mes>/`) y Luti le manda el **link de Drive** (no el archivo). Abre, baja en calidad full, publica.
+
+**Dónde corre (fasing):**
+- **Ahora — MacBook + Claude Code:** corre y se afina acá (probado).
+- **Desde ~6/7 — Mac Mini always-on:** mismo código, Drive montado. Migrar = clonar repo + montar Drive + instalar.
+- **Telegram (con el Mini):** Luti (n8n nube) dispara la fábrica en el Mini y devuelve el link. El Mini = la cocina prendida 24/7; Telegram = el control remoto.
+
 ## El proceso, paso a paso (de pedido a "Propuesto")
 
 **0 · Brief (refinar antes de producir).** Qué pieza, **formato** (`dimanche-formatos`), **pilar** POL-015, **buyer persona** REF-029 (Cande manda), **mensaje/canal**. Pedido vago → repreguntar, no producir cualquier cosa.

@@ -61,6 +61,36 @@ import {
   placaSanguchitoVideoDefaultProps,
   placaSanguchitoCajaDefaultProps,
 } from "./components/PlacaSanguchitoVideo";
+import {
+  PlacaPadreVideo,
+  placaPadreVideoDefaultProps,
+} from "./components/PlacaPadreVideo";
+import {
+  PlacaCookiesVideo,
+  placaCookiesMacroProps,
+  placaCookiesPosterProps,
+  placaCookiesPanelProps,
+} from "./components/PlacaCookiesVideo";
+import {
+  PlacaMasasVideo,
+  placaMasasVideoDefaultProps,
+} from "./components/PlacaMasasVideo";
+import {
+  PlacaMedialunasVideo,
+  placaMedialunasVideoDefaultProps,
+} from "./components/PlacaMedialunasVideo";
+import {
+  PlacaEscenaVideo,
+  placaChipaEscenaProps,
+  placaMedialunaCafeProps,
+} from "./components/PlacaEscenaVideo";
+import {
+  PlacaPromoVideo,
+  placaChipaKraftProps,
+  placaChipaAceroProps,
+  placaMedialunaPromoProps,
+} from "./components/PlacaPromoVideo";
+import { PLACAS_PRODUCTO } from "./placasProducto";
 import { ensureFonts } from "./brand";
 
 const FPS = 30;
@@ -76,6 +106,20 @@ export const RemotionRoot: React.FC = () => {
         width={1080}
         height={1920}
         defaultProps={reelDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      <Composition
+        id="PadreVideo"
+        component={PlacaPadreVideo}
+        durationInFrames={540} // 18 s @ 30fps
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaPadreVideoDefaultProps}
         calculateMetadata={async ({ props }) => {
           await ensureFonts();
           return { props };
@@ -315,6 +359,143 @@ export const RemotionRoot: React.FC = () => {
           return { props };
         }}
       />
+
+      {/* COOKIES — 3 conceptos con mecanismos distintos (macro / poster / panel).
+          Bocetos para elegir uno; ver PlacaCookiesVideo.tsx. */}
+      {[
+        ["CookiesMacro", placaCookiesMacroProps],
+        ["CookiesPoster", placaCookiesPosterProps],
+        ["CookiesPanel", placaCookiesPanelProps],
+      ].map(([id, props]) => (
+        <Composition
+          key={id as string}
+          id={id as string}
+          component={PlacaCookiesVideo}
+          durationInFrames={240} // 8 s @ 30fps
+          fps={FPS}
+          width={1920}
+          height={1080}
+          defaultProps={props as typeof placaCookiesMacroProps}
+          calculateMetadata={async ({ props: p }) => {
+            await ensureFonts();
+            return { props: p };
+          }}
+        />
+      ))}
+
+      {/* MASAS FINAS retrabajada — mecanismo editorial (tipografía dentro de la
+          pared cobalto de la foto), sin precio. Reemplaza a `ProductoMasasFinas`. */}
+      <Composition
+        id="MasasVideo"
+        component={PlacaMasasVideo}
+        durationInFrames={240} // 8 s @ 30fps
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaMasasVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      {/* MEDIALUNAS retrabajada — mecanismo de MONTAJE (3 tomas reales, corte
+          seco, copy sincronizado con los cortes), sin precio. Reemplaza a
+          `ProductoMedialunas`. */}
+      <Composition
+        id="MedialunasVideo"
+        component={PlacaMedialunasVideo}
+        durationInFrames={240} // 8 s @ 30fps — cortes en el 66 y el 132
+        fps={FPS}
+        width={1920}
+        height={1080}
+        defaultProps={placaMedialunasVideoDefaultProps}
+        calculateMetadata={async ({ props }) => {
+          await ensureFonts();
+          return { props };
+        }}
+      />
+
+      {/* ESCENAS (contexto de uso, fondo crudo, packaging + manos) — el formato
+          post-29/08; el "monumento" de chipa quedó rechazado ("un espanto"). */}
+      {[
+        ["ChipaEscena", placaChipaEscenaProps],
+        ["MedialunaCafe", placaMedialunaCafeProps],
+      ].map(([id, props]) => (
+        <Composition
+          key={id as string}
+          id={id as string}
+          component={PlacaEscenaVideo}
+          durationInFrames={240} // 8 s @ 30fps
+          fps={FPS}
+          width={1920}
+          height={1080}
+          defaultProps={props as typeof placaChipaEscenaProps}
+          calculateMetadata={async ({ props: p }) => {
+            await ensureFonts();
+            return { props: p };
+          }}
+        />
+      ))}
+
+      {/* PROMO BOARDS (3ª ronda 29/08): fondo sólido + marco + tipografía gigante
+          bicolor + precio — lenguaje copiado de las refs de menu board. */}
+      {[
+        ["ChipaKraft", placaChipaKraftProps],
+        ["ChipaAcero", placaChipaAceroProps],
+        ["MedialunaPromo", placaMedialunaPromoProps],
+      ].map(([id, props]) => (
+        <Composition
+          key={id as string}
+          id={id as string}
+          component={PlacaPromoVideo}
+          durationInFrames={240} // 8 s @ 30fps
+          fps={FPS}
+          width={1920}
+          height={1080}
+          defaultProps={props as typeof placaChipaKraftProps}
+          calculateMetadata={async ({ props: p }) => {
+            await ensureFonts();
+            return { props: p };
+          }}
+        />
+      ))}
+
+      {/* Las 6 placas de PRODUCTO del lote (TV izquierda), una composición por
+          producto — estática + video. Props y precios en `placasProducto.ts`
+          (que toma los números de `precios.ts`), para que re-renderizar sea
+          `npx remotion render ProductoMedialunas ...` y no haya que volver a
+          pasar `--props` a mano. */}
+      {PLACAS_PRODUCTO.map(({ id, ...props }) => (
+        <React.Fragment key={id}>
+          <Composition
+            id={`Producto${id}`}
+            component={PlacaProducto}
+            durationInFrames={150}
+            fps={FPS}
+            width={1920}
+            height={1080}
+            defaultProps={props}
+            calculateMetadata={async ({ props: p }) => {
+              await ensureFonts();
+              return { props: p };
+            }}
+          />
+          <Composition
+            id={`Producto${id}Video`}
+            component={PlacaProductoVideo}
+            durationInFrames={300}
+            fps={FPS}
+            width={1920}
+            height={1080}
+            defaultProps={props}
+            calculateMetadata={async ({ props: p }) => {
+              await ensureFonts();
+              return { props: p };
+            }}
+          />
+        </React.Fragment>
+      ))}
     </>
   );
 };

@@ -36,6 +36,7 @@ El look de Dimanche **no** es "panadería beige hogareña" genérica, **ni "fond
 - Si dudás del visual oficial: REF-002 y REF-030 en Notion (DB Documentos).
 - **`references/higgsfield-arsenal.md` — TODO lo que Higgsfield puede hacer y CUÁNDO usar cada cosa (video = Kling 3.0; "angles"/variar tomas = edición Nano Banana/Seedream; íconos/packaging = Recraft; reframe; upscale; virality). Mapa vivo: revisalo y sumá lo nuevo (Higgsfield cambia casi a diario).**
 - **Video: cuando se pide un video, el default es Kling 3.0 (`mode:pro`) desde una FOTO REAL, movimiento sutil, producto intacto. Ver el flujo en `higgsfield-arsenal.md`.**
+- **Antes de improvisar un prompt de producto o de un asset de marca, mirá si hay un workflow empaquetado del MCP que ya lo resuelva** (`get_workflow_instructions` sin argumento lista el catálogo): `product-photoshoot` para packshot/lifestyle/carrusel, `brand-asset-creation` para mockups/packaging/cartelíería, `ugc-product-video` para UGC producto-only, `subtitles` para subtítulos quemados. Rel. 2026-09-22.
 
 ## El proceso — de la idea a la pieza publicada
 

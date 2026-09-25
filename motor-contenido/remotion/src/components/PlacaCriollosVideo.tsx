@@ -23,6 +23,7 @@ import {
   staticFile,
 } from "remotion";
 import { FONT_FAMILY, FONT_WEIGHTS, COBALTO, CREMA, ASSETS } from "../brand";
+import { PRECIOS } from "../precios";
 
 type Precio = { nombre: string; valor: string };
 
@@ -41,8 +42,8 @@ export const placaCriollosVideoDefaultProps: PlacaCriollosVideoProps = {
     resaltado: "imposible",
   },
   precios: [
-    { nombre: "criollo común", valor: "$7.500" },
-    { nombre: "criollo de hojaldre", valor: "$8.500" },
+    { nombre: "criollo común", valor: PRECIOS.criolloComun },
+    { nombre: "criollo de hojaldre", valor: PRECIOS.criolloHojaldre },
   ],
   unidad: "el kilo",
 };

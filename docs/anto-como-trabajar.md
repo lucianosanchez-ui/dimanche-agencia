@@ -27,7 +27,7 @@ El detalle está en `docs/proceso-contenido.md`. Resumido, y el porqué de cada 
 0. **Brief:** qué pieza, para qué, en qué formato. *(Si no está claro, preguntá; no produzcas a ciegas.)*
 1. **Foto/video REAL primero.** Es el cuello de botella: sin material real no hay pieza (regla de oro). Sale de la sesión profesional del Drive (`06_Marketing/01_Fotos/Sesiones/...`) o de una foto del celu.
 2. **Escena/mejora con IA, solo si hace falta** (en el taller, skill `dimanche-media`). Nunca un prompt improvisado: el método está escrito.
-3. **Armado en Canva** (Brand Kit "Dimanche"). **Texto y logo a mano, nunca con IA.**
+3. **Armado POR CÓDIGO** (Canva quedó afuera en junio: quedaba malísimo, sobre todo en TV). El texto, el logo y los precios los compone el motor del repo. **Nunca texto hecho con IA.**
 4. **Copy** on-brand (tono sin marketinería, sin emojis).
 5. **Brand-check** (`dimanche-brand-check`): toda pieza —también las fotos— pasa por acá.
 6. **Queda "Propuesto"** en Notion → lo aprueba Luciano/vos → recién ahí se publica.

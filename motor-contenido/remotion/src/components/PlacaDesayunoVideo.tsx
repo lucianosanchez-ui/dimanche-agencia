@@ -22,26 +22,30 @@ import {
 import { FONT_FAMILY, FONT_WEIGHTS, COBALTO, CREMA } from "../brand";
 import { Titular } from "./Titular";
 import { Sello } from "./Sello";
+import { PRECIOS } from "../precios";
 
 export type PlacaDesayunoVideoProps = {
   videoSrc: string;
   titular: string;
   bajada: string;
-  precio: string;
+  precios: { label: string; valor: string }[];
 };
 
 export const placaDesayunoVideoDefaultProps: PlacaDesayunoVideoProps = {
   videoSrc: staticFile("media/tv/desayuno-hero.mp4"),
   titular: "primero, el café",
   bajada: "café + factura, medialuna o dos criollitos",
-  precio: "$3.700",
+  precios: [
+    { label: "chica", valor: PRECIOS.promoCafeChica },
+    { label: "grande", valor: PRECIOS.promoCafeGrande },
+  ],
 };
 
 export const PlacaDesayunoVideo: React.FC<PlacaDesayunoVideoProps> = ({
   videoSrc,
   titular,
   bajada,
-  precio,
+  precios,
 }) => {
   const frame = useCurrentFrame();
   const { fps } = useVideoConfig();
@@ -110,22 +114,45 @@ export const PlacaDesayunoVideo: React.FC<PlacaDesayunoVideoProps> = ({
             {bajada}
           </div>
 
-          {/* Precio */}
+          {/* Precios: los dos tamaños, entran juntos con el pop del precio */}
           <div
             style={{
               marginTop: 46,
-              fontFamily: FONT_FAMILY,
-              fontWeight: FONT_WEIGHTS.black,
-              fontSize: 132,
-              lineHeight: 1.0,
-              letterSpacing: "-0.01em",
-              color: CREMA,
+              display: "flex",
+              gap: 56,
               opacity: pOpacity,
               transform: `scale(${pScale})`,
               transformOrigin: "left center",
             }}
           >
-            {precio}
+            {precios.map((pr) => (
+              <div key={pr.label}>
+                <div
+                  style={{
+                    fontFamily: FONT_FAMILY,
+                    fontWeight: FONT_WEIGHTS.medium,
+                    fontSize: 34,
+                    color: CREMA,
+                    opacity: 0.82,
+                    marginBottom: 2,
+                  }}
+                >
+                  {pr.label}
+                </div>
+                <div
+                  style={{
+                    fontFamily: FONT_FAMILY,
+                    fontWeight: FONT_WEIGHTS.black,
+                    fontSize: 116,
+                    lineHeight: 1.0,
+                    letterSpacing: "-0.01em",
+                    color: CREMA,
+                  }}
+                >
+                  {pr.valor}
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </AbsoluteFill>

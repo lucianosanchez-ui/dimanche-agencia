@@ -11,12 +11,16 @@ import React from "react";
 import { AbsoluteFill, Img, staticFile } from "remotion";
 import { FONT_FAMILY, FONT_WEIGHTS, CREMA, COBALTO } from "../brand";
 import { Sello } from "./Sello";
+import { PRECIOS } from "../precios";
+
+type Precio = { label: string; valor: string };
 
 type PlacaDesayunoProps = {
   heroSrc?: string;
   titular?: string;
   bajada?: string;
-  precio?: string;
+  /** Los dos tamaños de la promo, uno al lado del otro (como la placa de café). */
+  precios?: Precio[];
   /** Sol line-art (crema) como acento arriba del titular. Default OFF:
    *  los iconos line-art sueltos quedan pegoteados; la identidad la llevan la
    *  foto (vaso con D + bolsa) + la Niveau + el sello. */
@@ -28,7 +32,10 @@ export const PlacaDesayuno: React.FC<PlacaDesayunoProps> = ({
   heroSrc = staticFile("media/tv/desayuno-v1.png"),
   titular = "primero, el café",
   bajada = "café + factura, medialuna o dos criollitos",
-  precio = "$3.700",
+  precios = [
+    { label: "chica", valor: PRECIOS.promoCafeChica },
+    { label: "grande", valor: PRECIOS.promoCafeGrande },
+  ],
   mostrarSol = false,
   solSrc = staticFile("assets/tv/sun-line.svg"),
 }) => {
@@ -93,19 +100,36 @@ export const PlacaDesayuno: React.FC<PlacaDesayunoProps> = ({
             {bajada}
           </div>
 
-          {/* Precio: protagonista */}
-          <div
-            style={{
-              marginTop: 46,
-              fontFamily: FONT_FAMILY,
-              fontWeight: FONT_WEIGHTS.black,
-              fontSize: 132,
-              lineHeight: 1.0,
-              letterSpacing: "-0.01em",
-              color: CREMA,
-            }}
-          >
-            {precio}
+          {/* Precios: protagonistas, los dos tamaños con su etiqueta */}
+          <div style={{ marginTop: 46, display: "flex", gap: 56 }}>
+            {precios.map((pr) => (
+              <div key={pr.label}>
+                <div
+                  style={{
+                    fontFamily: FONT_FAMILY,
+                    fontWeight: FONT_WEIGHTS.medium,
+                    fontSize: 34,
+                    color: CREMA,
+                    opacity: 0.82,
+                    marginBottom: 2,
+                  }}
+                >
+                  {pr.label}
+                </div>
+                <div
+                  style={{
+                    fontFamily: FONT_FAMILY,
+                    fontWeight: FONT_WEIGHTS.black,
+                    fontSize: 116,
+                    lineHeight: 1.0,
+                    letterSpacing: "-0.01em",
+                    color: CREMA,
+                  }}
+                >
+                  {pr.valor}
+                </div>
+              </div>
+            ))}
           </div>
 
           {/* Sello: capsula crema (contrasta sobre el cobalto) */}

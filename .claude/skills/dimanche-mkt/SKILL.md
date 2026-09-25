@@ -37,6 +37,7 @@ Los agentes autónomos de n8n (Lola, Mateo, Numa, Vera, Rocco) corren solos y **
 | guion de reel / video / TikTok | `dimanche-guion` |
 | nombre o descripción de un producto | `dimanche-copy` (naming) |
 | imagen, foto, video, visual | `dimanche-media` |
+| TVs del local / pantallas / menu board / placa / Zignia / "cambió un precio de la tele" | `dimanche-tv` |
 | campaña, promo, pauta, plan del mes | `dimanche-campana` |
 | "bajá esto al local" / mostrador / qué le decimos al equipo de ventas | `dimanche-local` |
 | "¿esto va? ¿es on-brand?" / revisar una pieza | `dimanche-brand-check` |

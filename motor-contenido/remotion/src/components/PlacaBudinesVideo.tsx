@@ -6,10 +6,12 @@
  *     crema (motion mínimo) + titular palabra×palabra "el que te salva" y
  *     cápsula cobalto "la juntada". Producto grande, solo titular.
  *  2. (4.2–10.2s) LA FAMILIA — los 6 budines en cenital VERTICAL, de a uno
- *     (~1s c/u), bien grandes, con su nombre Niveau al lado. Más estático.
- *  3. (10.2–12s) CIERRE — los 6 en fila + "$4.500 · el que sea" en cápsula +
- *     remate "los mates los pone otro." + sello estampado. Queda FIJO.
- *     La versión ESTÁTICA es un still de este acto asentado (--frame=355).
+ *     (~1s c/u), bien grandes, con su nombre Niveau al lado (sin precio: va
+ *     solo en el cierre, para no ser redundante).
+ *  3. CIERRE — los 6 en fila + DOS cápsulas de precio (manzana·chips·limón /
+ *     chocolatoso·carrot·frutos secos; números en `precios.ts`) + remate "los mates los
+ *     pone otro." + sello estampado. Queda FIJO. La versión ESTÁTICA es un
+ *     still de este cierre ya asentado.
  *
  * Assets: public/media/tv/budines/ — hero-clip.mp4 (Seedance 1080p), hero-still.png
  * (primer frame, respaldo anti-glitch) y cenital-*.png (recortados, fondo
@@ -31,16 +33,17 @@ import {
 } from "remotion";
 import { FONT_FAMILY, FONT_WEIGHTS, COBALTO, CREMA, TV_GRAFICA } from "../brand";
 import { Titular } from "./Titular";
+import { PRECIOS } from "../precios";
 
 type Budin = { key: string; src: string; label: string };
+type PrecioTier = { valor: string; label: string };
 
 export type PlacaBudinesVideoProps = {
   clipSrc: string;
   stillSrc: string;
   titular: { linea: string; capsula: string };
   budines: Budin[];
-  precio: string;
-  precioSub: string;
+  precios: PrecioTier[];
   remate: string;
 };
 
@@ -56,8 +59,10 @@ export const placaBudinesVideoDefaultProps: PlacaBudinesVideoProps = {
     { key: "chips", src: staticFile("media/tv/budines/cenital-chips.png"), label: "chips de chocolate" },
     { key: "limon", src: staticFile("media/tv/budines/cenital-limon.png"), label: "limón" },
   ],
-  precio: "$4.500",
-  precioSub: "el que sea",
+  precios: [
+    { valor: PRECIOS.budinSimple, label: "manzana · chips · limón" },
+    { valor: PRECIOS.budinPremium, label: "chocolatoso · carrot · frutos secos" },
+  ],
   remate: "los mates los pone otro.",
 };
 
@@ -181,8 +186,7 @@ export const PlacaBudinesVideo: React.FC<PlacaBudinesVideoProps> = ({
   stillSrc,
   titular,
   budines,
-  precio,
-  precioSub,
+  precios,
   remate,
 }) => {
   const frame = useCurrentFrame();
@@ -203,11 +207,7 @@ export const PlacaBudinesVideo: React.FC<PlacaBudinesVideoProps> = ({
 
   // --- Cierre ---
   const f3 = frame - CIERRE_FROM; // frame local del cierre
-  const precioSpring = spring({ frame: f3 - 14, fps, config: { damping: 13, mass: 0.6, stiffness: 110 } });
-  const precioScale = interpolate(precioSpring, [0, 1], [0.7, 1]);
-  const precioOpacity = interpolate(precioSpring, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
-  const subOpacity = interpolate(f3, [26, 36], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
-  const remOpacity = interpolate(f3, [32, 42], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
+  const remOpacity = interpolate(f3, [40, 52], [0, 1], { extrapolateLeft: "clamp", extrapolateRight: "clamp" });
   // sello: se ESTAMPA (scale 1.18→1, rotación -12°→-5°)
   const selloSpring = spring({ frame: f3 - 38, fps, config: { damping: 11, mass: 0.7, stiffness: 130 } });
   const selloScale = interpolate(selloSpring, [0, 1], [1.18, 1]);
@@ -323,59 +323,73 @@ export const PlacaBudinesVideo: React.FC<PlacaBudinesVideoProps> = ({
             })}
           </div>
 
-          {/* precio + remate */}
+          {/* precios (dos niveles) + remate */}
           <div
             style={{
               position: "absolute",
               left: 120,
-              top: 836,
+              top: 690,
               display: "flex",
-              alignItems: "center",
-              gap: 32,
+              flexDirection: "column",
+              gap: 22,
             }}
           >
+            {precios.map((p, i) => {
+              const pin = spring({
+                frame: f3 - 14 - i * 8,
+                fps,
+                config: { damping: 13, mass: 0.6, stiffness: 110 },
+              });
+              const sc = interpolate(pin, [0, 1], [0.7, 1]);
+              const op = interpolate(pin, [0, 0.5], [0, 1], { extrapolateRight: "clamp" });
+              return (
+                <div
+                  key={p.valor}
+                  style={{ display: "flex", alignItems: "center", gap: 30, opacity: op }}
+                >
+                  <span
+                    style={{
+                      display: "inline-block",
+                      backgroundColor: COBALTO,
+                      color: CREMA,
+                      fontFamily: FONT_FAMILY,
+                      fontWeight: FONT_WEIGHTS.black,
+                      fontSize: 78,
+                      lineHeight: 1.0,
+                      padding: "10px 36px 16px",
+                      borderRadius: 999,
+                      transform: `scale(${sc})`,
+                      transformOrigin: "left center",
+                    }}
+                  >
+                    {p.valor}
+                  </span>
+                  <span
+                    style={{
+                      fontFamily: FONT_FAMILY,
+                      fontWeight: FONT_WEIGHTS.medium,
+                      fontSize: 42,
+                      color: COBALTO,
+                      opacity: 0.9,
+                    }}
+                  >
+                    {p.label}
+                  </span>
+                </div>
+              );
+            })}
             <span
               style={{
-                display: "inline-block",
-                backgroundColor: COBALTO,
-                color: CREMA,
+                marginTop: 10,
                 fontFamily: FONT_FAMILY,
-                fontWeight: FONT_WEIGHTS.black,
-                fontSize: 110,
-                lineHeight: 1.0,
-                padding: "16px 46px 24px",
-                borderRadius: 999,
-                transform: `scale(${precioScale})`,
-                transformOrigin: "left center",
-                opacity: precioOpacity,
+                fontWeight: FONT_WEIGHTS.bold,
+                fontSize: 44,
+                color: COBALTO,
+                opacity: remOpacity,
               }}
             >
-              {precio}
+              {remate}
             </span>
-            <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
-              <span
-                style={{
-                  fontFamily: FONT_FAMILY,
-                  fontWeight: FONT_WEIGHTS.medium,
-                  fontSize: 48,
-                  color: COBALTO,
-                  opacity: subOpacity,
-                }}
-              >
-                {precioSub}
-              </span>
-              <span
-                style={{
-                  fontFamily: FONT_FAMILY,
-                  fontWeight: FONT_WEIGHTS.bold,
-                  fontSize: 44,
-                  color: COBALTO,
-                  opacity: remOpacity,
-                }}
-              >
-                {remate}
-              </span>
-            </div>
           </div>
 
           {/* sello que se estampa */}

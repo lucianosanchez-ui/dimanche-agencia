@@ -24,6 +24,8 @@ Dos capas, cada una con su responsable:
 - **Logo:** los PNG reales (`00_Marca/Logos`, p. ej. wordmark blanco para fondo oscuro).
 - **Íconos:** los reales de `00_Marca/Elementos_Graficos` (sol/pan/croissant/torta/galleta/monograma D) — silueta plana rellena en cobalto; sobre foto se usan en blanco. No dibujar a código ni inventar variantes.
 - **Badge / lockup / grilla / escala tipográfica:** según `design-system.md`, `foundations.md`, `components.md`, `templates.md`.
+- **Si falta un elemento gráfico y hay que generarlo** (no existe en el Drive): `gpt_image_2_5` con `background:'transparent'` devuelve el PNG ya recortado (rel. 2026-09-22). Sigue valiendo la regla: **el logo y los íconos oficiales NO se generan**, se usan los reales.
+- **Producto real sobre fondo de marca en VIDEO:** `sam_3_video` recorta el producto de un clip (remove-bg de video, nuevo 09/26) y el fondo se compone por código — mismo principio que las estáticas. Sin testear.
 
 ## Flujo de una pieza completa
 1. **Hero** (regla de oro): foto real del producto → Higgsfield/Nano Banana arma la escena premium por prompt (ver `herramientas.md`). El producto se mantiene; el fondo lo dicta el prompt; nada de "exact style of the references".

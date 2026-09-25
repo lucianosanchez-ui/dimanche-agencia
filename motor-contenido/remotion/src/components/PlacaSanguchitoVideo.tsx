@@ -9,9 +9,9 @@
  *
  *  - Placa 1 "sanguchito": hero = clip Seedance del SQUEEZE (la mano aprieta el
  *    pan de papa y el pan se recupera), espejado para que el producto quede a la
- *    derecha. Texto a la izquierda. $1.200.
+ *    derecha. Texto a la izquierda. $1.600 (precio en `precios.ts`).
  *  - Placa 2 "caja x 9": hero = caja de 9 sobre cobalto (imagen + push-in por
- *    código). Texto a la derecha. "para el partido" · $10.000.
+ *    código). Texto a la derecha. "para el partido" · $14.000.
  *
  * Handoff clip→still sin glitch (técnica delivery/budines): el still del ÚLTIMO
  * frame del clip vive DETRÁS a opacidad plena; el clip corre en una Sequence de
@@ -32,6 +32,7 @@ import {
   staticFile,
 } from "remotion";
 import { FONT_FAMILY, FONT_WEIGHTS, COBALTO, CREMA, TV_GRAFICA } from "../brand";
+import { PRECIOS } from "../precios";
 
 export type PlacaSanguchitoVideoProps = {
   /** Imagen hero (placa caja) o still inicial (placa squeeze). */
@@ -53,7 +54,7 @@ export const placaSanguchitoVideoDefaultProps: PlacaSanguchitoVideoProps = {
   textSide: "left",
   titularLines: ["sanguchito"],
   descriptor: "pan de papa, jamón y queso",
-  precio: "$1.200",
+  precio: PRECIOS.sanguchito,
 };
 
 export const placaSanguchitoCajaDefaultProps: PlacaSanguchitoVideoProps = {
@@ -63,7 +64,7 @@ export const placaSanguchitoCajaDefaultProps: PlacaSanguchitoVideoProps = {
   textSide: "right",
   titularLines: ["para", "el partido"],
   descriptor: "caja x 9",
-  precio: "$10.000",
+  precio: PRECIOS.sanguchitoCaja,
 };
 
 const CLIP_DUR = 150; // 5s @ 30fps

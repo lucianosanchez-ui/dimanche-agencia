@@ -1,6 +1,62 @@
 # ESTADO — Agencia de Marketing Dimanche (punto de retomada)
 
-## 🟢 2026-06-08 (sesión 9 — "agencia mkt 9") — LEER ESTO PRIMERO
+## 🟢 2026-06-17 (sesión 11) — HIGGSFIELD NATIVO EN TELEGRAM (destraba producción por Telegram) + Luti más abierto — LEER PRIMERO
+
+**Dos cosas que trajo Luciano:**
+
+1. **Anto dice que Luti es CORTANTE / cerrado** ("no la deja plantear cosas"). Diagnóstico sobre el system prompt LIVE (`YeDLHszeKM9Q7rMx`): empuja "frases cortas / al grano / directo", **cierra** con "directo y al grano", repite **"decilo en UNA línea"** para todo lo que no puede, y el framing "jefe/director" + mucho **NO / NUNCA / SOLO / gate** lo vuelve un portero. Faltaba apertura y escucha.
+
+2. **El bot NATIVO de Higgsfield ya está en el grupo "Agencia Mkt"**, conectado a Drive + Notion. Se promptea directo y usa sus agentes/elements nativos, **sin MCP**. → esto **destraba la producción visual POR TELEGRAM** (el norte original de Luciano; ver [[agente-contenido-frente]]).
+
+**Reconciliación con el descarte del 08/06 ("producir NO es por Telegram"):** lo que se descartó fue el **bot-productor PROPIO (fal.ai): motor flojo + producción a ciegas**. El nativo de Higgsfield arregla el MOTOR (arsenal fuerte) y, conectado al Drive, puede cumplir la regla de oro (parte de foto real). Lo que SIGUE faltando es la **DIRECCIÓN**. → **Síntesis: Luti = cerebro/director (refina brief + elige la foto base real + escribe el prompt on-brand + sostiene el gate); Higgsfield nativo = músculo; el puente bot↔bot lo hacen Anto/Luciano** (los bots no se hablan entre sí en Telegram: Luti escribe el prompt, Anto lo pega). La producción FINA/por código (placas con texto exacto, TV, video data-driven) sigue en el taller de Claude Code.
+
+**Hecho esta sesión:**
+- **Luti — system prompt reescrito Y PUBLICADO** (tono socio/abierto, no capataz; "refinar JUNTO, no interrogar"; límites = "decilo simple y ofrecé alternativa", sin portazo; nuevo bloque **VISUALES: vos dirigís, Higgsfield ejecuta** — paso "pegale al bot de Higgsfield con su mención/comando"; + documentada la tool "Notion - Agregar al calendario", que estaba cableada pero sin describir). ✅ Pusheado a `YeDLHszeKM9Q7rMx` y publicado (versión activa `b8bf3239`, 17/06). Reversible si hace falta.
+- **CLAUDE.md** — sección "Cómo se usa" actualizada: Luti ahora DIRIGE la producción visual; producción por Telegram vuelve a ser posible vía Higgsfield nativo; el taller de Claude Code queda para lo fino/por código.
+- **Memoria:** nueva [[luti-director-higgsfield-telegram]]; notas en [[agente-contenido-frente]] y [[higgsfield-mcp-vs-api]].
+
+**Pendientes / a confirmar con Luciano:**
+- (a) ✅ HECHO — prompt de Luti pusheado y publicado (versión `b8bf3239`).
+- (b) **Al bot de Higgsfield se lo invoca por mención/comando** (confirmado por Luciano 17/06; ya está en el prompt de Luti). Falta confirmar: ¿lee la foto base del Drive solo (basta nombrarla) o hay que adjuntársela?
+- (c) ¿el bot de Higgsfield respeta la regla de oro (partir de foto real del Drive) por sí solo, o hay que decírselo en cada prompt? (hoy se lo metemos en el prompt que arma Luti).
+- (d) **Probarlo en vivo:** que Anto le pida una pieza a Luti, Luti arme el prompt, se lo pegue al bot de Higgsfield, y ver si el resultado sale on-brand de punta a punta. Ese es el test real del carril nuevo.
+
+---
+
+## 🟢 2026-06-15 (sesión 10) — SINCRONIZACIÓN A NOTION (base visual) + arranca POMELLI — LEER ESTO PRIMERO
+
+Las decisiones de contenido/visual de las sesiones 7-9 vivían solo en repo/skills/memoria y nunca habían subido a Notion (el "se perdieron cosas que habíamos definido"). Diagnóstico + sync acotado, con OK de Luciano:
+- **MAN-021 (Branded AI Guide) → v2.0:** sumadas **la onda Dimanche** (producto a color/vivo + identidad como toque, versátil; cerrada 09/06) y las **decisiones de producción 08/06** (pieza completa POR CÓDIGO lista para publicar / Canva afuera / texto nunca por IA ni a mano · premium = piso · azul por formato). Purgado lo viejo (vocabulario homey, "capa gráfica en Canva", relación mal puesta a MAN-020). Sigue Vigente. → https://app.notion.com/p/3735616e313d8185b779e1c9208be56e
+- **REF-000 (índice maestro) → v1.9:** sumado MAN-021 que faltaba del índice + changelog.
+- **Confirmado: la base de MARCA ya está completa en Notion** (POL-010 a 018, REF-002 + 023-030, MAN-016/017/018/019/021). La maquinaria (motor-contenido/, infra, skills, setup) queda bien en el repo — NO va a Notion. Regla: Notion = el "qué" (marca, criterios, decisiones); repo = el "cómo/con qué" (herramientas, código, infra).
+
+**Pendiente abierto (Luciano eligió no hacerlo aún):** bajar `docs/proceso-contenido.md` a un **PRO formal** en Notion (hoy el paso a paso de producción vive solo en el repo).
+
+### Sesión 10 (cont.) — FRENTE GRANDE: destrabar la generación de contenido
+
+**Pomelli (Google Labs) — EVALUADO, NO es herramienta de producción.** Investigación completa (workflow 8 módulos): genera **solo en inglés** (interfaz y copy), es **isla** (no API, no lee Drive/Notion), beta. "Lo de Pomelli" (Photoshoot: foto real → imagen pro) **ya lo tenemos** = Higgsfield + Nano Banana (mismo modelo). Veredicto: sirve como **sandbox de ideas/stories**, no como motor. Se cargó igual el **Business DNA** de Dimanche (con la base de marca real, no lo auto-generado) por si mejora. NO reabrir como productor (mismo error que el bot-productor descartado 08/06).
+
+**Diagnóstico de la lentitud (Luciano marcó las 4 etapas):** no es una herramienta que falte — es que **se produce artesanal, de a una**, sin línea de montaje. Todo se trata como "feed premium". Falta la vía rápida operacionalizada.
+
+**FÁBRICA construida — `motor-contenido/fabrica.py`:** toma un spec de la semana (lista de piezas) → saca el lote en una corrida: piezas PNG + `_contact.png` (lámina de revisión) + `semana.md` (grilla con copys). **Probado**: semana piloto (5 piezas 4:5/9:16) salió on-brand en una corrida. El render ya existía (`plantillas.py`: lifestyle/solo_producto/placa, la onda en código); faltaba la fábrica encima.
+
+**FORMA DE TRABAJO POR ETAPAS (decisión clave de Luciano) — documentada en `docs/proceso-contenido.md`:** el error es "generar todo de una" (si la foto/copy no están buenos, sale feo). Se trabaja con **gate entre etapas**: 1) elegir foto base (siempre la elige Luciano/Anto) → 2) ¿potable? si no, mejorar con Higgsfield/Nano Banana (ángulos) → **gate hero** → 3) copy con `dimanche-copy` → **gate** → 4) componer con la fábrica → 5) brand-check → Propuesto. **Dos máquinas:** foto = Higgsfield+Nano Banana · componer = motor por código (Pillow, Canva afuera) · copy = dimanche-copy.
+
+**BANCO DE FOTOS por PRODUCTO (reorg) — `06_Marketing/01_Fotos/1_Listas-para-publicar/<producto>/` (+ `ia/`):** la fábrica come SOLO del banco, NUNCA de Piezas (bug texto-sobre-texto). Piezas terminadas → `02_Piezas/<mes>/`; cruce por producto = etiqueta en Calendario Notion. Código: `brand_kit.fotos_producto()` / `productos_disponibles()` (arreglado el path roto que apuntaba a `Sesion_Principal`). **Banco poblado** desde `~/Desktop/referencias diseño agencia/menu board`: **Criollitos (2, el ícono), Chipa (5), Budines (35, HEIC→jpg), Sanguchitos (1), +7 Medialunas** (copiados, originales intactos).
+
+**Mac Mini 24/7 (Luciano la compra ~6/7, viaje a Miami):** será el motor always-on con el Drive montado → ahí se conecta Telegram. **Telegram = arrancar LIVIANO** (Luti junta brief+fotos y dispara la fábrica, devuelve **link de Drive** —no el archivo— así Anto baja y publica). Full-nube descartado por ahora. Hasta el Mini: corre en la MacBook + Claude Code. Ver [[fabrica-y-flujo-contenido]].
+
+**PENDIENTES de este frente:**
+- (a) ✅ **2ª pasada del `menu board` HECHA**: refs externas → `00_Marca/Referencias` (10); Sanguchitos 1→8 y Budines 35→48 enriquecidos con heroes; piezas TV ya estaban en el Drive (`02_Piezas/TVs del local`).
+- (b) ⚠️ **`Dimache ` NO es basura — son las SESIONES PROFESIONALES completas** (~700 archivos: `Fotos ` 197 `_JFZ` + `Sesion 2` 101 + `Sesion 3` 254 + `Tomas` 152 + 335 clips `.MOV`/mp4, 10-14 MB c/u). Es MÁS material que el subset curado en `2_Material-crudo` (que tiene Sesion-principal 197 + Sesion-2/3 con 3 c/u). **Tarea (sesión dedicada, varios GB):** renombrar/reubicar (fotos → `01_Fotos/2_Material-crudo`, clips → `02_Videos/2_Material-crudo`), reconciliar el posible duplicado de 197 (Fotos vs Sesion-principal), y **CULL: elegir las mejores PRO al banco por producto** (pro >> celu, mejora enorme sobre lo que cargué hoy). NO archivar.
+- (c) **Combos-y-cafe** sigue sin fotos reales propias (solo refs).
+- (d) etiqueta "producto" en Calendario Notion; (e) afinar reel/motion (video flojo); (f) con el Mini: Luti → fábrica → link Drive.
+
+> **APRENDIDO (sesión 10, intento de triar `Dimache `):** la carpeta está **ONLINE-ONLY** en el Drive → toda lectura/move materializa GB desde la nube (lento) y los moves entre carpetas **fallan/duplican por sync lag** (probado: `shutil.move` copió 65 sin borrar el original → limpiado; Finder/osascript chocó con fantasma de sync). **NO bulk-mover archivos del Drive por código.** El CULL de Sesion 2/3 + la reubicación de los 349 videos = **tarea ideal para la Mac Mini** (todo local/sincronizado, always-on), o con esas carpetas puestas "disponibles sin conexión". **Nada se perdió** (Dimache intacto: 359 fotos + 349 videos). El banco por producto YA está poblado desde fuentes LOCALES (menu board + Sesion-principal): Criollitos 2 · Chipa 5 · Medialunas 30 · Sanguchitos 8 · Budines 48 · Masas-finas 23 · Muffins 8 · Pan 3 · Tortas 14 — suficiente para producir; el cull PRO de Dimache es mejora futura.
+
+---
+
+## 🟢 2026-06-08 (sesión 9 — "agencia mkt 9")
 
 **Frente prioritario CONTENIDO/VISUAL — diagnosticado, arreglado y validado (1ra prueba).** El "la salida vuelve al azul-base genérico" tenía DOS causas:
 1. **Bug de path (arreglado):** el skill `dimanche-media` anclaba las referencias de estilo a `01_Fotos/Editadas/` (slides viejas sobre azul, flojas) — contradecía `docs/proceso-contenido.md`. Re-apuntado a la **sesión profesional** `01_Fotos/Sesiones/Sesion_Principal/Fotos/` (197 buenas) en los 3 archivos del skill (`SKILL.md`, `references/herramientas.md`, `references/sistema-visual-dimanche.md`).

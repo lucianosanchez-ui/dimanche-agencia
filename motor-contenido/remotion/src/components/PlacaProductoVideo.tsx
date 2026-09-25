@@ -36,7 +36,7 @@ export const placaProductoVideoDefaultProps: PlacaProductoVideoProps = {
   heroSrc: "media/tv/producto-pan.png",
   gancho: ["se hace todos", "los días. todos"],
   nombre: "pan casero",
-  precios: [{ label: "el kilo", valor: "$5.500" }],
+  precios: [{ label: "el kilo", valor: "$5.500" }], // solo default del studio; los reales en placasProducto.ts
 };
 
 export const PlacaProductoVideo: React.FC<PlacaProductoVideoProps> = ({

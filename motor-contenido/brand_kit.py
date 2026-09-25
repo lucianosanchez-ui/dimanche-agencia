@@ -140,14 +140,70 @@ def fotos_base() -> Path:
     return Path(matches[0])
 
 
-def fotos_sesion_principal() -> list[Path]:
-    """Las fotos buenas (Sesion_Principal) — usar para PRODUCTO, nunca Editadas.
+# ---------------------------------------------------------------------------
+# Banco POR PRODUCTO, APLANADO (2026-06-16). La fábrica come SOLO de acá:
+#   01_Fotos/<producto>/        → fotos reales limpias
+#   01_Fotos/<producto>/ia/     → generadas con IA
+# NUNCA de Piezas (compuestas, ya tienen texto → texto sobre texto).
+# Las carpetas que NO son producto (crudo, wrappers) empiezan con dígito o "_".
+# ---------------------------------------------------------------------------
+_CRUDO = "2_Material-crudo"
+_IMG_EXT = ("*.jpg", "*.jpeg", "*.png", "*.JPG", "*.JPEG", "*.PNG")
 
-    Devuelve la lista ordenada de .JPG. El fondo lo pone el prompt, no la foto
-    (el banco es mayormente azul/madera; copiar su fondo devuelve al azul-base).
+
+def _es_producto(p: Path) -> bool:
+    """Carpeta de producto = dir que no empieza con '_' ni dígito (crudo/wrappers)."""
+    return p.is_dir() and not p.name.startswith("_") and not p.name[0].isdigit()
+
+
+def productos_disponibles() -> list[str]:
+    """Nombres de carpeta de producto (productos DIRECTO en 01_Fotos)."""
+    base = fotos_base()
+    if not base.exists():
+        return []
+    return sorted(p.name for p in base.iterdir() if _es_producto(p))
+
+
+def _glob_imgs(carpeta: Path) -> list[Path]:
+    out: list[Path] = []
+    for e in _IMG_EXT:
+        out.extend(carpeta.glob(e))
+    return sorted(set(out))
+
+
+def fotos_producto(producto: str, *, incluir_ia: bool = True) -> list[Path]:
+    """Fotos de un producto para ELEGIR la base (reales + generadas en ia/).
+
+    Match flexible del nombre de carpeta (sin importar may/min ni parcial).
+    Devuelve [] si la carpeta existe pero está vacía; tira error si no la encuentra
+    (con la lista de productos disponibles, para corregir el nombre).
     """
-    carpeta = fotos_base() / "Sesiones" / "Sesion_Principal" / "Fotos"
-    return sorted(carpeta.glob("*.JPG"))
+    base = fotos_base()
+    objetivo = producto.strip().lower()
+    carpeta = None
+    if base.exists():
+        dirs = [p for p in base.iterdir() if _es_producto(p)]
+        carpeta = next((p for p in dirs if p.name.lower() == objetivo), None)
+        if carpeta is None:
+            carpeta = next((p for p in dirs if objetivo in p.name.lower()), None)
+    if carpeta is None:
+        raise FileNotFoundError(
+            f"No encontré el producto {producto!r} en {base}.\n"
+            f"Disponibles: {productos_disponibles()}")
+    fotos = _glob_imgs(carpeta)
+    if incluir_ia and (carpeta / "ia").is_dir():
+        fotos += _glob_imgs(carpeta / "ia")
+    return sorted(fotos)
+
+
+def fotos_sesion_principal() -> list[Path]:
+    """[compat] Material crudo de la sesión principal. Estructura nueva primero,
+    con fallback a la vieja (para no romper código existente)."""
+    for sub in (f"{_CRUDO}/Sesion-principal", "Sesiones/Sesion_Principal/Fotos"):
+        carpeta = fotos_base() / sub
+        if carpeta.exists():
+            return sorted(list(carpeta.glob("*.JPG")) + list(carpeta.glob("*.jpg")))
+    return []
 
 
 # Sub-rutas dentro de 00_Marca

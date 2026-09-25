@@ -19,6 +19,9 @@
 | Íconos / mockups de packaging on-brand | **Recraft 4.1** | vector/utility + paleta #hex |
 | Meter foto real de producto en la escena, logo, texto correcto | **Nano Banana** (vía Higgsfield) | `generate_image` con multi-referencia / Higgsfield "Nano Banana" |
 | Layout final con texto, logo, íconos y badge | **Composición POR CÓDIGO** (Satori/PIL para estáticas, Remotion para video/TV) | ver `motor-de-composicion.md`. Canva queda AFUERA de todo. |
+| Meter nuestro producto real DENTRO de un clip que ya se mueve bien | **Genjutsu — `hf_mult_replace_object`** | video fuente + fotos de referencia. Nuevo 09/26, **sin testear** — ver `higgsfield-arsenal.md` |
+| Retoque quirúrgico con máscara (sin tocar el resto del pixel) | **`nano_banana_2` `is_inpaint:true` + media rol `mask`** | nuevo 09/26; convive con el `rembg`+Pillow que ya usamos |
+| PNG **transparente** on-brand para el motor de composición | **`gpt_image_2_5`** con `background:'transparent'` | nuevo 09/26 — evita el paso de remove-bg |
 | Retoque/resize de foto real | **Adobe** | skills adobe-* |
 | Loops / texto-a-video | Sora (opcional) | — |
 | Estética artística muy entrenada | Midjourney (opcional, no en stack base) | — |

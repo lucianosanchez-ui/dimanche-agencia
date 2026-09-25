@@ -54,7 +54,15 @@ Los **MCP** son las "manos" de Claude Code: le dan acceso a Higgsfield, Notion y
 
 Qué es cada uno y para qué sirve en el flujo de producción:
 
-- **Higgsfield** → generar **imagen/video manual** (escena, mood, fondo, textura, movimiento de cámara) y el **hero del producto** (Nano Banana desde la foto real). Es la materia prima visual. Conectar el **workspace de Dimanche** (el del plan con créditos). Generar cuesta, por eso primero se boceta (ver Paso 6). Exprimir Higgsfield al máximo: ver `.claude/skills/dimanche-media/references/higgsfield-arsenal.md`.
+> ⚠ **ACT. 2026-09-25 — Higgsfield está DADO DE BAJA.** Ya no se conecta ni se usa.
+> El motor de imagen ahora es **fal.ai** (mismo modelo, `nano-banana`): es una API con
+> key, no OAuth, así que **no hay MCP que conectar ni créditos que administrar**. La key
+> ya está en el `.env` del repo y el script es
+> `motor-contenido/scripts/hero_ia.py`. Cuesta ~US$0,04 por imagen.
+> El recorte de fondo pasó a ser **local y gratis** (`rembg`, se instala con
+> `pip3 install rembg`). Lo de abajo sobre Higgsfield quedó histórico.
+
+- ~~**Higgsfield** → generar **imagen/video manual** (escena, mood, fondo, textura, movimiento de cámara) y el **hero del producto** (Nano Banana desde la foto real). Es la materia prima visual. Conectar el **workspace de Dimanche** (el del plan con créditos). Generar cuesta, por eso primero se boceta (ver Paso 6). Exprimir Higgsfield al máximo: ver `.claude/skills/dimanche-media/references/higgsfield-arsenal.md`.
 - **Notion** → la **fuente de verdad** y la base operativa común (Calendario, Inteligencia & Ideas, Documentos, Productos). Conectar el **teamspace Dimanche**. Acá Anto ve/edita lo mismo que vos, y acá quedan las piezas como **"Propuesto"** (el gate).
 - **Google Drive → van las DOS vías, y necesitás las dos.** (1) **Google Drive Desktop** (app nativa, montaje local): da las **rutas de archivo reales** que las skills leen para las fotos base. Instalalo en la compu de Anto con la cuenta de Dimanche (`lucianosanchez@panaderiadimanche.ar`) y verificá la ruta del estilo `…/Library/CloudStorage/GoogleDrive-lucianosanchez@panaderiadimanche.ar/Mi unidad/06_Marketing/` (ahí están fotos, logos, packaging, design system; las **fotos base reales** de la regla de oro). (2) El **MCP de Google Drive** (`https://drivemcp.googleapis.com/mcp/v1`, se autoriza con `/mcp`): da acceso programático (listar carpetas, leer metadatos, subir resultados). Una no reemplaza a la otra: Desktop = rutas locales para producir; MCP = manejo desde el chat.
 
