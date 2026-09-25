@@ -4,6 +4,11 @@
 > el trabajo. Esto explica **qué pedir, qué te va a pedir a vos, y qué hacés vos sola.**
 > Última act.: 2026-09-25.
 
+> 📺 **Instructivo paso a paso (con los comandos para copiar):**
+> https://claude.ai/artifact/8J8bzhGx18QnSuZyfnPBZZ
+> Ese cubre además cómo preparar la compu la primera vez. Este documento es el
+> resumen de consulta.
+
 ## Qué son
 Cada local tiene **3 pantallas**: la de la **izquierda** muestra productos, la del
 **medio** información (horarios, delivery, medios de pago) y la de la **derecha**
